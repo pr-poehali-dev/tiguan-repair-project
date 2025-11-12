@@ -589,7 +589,7 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold mb-2">ДОСТАВКА</h3>
-                  <p className="text-muted-foreground">Привезите детали к нам или отправьте транспортной компанией</p>
+                  <p className="text-muted-foreground">Привезите детали к нам или отправьте через СДЭК по всей России</p>
                 </CardContent>
               </Card>
             </div>
