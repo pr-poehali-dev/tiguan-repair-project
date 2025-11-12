@@ -642,7 +642,7 @@ const ServicesSection = () => {
                 </div>
               </div>
               <CardContent className="pt-4">
-                <h3 className="font-bold text-lg mb-2">Восстановление дифференциала</h3>
+                <h3 className="font-bold text-lg mb-2">Восстановленный дифференциал и вал раздатки</h3>
                 <p className="text-sm text-muted-foreground">Изношенная деталь слева, полностью восстановленная справа</p>
               </CardContent>
             </Card>
