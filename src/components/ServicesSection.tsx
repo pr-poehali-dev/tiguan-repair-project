@@ -116,9 +116,7 @@ const ServicesSection = () => {
           <div className="text-center mb-12">
             <Badge className="mb-4">Услуги</Badge>
             <h2 className="text-4xl font-bold mb-4">Что мы делаем</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Полный спектр услуг по ремонту и обслуживанию трансмиссии и ходовой части Volkswagen Tiguan
-            </p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Полный спектр услуг по ремонту и обслуживанию полного привода Volkswagen Tiguan I</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
