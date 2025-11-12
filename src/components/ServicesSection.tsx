@@ -401,15 +401,8 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="guarantees" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/files/1713efb4-7f44-439c-b600-12c1e2bef872.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }} />
-        </div>
-        <div className="container mx-auto relative z-10">
+      <section id="guarantees" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-bold mb-4">
               ПОРЯДОК РАБОТЫ
