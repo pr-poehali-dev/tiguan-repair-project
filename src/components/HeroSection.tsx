@@ -58,8 +58,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
               <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent/10 rounded-full blur-2xl" />
               <img 
-                src="https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg"
-                alt="Производство"
+                src="https://cdn.poehali.dev/files/6bfcc366-0e54-412a-88e5-69e2a5b8ddc0.jpg"
+                alt="Восстановленные шлицевые соединения"
                 className="relative rounded-2xl shadow-2xl w-full h-[600px] object-cover border border-border/50"
               />
               <div className="absolute bottom-8 left-8 right-8 bg-background/95 backdrop-blur-sm p-6 rounded-xl border border-border shadow-xl">
