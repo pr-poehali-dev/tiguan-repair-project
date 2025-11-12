@@ -12,9 +12,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-              Специализация: Volkswagen Tiguan
-            </Badge>
+            <Badge className="bg-primary/10 text-primary hover:bg-primary/20">Специализация: Volkswagen Tiguan I</Badge>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Восстановление шлицов и ремонт полного привода
             </h1>
