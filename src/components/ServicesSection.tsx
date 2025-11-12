@@ -901,7 +901,7 @@ const ServicesSection = () => {
               <CardContent>
                 <div className="aspect-video rounded-xl overflow-hidden bg-black/5">
                   <iframe
-                    src="https://rutube.ru/play/embed/c53bdc0ba227d6bc55d80c78b8f18569/"
+                    src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
                     frameBorder="0"
                     allow="clipboard-write; autoplay"
                     allowFullScreen
