@@ -716,7 +716,7 @@ const ServicesSection = () => {
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                      placeholder="BMW X5 E70 / карданный вал"
+                      placeholder="Volkswagen Tiguan I (5N)"
                     />
                   </div>
                   <div>
