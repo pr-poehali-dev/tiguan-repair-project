@@ -559,6 +559,115 @@ const ServicesSection = () => {
         </div>
       </section>
 
+      <section id="gallery" className="py-24 px-4 bg-muted/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Портфолио</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Наши работы</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Примеры восстановленных шлицевых соединений с высокоточной обработкой на станках с ЧПУ
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg')}>
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg"
+                  alt="Восстановленные шлицевые детали"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center gap-2 text-white">
+                      <Icon name="ZoomIn" size={20} />
+                      <span className="text-sm font-semibold">Увеличить</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-bold text-lg mb-2">Восстановленные детали трансмиссии</h3>
+                <p className="text-sm text-muted-foreground">Шлицевые соединения после механической обработки и термообработки</p>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg')}>
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg"
+                  alt="До и после восстановления"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-primary text-primary-foreground shadow-lg">До / После</Badge>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center gap-2 text-white">
+                      <Icon name="ZoomIn" size={20} />
+                      <span className="text-sm font-semibold">Увеличить</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-bold text-lg mb-2">Сравнение: изношенная и восстановленная деталь</h3>
+                <p className="text-sm text-muted-foreground">Наглядная демонстрация качества восстановления шлицов</p>
+              </CardContent>
+            </Card>
+
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg')}>
+              <div className="relative overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg"
+                  alt="До и после восстановления дифференциала"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-primary text-primary-foreground shadow-lg">До / После</Badge>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center gap-2 text-white">
+                      <Icon name="ZoomIn" size={20} />
+                      <span className="text-sm font-semibold">Увеличить</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="font-bold text-lg mb-2">Восстановление дифференциала</h3>
+                <p className="text-sm text-muted-foreground">Изношенная деталь слева, полностью восстановленная справа</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="max-w-3xl mx-auto border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+              <CardContent className="py-8 px-6">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Camera" className="text-primary" size={32} />
+                  </div>
+                  <div className="text-center md:text-left flex-1">
+                    <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
+                    <p className="text-muted-foreground">
+                      Документируем все этапы восстановления: от получения детали до финального контроля качества
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
