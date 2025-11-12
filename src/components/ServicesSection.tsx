@@ -147,6 +147,121 @@ const ServicesSection = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-gradient-to-r from-primary/5 via-background to-accent/5">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Сертификация</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Патенты и лицензии</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              Запатентованные технологии восстановления и полный пакет разрешительной документации
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
+              <CardContent className="pt-8 pb-6 space-y-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Icon name="Award" className="text-primary" size={40} />
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-1">№2829377</div>
+                  <p className="text-sm font-semibold text-foreground mb-2">Патент РФ</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Способ восстановления шлицевого соединения на полноприводных автомобилях
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
+              <CardContent className="pt-8 pb-6 space-y-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Icon name="FileCheck" className="text-primary" size={40} />
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-1">ISO 9001</div>
+                  <p className="text-sm font-semibold text-foreground mb-2">Сертификат качества</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Система менеджмента качества производства
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
+              <CardContent className="pt-8 pb-6 space-y-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Icon name="Shield" className="text-primary" size={40} />
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-1">15+</div>
+                  <p className="text-sm font-semibold text-foreground mb-2">Лет опыта</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Работаем с 2009 года. Более 50 корпоративных клиентов
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
+              <CardContent className="pt-8 pb-6 space-y-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+                  <Icon name="Users" className="text-primary" size={40} />
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-1">100%</div>
+                  <p className="text-sm font-semibold text-foreground mb-2">Легально</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    ООО с полным пакетом документов. Работаем с НДС
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 max-w-4xl mx-auto">
+            <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <img 
+                      src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
+                      alt="Патент на изобретение"
+                      className="rounded-xl shadow-lg border border-border w-full"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Icon name="Award" className="text-primary" size={32} />
+                      <h3 className="text-2xl font-bold">Патент на изобретение</h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Наша компания является правообладателем патента на изобретение <span className="font-semibold text-foreground">№2829377</span> "Способ восстановления шлицевого соединения на полноприводных автомобилях".
+                    </p>
+                    <div className="space-y-2 pt-4">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Дата регистрации: 30 октября 2024 г.</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Действует на территории РФ</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Запатентованная технология наплавки</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="portfolio" className="py-24 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
