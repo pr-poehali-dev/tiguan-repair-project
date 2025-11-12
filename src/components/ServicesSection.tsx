@@ -548,9 +548,7 @@ const ServicesSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Tiguan первого поколения — наша главная специализация, но мы также восстанавливаем шлицевые соединения на других автомобилях: BMW X5, Audi Q7, Mercedes ML и других полноприводных моделях. Звоните — проконсультируем по вашему случаю.
-                </p>
+                <p className="text-muted-foreground leading-relaxed">Tiguan первого поколения — наша главная специализация, но мы также восстанавливаем шлицевые соединения на других автомобилях полноприводных моделях. Звоните — проконсультируем по вашему случаю.</p>
               </CardContent>
             </Card>
           </div>
