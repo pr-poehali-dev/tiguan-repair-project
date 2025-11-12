@@ -11,11 +11,11 @@ const Footer = ({ scrollToSection }: FooterProps) => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Icon name="Wrench" size={24} />
-              <span className="text-lg font-bold">VW Tiguan Сервис</span>
+              <Icon name="Cog" size={24} />
+              <span className="text-lg font-bold">Мега Шлиц</span>
             </div>
             <p className="text-secondary-foreground/80 text-sm">
-              Профессиональный ремонт и обслуживание Volkswagen Tiguan с гарантией качества
+              Профессиональное восстановление и изготовление шлицевых соединений. Собственное производство.
             </p>
           </div>
           <div>
@@ -31,13 +31,13 @@ const Footer = ({ scrollToSection }: FooterProps) => {
             <h3 className="font-bold mb-4">Контакты</h3>
             <div className="space-y-2 text-sm text-secondary-foreground/80">
               <div>+7 (900) 123-45-67</div>
-              <div>info@vw-tiguan-service.ru</div>
-              <div>г. Москва, ул. Автомобильная, 15</div>
+              <div>info@mega-shlic.ru</div>
+              <div>г. Москва, ул. Промышленная, 28с3</div>
             </div>
           </div>
         </div>
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm text-secondary-foreground/60">
-          <p>© 2024 VW Tiguan Сервис. Все права защищены.</p>
+          <p>© 2024 Мега Шлиц. Все права защищены.</p>
         </div>
       </div>
     </footer>

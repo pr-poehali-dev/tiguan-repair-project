@@ -12,8 +12,8 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Icon name="Wrench" className="text-primary" size={28} />
-            <span className="text-xl font-bold text-secondary">VW Tiguan Сервис</span>
+            <Icon name="Cog" className="text-primary" size={28} />
+            <span className="text-xl font-bold text-secondary">Мега Шлиц</span>
           </div>
           <div className="hidden md:flex space-x-1">
             {['home', 'services', 'portfolio', 'guarantees', 'contacts'].map((section) => (

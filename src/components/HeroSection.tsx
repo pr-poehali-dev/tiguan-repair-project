@@ -12,9 +12,9 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge className="bg-primary/10 text-primary hover:bg-primary/20">Специализация: Volkswagen Tiguan I</Badge>
-            <h1 className="md:text-6xl leading-tight text-[#000000] font-semibold text-4xl">Профессиональный ремонт полного привода                          Volkswagen Tiguan I</h1>
-            <p className="text-lg text-muted-foreground">Профессиональный ремонт полного привода Volkswagen Tiguan I. Гарантия 12 месяцев. Качественные запчасти и современное оборудование.</p>
+            <Badge className="bg-primary/10 text-primary hover:bg-primary/20">Эксперты по восстановлению шлицевых соединений</Badge>
+            <h1 className="md:text-6xl leading-tight text-[#000000] font-semibold text-4xl">Мега Шлиц — восстановление шлицов приводных валов</h1>
+            <p className="text-lg text-muted-foreground">Специализируемся на профессиональном восстановлении шлицевых соединений трансмиссии. Собственное производство, современное оборудование, гарантия качества 12 месяцев.</p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" onClick={() => scrollToSection('services')}>
                 <Icon name="Settings" size={20} className="mr-2" />
@@ -27,16 +27,16 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">12+</div>
-                <div className="text-sm text-muted-foreground">лет опыта</div>
+                <div className="text-3xl font-bold text-primary">15+</div>
+                <div className="text-sm text-muted-foreground">лет в отрасли</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">автомобилей</div>
+                <div className="text-3xl font-bold text-primary">2000+</div>
+                <div className="text-sm text-muted-foreground">восстановленных узлов</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">довольных клиентов</div>
+                <div className="text-3xl font-bold text-primary">99%</div>
+                <div className="text-sm text-muted-foreground">успешных ремонтов</div>
               </div>
             </div>
           </div>

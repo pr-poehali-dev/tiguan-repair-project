@@ -7,104 +7,105 @@ const ServicesSection = () => {
   const services = [
     {
       icon: 'Cog',
-      title: 'Восстановление шлицов',
-      description: 'Профессиональное восстановление шлицевых соединений с применением современного оборудования',
+      title: 'Восстановление шлицевых соединений',
+      description: 'Точное восстановление геометрии шлицов методом наплавки с высокоточной механической обработкой на станках с ЧПУ',
       price: 'от 8 000 ₽'
     },
     {
-      icon: 'Cable',
-      title: 'Ремонт полного привода',
-      description: 'Диагностика и ремонт системы полного привода 4Motion с заменой муфты Haldex',
-      price: 'от 25 000 ₽'
-    },
-    {
-      icon: 'CircuitBoard',
-      title: 'Диагностика подвески',
-      description: 'Компьютерная диагностика ходовой части на стенде Hunter',
-      price: 'от 2 000 ₽'
-    },
-    {
-      icon: 'Wrench',
-      title: 'Замена приводов',
-      description: 'Установка оригинальных и качественных аналогов ШРУСов',
-      price: 'от 6 500 ₽'
-    },
-    {
-      icon: 'Settings',
-      title: 'ТО Volkswagen',
-      description: 'Регламентное техническое обслуживание согласно рекомендациям производителя',
-      price: 'от 12 000 ₽'
+      icon: 'Factory',
+      title: 'Изготовление шлицевых валов',
+      description: 'Производство новых шлицевых валов по чертежам или образцам с соблюдением всех технических характеристик',
+      price: 'от 15 000 ₽'
     },
     {
       icon: 'Gauge',
-      title: 'Компьютерная диагностика',
-      description: 'Полная диагностика всех систем автомобиля на дилерском оборудовании',
-      price: 'от 1 500 ₽'
+      title: 'Контроль качества',
+      description: 'Многоуровневая проверка геометрии, твердости и точности шлицевых соединений на профессиональном оборудовании',
+      price: 'включено'
+    },
+    {
+      icon: 'Wrench',
+      title: 'Балансировка валов',
+      description: 'Прецизионная динамическая балансировка карданных и приводных валов для устранения вибраций',
+      price: 'от 3 500 ₽'
+    },
+    {
+      icon: 'Shield',
+      title: 'Термообработка',
+      description: 'Профессиональная термообработка деталей для восстановления твердости и износостойкости поверхности',
+      price: 'от 5 000 ₽'
+    },
+    {
+      icon: 'Package',
+      title: 'Комплексный ремонт трансмиссии',
+      description: 'Восстановление всех изношенных шлицевых узлов в трансмиссии с гарантией качества',
+      price: 'от 25 000 ₽'
     }
   ];
 
   const portfolio = [
     {
-      title: 'Восстановление шлицов приводного вала',
-      car: 'VW Tiguan 2.0 TSI 4Motion',
-      year: '2018',
-      work: 'Восстановление изношенных шлицов методом наплавки с последующей механической обработкой',
+      title: 'Восстановление карданного вала BMW X5',
+      car: 'BMW X5 E70',
+      year: '2024',
+      work: 'Восстановление изношенных шлицов карданного вала методом наплавки, механическая обработка на станке с ЧПУ, термообработка, балансировка',
       image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg'
     },
     {
-      title: 'Капитальный ремонт трансмиссии',
-      car: 'VW Tiguan 2.0 TDI 4Motion',
-      year: '2016',
-      work: 'Замена муфты Haldex, восстановление карданного вала, замена обоих приводов',
+      title: 'Изготовление приводного вала',
+      car: 'Mercedes-Benz ML W164',
+      year: '2024',
+      work: 'Производство нового приводного вала с шлицевыми соединениями по оригинальным чертежам, контроль качества, балансировка',
       image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg'
     },
     {
-      title: 'Комплексное ТО с диагностикой',
-      car: 'VW Tiguan 1.4 TSI',
-      year: '2019',
-      work: 'ТО-60000, замена масла DSG, диагностика подвески, замена передних тормозных дисков',
+      title: 'Ремонт раздаточной коробки Audi Q7',
+      car: 'Audi Q7 4L',
+      year: '2024',
+      work: 'Восстановление шлицевых соединений первичного вала раздатки, замена подшипников, герметизация корпуса',
       image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg'
     }
   ];
 
   const guarantees = [
     {
-      title: 'Гарантия на работы',
+      title: 'Гарантия качества работ',
       items: [
-        'Восстановление шлицов - 12 месяцев без ограничения пробега',
-        'Ремонт трансмиссии и полного привода - 12 месяцев или 20 000 км',
-        'Замена приводов и ШРУСов - 6 месяцев или 10 000 км',
-        'Техническое обслуживание - 6 месяцев или 10 000 км',
-        'Диагностические работы - 1 месяц на выявленные дефекты'
+        'Восстановление шлицевых соединений - 18 месяцев без ограничения пробега',
+        'Изготовление новых валов - 24 месяца гарантии',
+        'Балансировка валов - 12 месяцев или 30 000 км',
+        'Термообработка деталей - пожизненная гарантия на технологию',
+        'Механическая обработка на ЧПУ - гарантия точности соответствия чертежам'
       ]
     },
     {
-      title: 'Гарантия на запчасти',
+      title: 'Контроль качества',
       items: [
-        'Оригинальные запчасти VAG - гарантия производителя 24 месяца',
-        'Качественные аналоги (GKN, SKF, FAG) - 12 месяцев',
-        'Расходные материалы - согласно рекомендациям производителя',
-        'Масла и технические жидкости - гарантия подлинности'
+        'Измерение геометрии шлицов высокоточным оборудованием',
+        'Контроль твердости поверхности после термообработки',
+        'Проверка биения валов на балансировочном стенде',
+        'Документирование всех этапов работы с фотофиксацией',
+        'Выдача протокола испытаний после завершения работ'
       ]
     },
     {
-      title: 'Условия гарантийного обслуживания',
+      title: 'Технологические преимущества',
       items: [
-        'Бесплатное устранение дефектов по вине исполнителя',
-        'Предоставление подменного автомобиля на время ремонта (при наличии)',
-        'Компенсация стоимости эвакуатора в случае поломки по гарантии',
-        'Гарантия действует при соблюдении регламента ТО',
-        'Обязательное использование рекомендованных масел и жидкостей'
+        'Собственное производство с полным циклом обработки',
+        'Станки с ЧПУ для высокоточной механической обработки',
+        'Современное оборудование для наплавки и термообработки',
+        'Опыт работы с любыми марками автомобилей',
+        'Индивидуальный подход к каждой детали'
       ]
     },
     {
-      title: 'Исключения из гарантии',
+      title: 'Дополнительные услуги',
       items: [
-        'Механические повреждения вследствие ДТП или неправильной эксплуатации',
-        'Ремонт или вмешательство третьих лиц',
-        'Использование нерекомендованных запчастей и материалов',
-        'Естественный износ расходных материалов',
-        'Эксплуатация автомобиля в экстремальных условиях без согласования'
+        'Бесплатная диагностика шлицевых соединений',
+        'Консультация по выбору оптимального метода восстановления',
+        'Доставка деталей по Москве и области',
+        'Работа с юридическими лицами, безналичный расчет',
+        'Срочное выполнение заказов (от 2 рабочих дней)'
       ]
     }
   ];
@@ -115,8 +116,8 @@ const ServicesSection = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4">Услуги</Badge>
-            <h2 className="text-4xl font-bold mb-4">Что мы делаем</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Полный спектр услуг по ремонту и обслуживанию полного привода Volkswagen Tiguan I</p>
+            <h2 className="text-4xl font-bold mb-4">Наши технологии</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Профессиональное восстановление и изготовление шлицевых соединений на современном оборудовании</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
@@ -185,11 +186,11 @@ const ServicesSection = () => {
       <section id="guarantees" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <Badge className="mb-4">Надёжность</Badge>
-            <h2 className="text-4xl font-bold mb-4">Гарантии качества</h2>
+            <Badge className="mb-4">Качество и надёжность</Badge>
+            <h2 className="text-4xl font-bold mb-4">Почему выбирают нас</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Мы несём полную ответственность за качество выполненных работ 
-              и предоставляем расширенные гарантийные обязательства
+              Собственное производство, современное оборудование и многолетний опыт 
+              гарантируют высочайшее качество восстановления шлицевых соединений
             </p>
           </div>
           
@@ -268,29 +269,31 @@ const ServicesSection = () => {
                   <div>
                     <div className="font-medium">Телефон</div>
                     <a href="tel:+79001234567" className="text-primary hover:underline">+7 (900) 123-45-67</a>
+                    <div className="text-sm text-muted-foreground mt-1">Технические консультации</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Icon name="MapPin" className="text-primary mt-1" size={20} />
                   <div>
-                    <div className="font-medium">Адрес</div>
-                    <div className="text-muted-foreground">г. Москва, ул. Автомобильная, д. 15</div>
+                    <div className="font-medium">Производственная база</div>
+                    <div className="text-muted-foreground">г. Москва, ул. Промышленная, д. 28, стр. 3</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Icon name="Clock" className="text-primary mt-1" size={20} />
                   <div>
                     <div className="font-medium">Режим работы</div>
-                    <div className="text-muted-foreground">Пн-Пт: 9:00 - 20:00</div>
-                    <div className="text-muted-foreground">Сб-Вс: 10:00 - 18:00</div>
+                    <div className="text-muted-foreground">Пн-Пт: 8:00 - 20:00</div>
+                    <div className="text-muted-foreground">Сб: 9:00 - 18:00</div>
+                    <div className="text-sm text-primary mt-1">Срочные заказы - круглосуточно</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Icon name="Mail" className="text-primary mt-1" size={20} />
                   <div>
                     <div className="font-medium">Email</div>
-                    <a href="mailto:info@vw-tiguan-service.ru" className="text-primary hover:underline">
-                      info@vw-tiguan-service.ru
+                    <a href="mailto:info@mega-shlic.ru" className="text-primary hover:underline">
+                      info@mega-shlic.ru
                     </a>
                   </div>
                 </div>
@@ -299,7 +302,8 @@ const ServicesSection = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle>Записаться на ремонт</CardTitle>
+                <CardTitle>Отправить заявку на расчёт</CardTitle>
+                <CardDescription>Опишите задачу - мы рассчитаем стоимость и сроки</CardDescription>
               </CardHeader>
               <CardContent>
                 <form className="space-y-4">
@@ -320,18 +324,18 @@ const ServicesSection = () => {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Автомобиль</label>
+                    <label className="text-sm font-medium mb-2 block">Автомобиль / деталь</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="VW Tiguan 2.0 TSI 2018"
+                      placeholder="BMW X5 / карданный вал"
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Описание проблемы</label>
+                    <label className="text-sm font-medium mb-2 block">Описание задачи</label>
                     <textarea 
                       className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary min-h-24"
-                      placeholder="Опишите проблему с автомобилем"
+                      placeholder="Например: износ шлицов карданного вала, требуется восстановление"
                     />
                   </div>
                   <Button className="w-full" size="lg">
