@@ -17,7 +17,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
             </div>
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold text-foreground">Мега Шлиц</span>
-              <span className="text-xs text-muted-foreground">Производство с 2009</span>
+              <span className="text-xs text-muted-foreground">Эксперты по VW Tiguan I</span>
             </div>
           </button>
           <div className="hidden lg:flex items-center space-x-2">

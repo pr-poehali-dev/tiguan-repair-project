@@ -6,9 +6,9 @@ import Icon from '@/components/ui/icon';
 const ServicesSection = () => {
   const services = [
     {
-      icon: 'Cog',
-      title: 'Восстановление шлицевых соединений',
-      description: 'Точное восстановление геометрии шлицов специализированным методом с высокоточной механической обработкой на станках с ЧПУ',
+      icon: 'Car',
+      title: 'Восстановление шлицевых соединений Volkswagen Tiguan I',
+      description: 'Специализация на ремонте полноприводной трансмиссии Tiguan первого поколения (5N, 2007-2017): восстановление приводных валов, шлицевых соединений передней и задней оси',
       price: 'от 8 000 ₽'
     },
     {
@@ -78,7 +78,7 @@ const ServicesSection = () => {
     {
       title: 'Гарантия качества работ',
       items: [
-        'Восстановление шлицевых соединений - 18 месяцев без ограничения пробега',
+        'Восстановление шлицевых соединений Volkswagen Tiguan I - 18 месяцев без ограничения пробега',
         'Изготовление новых валов - 24 месяца гарантии',
         'Балансировка валов - 12 месяцев или 30 000 км',
         'Термообработка деталей - пожизненная гарантия на технологию',
@@ -125,9 +125,9 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технологии</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Полный цикл производства</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Специализация — Volkswagen Tiguan I (5N)</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              Собственное оборудование и запатентованные технологии позволяют восстанавливать любые шлицевые соединения с точностью до микрона
+              Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,7 +176,7 @@ const ServicesSection = () => {
                   <div className="text-3xl font-bold text-primary mb-1">№2829377</div>
                   <p className="text-sm font-semibold text-foreground mb-2">Патент РФ</p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    Способ восстановления шлицевого соединения на полноприводных автомобилях
+                    Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях
                   </p>
                 </div>
               </CardContent>
@@ -245,7 +245,7 @@ const ServicesSection = () => {
                       <h3 className="text-2xl font-bold">Патент на изобретение</h3>
                     </div>
                     <p className="text-muted-foreground leading-relaxed">
-                      Наша компания является правообладателем патента на изобретение <span className="font-semibold text-foreground">№2829377</span> "Способ восстановления шлицевого соединения на полноприводных автомобилях".
+                      Наша компания является правообладателем патента на изобретение <span className="font-semibold text-foreground">№2829377</span> "Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях".
                     </p>
                     <div className="space-y-2 pt-4">
                       <div className="flex items-center gap-2 text-sm">
@@ -275,9 +275,9 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">Портфолио</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Выполненные проекты</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Наши работы по Volkswagen Tiguan I</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Более 2000 успешно восстановленных узлов для автомобилей премиум-класса
+              Специализируемся на восстановлении шлицевых соединений Tiguan первого поколения. Более 2100 успешно восстановленных узлов.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

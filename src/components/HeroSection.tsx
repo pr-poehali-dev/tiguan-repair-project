@@ -19,13 +19,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Прецизионное восстановление
+                Восстановление шлицевых соединений
               </span>
               <br />
-              <span className="text-primary">шлицевых соединений</span>
+              <span className="text-primary">Volkswagen Tiguan I</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Полный цикл производства: от диагностики до изготовления. Станки с ЧПУ, современные методы восстановления, термообработка и балансировка.
+              Специализируемся на ремонте полноприводной трансмиссии Tiguan первого поколения (5N). Полный цикл: диагностика, восстановление шлицов, термообработка, балансировка на станках с ЧПУ.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="h-14 px-8 text-base" onClick={() => scrollToSection('services')}>
@@ -64,11 +64,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               />
               <div className="absolute bottom-8 left-8 right-8 bg-background/95 backdrop-blur-sm p-6 rounded-xl border border-border shadow-xl">
                 <div className="flex items-center gap-3 mb-3">
-                  <Icon name="Shield" className="text-primary" size={24} />
-                  <span className="font-bold text-lg">Гарантия 18 месяцев</span>
+                  <Icon name="Car" className="text-primary" size={24} />
+                  <span className="font-bold text-lg">Эксперты по Volkswagen Tiguan I</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  На все виды восстановительных работ с протоколом испытаний
+                  Восстановление приводных валов и шлицевых соединений с гарантией 18 месяцев
                 </p>
               </div>
             </div>
