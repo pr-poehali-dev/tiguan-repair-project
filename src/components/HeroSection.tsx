@@ -25,7 +25,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <span className="text-primary">Volkswagen Tiguan I</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Специализируемся на ремонте полноприводной трансмиссии Tiguan первого поколения (5N). Полный цикл: диагностика, восстановление шлицов, термообработка, балансировка на станках с ЧПУ.
+              Специализируемся на ремонте полноприводной трансмиссии Tiguan первого поколения (5N). Полный цикл: диагностика, восстановление шлицов, термообработка, калибровка на станках с ЧПУ.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="h-14 px-8 text-base" onClick={() => scrollToSection('services')}>
