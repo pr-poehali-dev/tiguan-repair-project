@@ -68,7 +68,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   <span className="font-bold text-lg">Эксперты по Volkswagen Tiguan I</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Восстановление приводных валов и шлицевых соединений с гарантией 18 месяцев
+                  Восстановление шлицевых соединений трансмиссии с гарантией 18 месяцев
                 </p>
               </div>
             </div>
