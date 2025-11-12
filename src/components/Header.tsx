@@ -35,7 +35,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               >
                 {section === 'home' && 'Главная'}
                 {section === 'services' && 'Технологии'}
-                {section === 'guarantees' && 'Преимущества'}
+                {section === 'guarantees' && 'Порядок работ'}
                 {section === 'faq' && 'Вопросы'}
                 {section === 'contacts' && 'Контакты'}
               </button>
