@@ -726,7 +726,7 @@ const ServicesSection = () => {
             <Card className="lg:col-span-3 border-border/50 bg-gradient-to-br from-card/50 to-primary/5 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl">Получить расчёт стоимости</CardTitle>
-                <CardDescription className="text-base">Отправьте запрос — мы рассчитаем стоимость и сроки восстановления в течение 30 минут</CardDescription>
+                <CardDescription className="text-base">Отправьте запрос — мы рассчитаем стоимость и сроки восстановления</CardDescription>
               </CardHeader>
               <CardContent>
                 <form className="space-y-5">
@@ -765,7 +765,7 @@ const ServicesSection = () => {
                   </div>
                   <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                     <Icon name="Clock" className="text-primary" size={20} />
-                    <p className="text-sm text-muted-foreground">Ответим в течение 30 минут в рабочее время</p>
+                    <p className="text-sm text-muted-foreground">Ответим в рабочее время</p>
                   </div>
                   <Button className="w-full h-12 text-base" size="lg">
                     <Icon name="Send" size={20} className="mr-2" />
