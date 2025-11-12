@@ -608,8 +608,8 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-lg mb-1">Email</div>
-                    <a href="mailto:megashlic@mail.ru" className="text-primary hover:underline font-medium">
-                      megashlic@mail.ru
+                    <a href="mailto:megashlic@yandex.ru" className="text-primary hover:underline font-medium">
+                      megashlic@yandex.ru
                     </a>
                   </div>
                 </div>
