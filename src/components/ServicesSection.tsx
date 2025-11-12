@@ -401,6 +401,151 @@ const ServicesSection = () => {
         </div>
       )}
 
+      <section id="turnkey" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Комплексное решение</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ремонт под ключ</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Полный цикл восстановления трансмиссии Volkswagen Tiguan I — от диагностики до установки на автомобиль
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-2xl">
+                    <Icon name="CheckCircle" className="text-primary" size={28} />
+                    Что входит в услугу
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Search" className="text-primary" size={18} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Диагностика и дефектовка</h4>
+                        <p className="text-sm text-muted-foreground">Полная проверка состояния деталей, измерение износа, фотофиксация</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Settings" className="text-primary" size={18} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Восстановление шлицов</h4>
+                        <p className="text-sm text-muted-foreground">Механическая обработка на ЧПУ, термообработка, балансировка</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Package" className="text-primary" size={18} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Замена расходников</h4>
+                        <p className="text-sm text-muted-foreground">Новые подшипники, сальники, крепёж — всё необходимое для надёжности</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Wrench" className="text-primary" size={18} />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-1">Сборка и контроль</h4>
+                        <p className="text-sm text-muted-foreground">Профессиональная сборка узла с соблюдением моментов затяжки</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-2xl">
+                    <Icon name="Star" className="text-primary" size={28} />
+                    Преимущества
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-semibold mb-1">Экономия времени</h4>
+                        <p className="text-sm text-muted-foreground">Не нужно искать мастеров под каждую операцию — делаем всё сами</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="DollarSign" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-semibold mb-1">Выгоднее, чем по отдельности</h4>
+                        <p className="text-sm text-muted-foreground">Комплексный ремонт дешевле суммы отдельных работ</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-semibold mb-1">Единая гарантия 18 месяцев</h4>
+                        <p className="text-sm text-muted-foreground">Гарантия на весь узел целиком, а не на отдельные детали</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="UserCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-semibold mb-1">Работаем с одним специалистом</h4>
+                        <p className="text-sm text-muted-foreground">Вы общаетесь с одним мастером от начала до конца</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="FileText" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <div>
+                        <h4 className="font-semibold mb-1">Полный фотоотчёт</h4>
+                        <p className="text-sm text-muted-foreground">Фиксируем каждый этап работы с вашими деталями</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-primary/50 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+              <CardContent className="py-8 px-6">
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Calendar" className="text-primary" size={32} />
+                    </div>
+                    <div className="text-3xl font-bold text-primary mb-2">2-5 дней</div>
+                    <div className="text-sm text-muted-foreground">Полный цикл работ</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon name="BadgeCheck" className="text-primary" size={32} />
+                    </div>
+                    <div className="text-3xl font-bold text-primary mb-2">18 мес</div>
+                    <div className="text-sm text-muted-foreground">Гарантия на всё</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Phone" className="text-primary" size={32} />
+                    </div>
+                    <div className="text-sm font-semibold mb-2">Узнать стоимость</div>
+                    <a href="tel:+79202520352" className="text-primary hover:underline font-bold text-lg">
+                      +7 (920) 252-03-52
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="guarantees" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
