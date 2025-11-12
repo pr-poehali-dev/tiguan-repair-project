@@ -701,6 +701,84 @@ const ServicesSection = () => {
               </div>
             </CardContent>
           </Card>
+
+          <div className="mt-12 max-w-5xl mx-auto">
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <CardTitle className="flex items-center justify-center gap-3 text-2xl">
+                  <Icon name="Truck" className="text-primary" size={28} />
+                  Доставка по всей России
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Работаем с транспортной компанией СДЭК — быстро и надёжно
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-8 mb-6">
+                  <div className="space-y-4">
+                    <h4 className="font-bold text-lg flex items-center gap-2">
+                      <Icon name="PackageOpen" className="text-primary" size={20} />
+                      Отправка деталей к нам
+                    </h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Отправьте в ближайший пункт СДЭК на наш адрес</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Стоимость доставки рассчитывается индивидуально на сайте СДЭК</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <h4 className="font-bold text-lg flex items-center gap-2">
+                      <Icon name="PackageCheck" className="text-primary" size={20} />
+                      Возврат восстановленных деталей
+                    </h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Отправка в течение 1 рабочего дня после оплаты</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                        <span className="text-sm text-muted-foreground">Доставка в любой город России за 2-5 дней</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon name="Info" className="text-primary" size={24} />
+                    </div>
+                    <div className="space-y-2">
+                      <h4 className="font-bold">Адрес для отправки через СДЭК</h4>
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Получатель:</strong> ООО "Мега Шлиц"<br />
+                        <strong>Адрес:</strong> г. Нижний Новгород, Восточный проезд, 11/1<br />
+                        <strong>Телефон:</strong> +7 (920) 252-03-52
+                      </p>
+                      <p className="text-sm text-primary font-medium mt-3">
+                        Свяжитесь с нами перед отправкой — поможем правильно оформить доставку
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
