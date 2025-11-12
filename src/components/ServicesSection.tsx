@@ -238,9 +238,7 @@ const ServicesSection = () => {
                 <div>
                   <div className="text-3xl font-bold text-primary mb-1">100%</div>
                   <p className="text-sm font-semibold text-foreground mb-2">Легально</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    ООО с полным пакетом документов. Работаем с НДС
-                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">ООО с полным пакетом документов. Без НДС</p>
                 </div>
               </CardContent>
             </Card>
