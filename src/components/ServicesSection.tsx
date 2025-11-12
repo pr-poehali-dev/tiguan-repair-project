@@ -145,51 +145,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="pricing" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Прайс-лист</Badge>
-            <h2 className="text-4xl font-bold mb-4">Стоимость работ</h2>
-            <p className="text-muted-foreground text-lg">
-              Прозрачное ценообразование без скрытых платежей
-            </p>
-          </div>
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <div className="space-y-4">
-                {[
-                  { name: 'Диагностика трансмиссии', price: '2 000 ₽' },
-                  { name: 'Восстановление шлицов приводного вала', price: '8 000 - 15 000 ₽' },
-                  { name: 'Замена муфты Haldex', price: '25 000 - 35 000 ₽' },
-                  { name: 'Замена приводного вала (ШРУС)', price: '6 500 - 12 000 ₽' },
-                  { name: 'Ремонт карданного вала', price: '18 000 - 25 000 ₽' },
-                  { name: 'Диагностика подвески на стенде', price: '2 000 ₽' },
-                  { name: 'ТО-60000 (масло, фильтры, диагностика)', price: '12 000 - 18 000 ₽' },
-                  { name: 'Замена масла DSG', price: '8 500 ₽' },
-                  { name: 'Замена тормозных дисков и колодок (комплект)', price: '15 000 - 22 000 ₽' }
-                ].map((item, index) => (
-                  <div key={index} className="flex justify-between items-center py-3 border-b last:border-0">
-                    <span className="font-medium">{item.name}</span>
-                    <span className="text-primary font-bold">{item.price}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 p-6 bg-muted rounded-lg">
-                <div className="flex items-start gap-3">
-                  <Icon name="Info" className="text-primary mt-1" size={20} />
-                  <p className="text-sm text-muted-foreground">
-                    Стоимость запчастей рассчитывается отдельно. Используем оригинальные детали VAG 
-                    или качественные аналоги (GKN, SKF, FAG) по вашему выбору. Точная цена определяется 
-                    после диагностики.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      <section id="portfolio" className="py-20 px-4 bg-muted/30">
+      <section id="portfolio" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <Badge className="mb-4">Наши работы</Badge>

@@ -16,7 +16,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
             <span className="text-xl font-bold text-secondary">VW Tiguan Сервис</span>
           </div>
           <div className="hidden md:flex space-x-1">
-            {['home', 'services', 'pricing', 'portfolio', 'guarantees', 'contacts'].map((section) => (
+            {['home', 'services', 'portfolio', 'guarantees', 'contacts'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -28,7 +28,6 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               >
                 {section === 'home' && 'Главная'}
                 {section === 'services' && 'Услуги'}
-                {section === 'pricing' && 'Прайс'}
                 {section === 'portfolio' && 'Портфолио'}
                 {section === 'guarantees' && 'Гарантии'}
                 {section === 'contacts' && 'Контакты'}
