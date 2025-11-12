@@ -465,11 +465,72 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">Контакты</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Свяжитесь с нами</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Узнайте точную стоимость</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Работаем напрямую с автовладельцами и СТО. Бесплатная консультация и расчёт стоимости
+              Цена зависит от объёма работ и состояния деталей. Бесплатная консультация и расчёт за 30 минут.
             </p>
           </div>
+
+          <Card className="max-w-4xl mx-auto mb-12 border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-2xl">
+                <Icon name="Calculator" className="text-primary" size={28} />
+                Индивидуальный расчёт стоимости
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Стоимость восстановления шлицевых соединений Volkswagen Tiguan I рассчитывается индивидуально и зависит от:
+                  </p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-sm">Степени износа шлицов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-sm">Количества деталей для восстановления</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-sm">Необходимости термообработки</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-sm">Срочности выполнения заказа</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-background/60 rounded-xl p-6 border border-border/50">
+                  <div className="text-center mb-4">
+                    <div className="text-4xl font-bold text-primary mb-2">от 8 000 ₽</div>
+                    <p className="text-sm text-muted-foreground">Базовая стоимость восстановления</p>
+                  </div>
+                  <div className="space-y-3 pt-4 border-t border-border/50">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Бесплатная диагностика</span>
+                      <Icon name="Check" className="text-primary" size={18} />
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Расчёт за 30 минут</span>
+                      <Icon name="Check" className="text-primary" size={18} />
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Гарантия 18 месяцев</span>
+                      <Icon name="Check" className="text-primary" size={18} />
+                    </div>
+                  </div>
+                  <Button className="w-full mt-6" size="lg">
+                    <Icon name="Phone" size={18} className="mr-2" />
+                    Получить расчёт
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
             <Card className="lg:col-span-2 border-border/50 bg-card/50 backdrop-blur-sm">
               <CardHeader>
