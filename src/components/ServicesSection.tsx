@@ -570,9 +570,7 @@ const ServicesSection = () => {
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">Контакты</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Узнайте точную стоимость</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Цена зависит от объёма работ и состояния деталей. Бесплатная консультация и расчёт за 30 минут.
-            </p>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Цена зависит от восстанавливаемой детали. Бесплатная консультация и расчёт за 30 минут.</p>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
