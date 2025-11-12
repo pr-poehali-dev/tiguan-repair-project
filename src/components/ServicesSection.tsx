@@ -544,7 +544,7 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-lg mb-1">Телефон</div>
-                    <a href="tel:+79001234567" className="text-primary hover:underline text-lg font-medium">+7 (900) 123-45-67</a>
+                    <a href="tel:+79202520352" className="text-primary hover:underline text-lg font-medium">+7 (920) 252-03-52</a>
                     <div className="text-sm text-muted-foreground mt-1">Технические консультации 24/7</div>
                   </div>
                 </div>
@@ -554,7 +554,7 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-lg mb-1">Адрес</div>
-                    <div className="text-muted-foreground">г. Москва, ул. Промышленная,<br />д. 28, стр. 3</div>
+                    <div className="text-muted-foreground">г. Нижний Новгород,<br />Восточный проезд, 11/1</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -574,8 +574,8 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-lg mb-1">Email</div>
-                    <a href="mailto:info@mega-shlic.ru" className="text-primary hover:underline font-medium">
-                      info@mega-shlic.ru
+                    <a href="mailto:megashlic@mail.ru" className="text-primary hover:underline font-medium">
+                      megashlic@mail.ru
                     </a>
                   </div>
                 </div>

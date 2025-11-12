@@ -1,7 +1,7 @@
 import Icon from '@/components/ui/icon';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '79001234567';
+  const phoneNumber = '79202520352';
   const message = encodeURIComponent('Здравствуйте! Интересует восстановление шлицевых соединений Volkswagen Tiguan I.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

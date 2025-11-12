@@ -41,10 +41,10 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               </button>
             ))}
           </div>
-          <a href="tel:+79001234567">
+          <a href="tel:+79202520352">
             <Button className="hidden md:flex h-11 px-6 shadow-lg">
               <Icon name="Phone" size={18} className="mr-2" />
-              +7 (900) 123-45-67
+              +7 (920) 252-03-52
             </Button>
           </a>
         </div>

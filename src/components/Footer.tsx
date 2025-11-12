@@ -34,9 +34,9 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           <div>
             <h3 className="font-bold mb-4">Контакты</h3>
             <div className="space-y-2 text-sm text-secondary-foreground/80">
-              <div>+7 (900) 123-45-67</div>
-              <div>info@mega-shlic.ru</div>
-              <div>г. Москва, ул. Промышленная, 28с3</div>
+              <div>+7 (920) 252-03-52</div>
+              <div>megashlic@mail.ru</div>
+              <div>г. Нижний Новгород, Восточный проезд, 11/1</div>
             </div>
           </div>
         </div>
