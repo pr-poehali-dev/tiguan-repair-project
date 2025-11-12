@@ -643,7 +643,7 @@ const ServicesSection = () => {
               </div>
               <CardContent className="pt-4">
                 <h3 className="font-bold text-lg mb-2">Восстановленный дифференциал и вал раздатки</h3>
-                <p className="text-sm text-muted-foreground">Изношенная деталь слева, полностью восстановленная справа</p>
+                <p className="text-sm text-muted-foreground">Полностью восстановленные детали до заводского состояния</p>
               </CardContent>
             </Card>
           </div>
