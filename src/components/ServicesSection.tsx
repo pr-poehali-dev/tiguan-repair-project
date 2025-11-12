@@ -19,9 +19,9 @@ const ServicesSection = () => {
       description: 'До и после восстановления шлицов'
     },
     {
-      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg',
-      title: 'Механическая обработка',
-      description: 'Процесс восстановления геометрии'
+      url: 'https://cdn.poehali.dev/files/3670ad1e-8c6b-43b5-9081-66a9d5aff82d.jpg',
+      title: 'Раздаточная коробка Tiguan',
+      description: 'Восстановленные шлицы в сборе с новыми подшипниками'
     },
     {
       url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg',
