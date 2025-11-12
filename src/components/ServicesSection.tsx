@@ -1,9 +1,35 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
 const ServicesSection = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const galleryImages = [
+    {
+      url: 'https://cdn.poehali.dev/files/6bfcc366-0e54-412a-88e5-69e2a5b8ddc0.jpg',
+      title: 'Восстановленные шлицевые соединения',
+      description: 'Высокоточная обработка на станках с ЧПУ'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg',
+      title: 'Приводной вал Volkswagen Tiguan I',
+      description: 'До и после восстановления шлицов'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg',
+      title: 'Механическая обработка',
+      description: 'Процесс восстановления геометрии'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg',
+      title: 'Готовые детали',
+      description: 'Контроль качества после термообработки'
+    }
+  ];
+
   const services = [
     {
       icon: 'Car',
@@ -311,8 +337,61 @@ const ServicesSection = () => {
               </Card>
             ))}
           </div>
+
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4">Галерея работ</h3>
+              <p className="text-muted-foreground">Нажмите на фото для просмотра в полном размере</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {galleryImages.map((image, index) => (
+                <div 
+                  key={index}
+                  onClick={() => setSelectedImage(image.url)}
+                  className="group relative overflow-hidden rounded-xl cursor-pointer hover:shadow-2xl transition-all duration-300"
+                >
+                  <img 
+                    src={image.url}
+                    alt={image.title}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <p className="font-semibold text-sm mb-1">{image.title}</p>
+                      <p className="text-xs text-white/80">{image.description}</p>
+                    </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <Icon name="ZoomIn" className="text-white" size={24} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <div 
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-pointer animate-in fade-in duration-200"
+        >
+          <button 
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors z-10"
+          >
+            <Icon name="X" className="text-white" size={24} />
+          </button>
+          <img 
+            src={selectedImage}
+            alt="Просмотр фото"
+            className="max-w-full max-h-full object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <section id="guarantees" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
