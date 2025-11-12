@@ -16,10 +16,7 @@ const Footer = ({ scrollToSection }: FooterProps) => {
                 alt="Мега Шлиц"
                 className="h-12 w-auto object-contain"
               />
-              <div className="flex items-center gap-1">
-                <span className="text-lg font-bold">Мега Шлиц</span>
-                <span className="text-xs font-bold text-secondary-foreground/60 border border-current rounded-full w-4 h-4 flex items-center justify-center" style={{fontSize: '10px'}}>®</span>
-              </div>
+              <span className="text-lg font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
             <p className="text-secondary-foreground/80 text-sm">
               Профессиональное восстановление и изготовление шлицевых соединений. Собственное производство.
