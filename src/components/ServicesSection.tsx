@@ -758,21 +758,46 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon name="Info" className="text-primary" size={24} />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Info" className="text-primary" size={24} />
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="font-bold">Адрес для отправки через СДЭК</h4>
+                        <p className="text-sm text-muted-foreground">
+                          <strong>Получатель:</strong> ООО "Мега Шлиц"<br />
+                          <strong>Адрес:</strong> г. Нижний Новгород, Восточный проезд, 11/1<br />
+                          <strong>Телефон:</strong> +7 (920) 252-03-52
+                        </p>
+                        <p className="text-sm text-primary font-medium mt-3">
+                          Свяжитесь с нами перед отправкой — поможем правильно оформить доставку
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-2">
-                      <h4 className="font-bold">Адрес для отправки через СДЭК</h4>
-                      <p className="text-sm text-muted-foreground">
-                        <strong>Получатель:</strong> ООО "Мега Шлиц"<br />
-                        <strong>Адрес:</strong> г. Нижний Новгород, Восточный проезд, 11/1<br />
-                        <strong>Телефон:</strong> +7 (920) 252-03-52
-                      </p>
-                      <p className="text-sm text-primary font-medium mt-3">
-                        Свяжитесь с нами перед отправкой — поможем правильно оформить доставку
-                      </p>
+                  </div>
+
+                  <div className="bg-accent/5 border border-accent/20 rounded-xl p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="Calculator" className="text-accent-foreground" size={24} />
+                      </div>
+                      <div className="space-y-3 flex-1">
+                        <h4 className="font-bold">Рассчитать стоимость доставки</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Узнайте точную стоимость и сроки доставки из вашего города
+                        </p>
+                        <a 
+                          href="https://www.cdek.ru/ru/calculate" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold"
+                        >
+                          <Icon name="ExternalLink" size={16} />
+                          Калькулятор СДЭК
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
