@@ -23,7 +23,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
             </div>
           </button>
           <div className="hidden lg:flex items-center space-x-2">
-            {['home', 'services', 'guarantees', 'faq', 'contacts'].map((section) => (
+            {['home', 'services', 'turnkey', 'guarantees', 'faq', 'contacts'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -35,6 +35,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               >
                 {section === 'home' && 'Главная'}
                 {section === 'services' && 'Технологии'}
+                {section === 'turnkey' && 'Под ключ'}
                 {section === 'guarantees' && 'Порядок работ'}
                 {section === 'faq' && 'Вопросы'}
                 {section === 'contacts' && 'Контакты'}
