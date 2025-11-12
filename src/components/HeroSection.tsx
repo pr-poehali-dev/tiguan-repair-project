@@ -25,7 +25,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <span className="text-primary">шлицевых соединений</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Полный цикл производства: от диагностики до изготовления. Станки с ЧПУ, наплавка, термообработка и балансировка.
+              Полный цикл производства: от диагностики до изготовления. Станки с ЧПУ, современные методы восстановления, термообработка и балансировка.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="h-14 px-8 text-base" onClick={() => scrollToSection('services')}>
