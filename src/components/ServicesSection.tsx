@@ -683,7 +683,7 @@ const ServicesSection = () => {
               <CardContent className="p-0">
                 <div className="w-full h-[450px]">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=43.917089%2C56.251827&amp;z=18&amp;pt=43.917089%2C56.251827%2Cpm2rdm"
+                    src="https://yandex.ru/map-widget/v1/?ll=43.916447%2C56.251369&amp;z=18&amp;pt=43.916447%2C56.251369%2Cpm2rdm"
                     width="100%"
                     height="450"
                     frameBorder="0"
