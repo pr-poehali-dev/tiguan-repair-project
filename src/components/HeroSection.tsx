@@ -67,9 +67,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   <Icon name="Car" className="text-primary" size={24} />
                   <span className="font-bold text-lg">Эксперты по Volkswagen Tiguan I</span>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Восстановление шлицевых соединений трансмиссии с гарантией 18 месяцев
-                </p>
+                <p className="text-sm text-muted-foreground">Восстановление шлицевых соединений трансмиссии с гарантией</p>
               </div>
             </div>
           </div>
