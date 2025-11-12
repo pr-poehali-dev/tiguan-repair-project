@@ -10,11 +10,14 @@ const Footer = ({ scrollToSection }: FooterProps) => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img 
-              src="https://cdn.poehali.dev/files/a81aa78f-4b50-4b53-819a-bb02a592678a.jpg"
-              alt="Мега Шлиц"
-              className="h-16 w-auto object-contain mb-4"
-            />
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="https://cdn.poehali.dev/files/ee0a5ef4-bf03-4f3d-9cca-0715c95a466c.jpg"
+                alt="Мега Шлиц"
+                className="h-12 w-auto object-contain"
+              />
+              <span className="text-lg font-bold">Мега Шлиц</span>
+            </div>
             <p className="text-secondary-foreground/80 text-sm">
               Профессиональное восстановление и изготовление шлицевых соединений. Собственное производство.
             </p>
