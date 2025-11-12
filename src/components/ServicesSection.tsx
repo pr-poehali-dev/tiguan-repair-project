@@ -605,9 +605,8 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-lg mb-1">Режим работы</div>
-                    <div className="text-muted-foreground">Пн-Пт: 8:00 - 20:00</div>
-                    <div className="text-muted-foreground">Сб: 9:00 - 18:00</div>
-                    <Badge className="mt-2 bg-primary/10 text-primary hover:bg-primary/20">Срочные заказы 24/7</Badge>
+                    <div className="text-muted-foreground">Пн-Пт: 9:30 - 17:30</div>
+                    <div className="text-muted-foreground">Сб-Вс: Выходной</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
