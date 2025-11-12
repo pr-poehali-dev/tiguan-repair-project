@@ -459,7 +459,107 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-24 px-4 bg-muted/20">
+      <section id="faq" className="py-24 px-4 bg-muted/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">FAQ</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Частые вопросы</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Ответы на популярные вопросы о восстановлении шлицевых соединений Volkswagen Tiguan I
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Как понять, что шлицы на Tiguan I изношены?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Основные признаки: вибрация при разгоне и торможении, металлический стук при трогании с места, рывки при переключении передач, гул со стороны раздаточной коробки. Если заметили хотя бы один симптом — необходима диагностика.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Сколько времени занимает восстановление?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Стандартный срок — 3-5 рабочих дней с момента получения деталей. В срочном порядке можем выполнить за 2 дня. Точные сроки зависят от степени износа и объёма работ.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Можно ли восстановить сильно изношенные шлицы?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Да, наша запатентованная технология позволяет восстанавливать даже критически изношенные шлицы. Мы наращиваем металл, обрабатываем на станках с ЧПУ и проводим термообработку. Восстановленная деталь не уступает новой по прочности.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Какая гарантия на восстановленные детали?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  На восстановление шлицевых соединений Volkswagen Tiguan I предоставляем гарантию 18 месяцев без ограничения пробега. Гарантия оформляется официальным талоном с печатью организации.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Нужно ли снимать детали с автомобиля самостоятельно?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Мы работаем только с уже снятыми деталями — занимаемся восстановлением, а не демонтажем. Вы можете снять детали самостоятельно или обратиться в любой автосервис. После этого привезите их к нам или отправьте транспортной компанией.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3 text-lg">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+                  Работаете ли вы только с Tiguan I?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed">
+                  Tiguan первого поколения — наша главная специализация, но мы также восстанавливаем шлицевые соединения на других автомобилях: BMW X5, Audi Q7, Mercedes ML и других полноприводных моделях. Звоните — проконсультируем по вашему случаю.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
