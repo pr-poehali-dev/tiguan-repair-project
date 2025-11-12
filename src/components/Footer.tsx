@@ -25,9 +25,9 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           <div>
             <h3 className="font-bold mb-4">Быстрые ссылки</h3>
             <div className="space-y-2 text-sm">
-              <div><button onClick={() => scrollToSection('services')} className="hover:underline">Услуги</button></div>
-              <div><button onClick={() => scrollToSection('portfolio')} className="hover:underline">Портфолио</button></div>
-              <div><button onClick={() => scrollToSection('guarantees')} className="hover:underline">Гарантии</button></div>
+              <div><button onClick={() => scrollToSection('services')} className="hover:underline">Технологии</button></div>
+              <div><button onClick={() => scrollToSection('guarantees')} className="hover:underline">Преимущества</button></div>
+              <div><button onClick={() => scrollToSection('faq')} className="hover:underline">Вопросы</button></div>
               <div><button onClick={() => scrollToSection('contacts')} className="hover:underline">Контакты</button></div>
             </div>
           </div>
