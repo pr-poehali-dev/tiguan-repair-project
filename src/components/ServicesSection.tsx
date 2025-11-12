@@ -887,7 +887,42 @@ const ServicesSection = () => {
             </Card>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 space-y-8">
+            <Card className="max-w-4xl mx-auto border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <CardTitle className="flex items-center justify-center gap-3 text-2xl">
+                  <Icon name="Video" className="text-primary" size={28} />
+                  Видео наших работ
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Процесс восстановления шлицевых соединений на нашем производстве
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="aspect-video rounded-xl overflow-hidden bg-black/5">
+                  <iframe
+                    src="https://rutube.ru/play/embed/c53bdc0ba227d6bc55d80c78b8f18569/"
+                    frameBorder="0"
+                    allow="clipboard-write; autoplay"
+                    allowFullScreen
+                    className="w-full h-full"
+                    title="Видео работ по восстановлению шлицевых соединений"
+                  />
+                </div>
+                <div className="mt-6 text-center">
+                  <a 
+                    href="https://rutube.ru/channel/35843934/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors font-semibold"
+                  >
+                    <Icon name="ExternalLink" size={20} />
+                    Больше видео на RuTube
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card className="max-w-3xl mx-auto border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
               <CardContent className="py-8 px-6">
                 <div className="flex flex-col md:flex-row items-center gap-6">
