@@ -14,7 +14,8 @@ const Footer = ({ scrollToSection }: FooterProps) => {
               <img 
                 src="https://cdn.poehali.dev/files/91564d46-9c4b-434e-9dcf-d231a1c4ff2d.jpg"
                 alt="Мега Шлиц"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain rounded-lg"
+                style={{ background: 'transparent' }}
               />
               <span className="text-lg font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
