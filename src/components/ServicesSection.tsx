@@ -626,12 +626,9 @@ const ServicesSection = () => {
               <div className="relative overflow-hidden">
                 <img 
                   src="https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg"
-                  alt="До и после восстановления дифференциала"
+                  alt="Восстановление дифференциала"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-primary text-primary-foreground shadow-lg">До / После</Badge>
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center gap-2 text-white">
