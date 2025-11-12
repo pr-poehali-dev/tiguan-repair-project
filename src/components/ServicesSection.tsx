@@ -566,9 +566,7 @@ const ServicesSection = () => {
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">Портфолио</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Наши работы</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Примеры восстановленных шлицевых соединений с высокоточной обработкой на станках с ЧПУ
-            </p>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Примеры восстановленных шлицевых соединений с высокоточной обработкой на станках с ЧПУ и термообработкой</p>
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
