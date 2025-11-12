@@ -39,7 +39,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </div>
             <div className="grid grid-cols-3 gap-8 pt-12 border-t">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                <div className="text-4xl font-bold text-primary mb-2">5+</div>
                 <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">лет опыта</div>
               </div>
               <div>
