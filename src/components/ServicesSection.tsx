@@ -520,7 +520,7 @@ const ServicesSection = () => {
                     <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Icon name="Calendar" className="text-primary" size={32} />
                     </div>
-                    <div className="text-3xl font-bold text-primary mb-2">2-5 дней</div>
+                    <div className="text-3xl font-bold text-primary mb-2">1 день</div>
                     <div className="text-sm text-muted-foreground">Полный цикл работ</div>
                   </div>
                   <div className="text-center">
