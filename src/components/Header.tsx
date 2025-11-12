@@ -18,7 +18,10 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               className="h-14 w-auto object-contain"
             />
             <div className="flex flex-col items-start">
-              <span className="text-xl font-bold text-foreground">Мега Шлиц</span>
+              <div className="flex items-center gap-1">
+                <span className="text-xl font-bold text-foreground">Мега Шлиц</span>
+                <span className="text-xs font-bold text-muted-foreground border border-current rounded-full w-4 h-4 flex items-center justify-center" style={{fontSize: '10px'}}>®</span>
+              </div>
               <span className="text-xs text-muted-foreground">Эксперты по VW Tiguan I</span>
             </div>
           </button>
