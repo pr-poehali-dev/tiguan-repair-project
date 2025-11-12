@@ -45,18 +45,25 @@ const ServicesSection = () => {
 
   const portfolio = [
     {
+      title: 'Восстановление шлицевого соединения Volkswagen Tiguan',
+      car: 'Volkswagen Tiguan I (5N)',
+      year: '2024',
+      work: 'Восстановление изношенных шлицов приводного вала, механическая обработка на станке с ЧПУ, термообработка, контроль геометрии, балансировка',
+      image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg'
+    },
+    {
       title: 'Восстановление карданного вала BMW X5',
       car: 'BMW X5 E70',
       year: '2024',
       work: 'Восстановление изношенных шлицов карданного вала, механическая обработка на станке с ЧПУ, термообработка, балансировка',
-      image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg'
+      image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg'
     },
     {
       title: 'Изготовление приводного вала',
       car: 'Mercedes-Benz ML W164',
       year: '2024',
       work: 'Производство нового приводного вала с шлицевыми соединениями по оригинальным чертежам, контроль качества, балансировка',
-      image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/99bfe21f-3603-4929-9394-e5dcded08802.jpg'
+      image: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg'
     },
     {
       title: 'Ремонт раздаточной коробки Audi Q7',
