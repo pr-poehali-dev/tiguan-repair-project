@@ -112,29 +112,32 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-20 px-4 bg-muted/30">
+      <section id="services" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Услуги</Badge>
-            <h2 className="text-4xl font-bold mb-4">Наши технологии</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Профессиональное восстановление и изготовление шлицевых соединений на современном оборудовании</p>
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технологии</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Полный цикл производства</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              Собственное оборудование и запатентованные технологии позволяют восстанавливать любые шлицевые соединения с точностью до микрона
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all hover:-translate-y-1">
-                <CardHeader>
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                    <Icon name={service.icon} className="text-primary" size={28} />
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 bg-card/50 backdrop-blur-sm">
+                <CardHeader className="space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <Icon name={service.icon} className="text-primary" size={32} />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
+                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between pt-4 border-t">
                     <span className="text-2xl font-bold text-primary">{service.price}</span>
-                    <Button variant="ghost" size="sm">
-                      Подробнее
-                      <Icon name="ArrowRight" size={16} className="ml-2" />
+                    <Button variant="ghost" size="sm" className="group-hover:bg-primary/10">
+                      <Icon name="ArrowRight" size={18} />
                     </Button>
                   </div>
                 </CardContent>
@@ -144,38 +147,44 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-20 px-4">
+      <section id="portfolio" className="py-24 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Наши работы</Badge>
-            <h2 className="text-4xl font-bold mb-4">Портфолио</h2>
-            <p className="text-muted-foreground text-lg">
-              Примеры выполненных работ с фотографиями и описанием
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Портфолио</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Выполненные проекты</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Более 2000 успешно восстановленных узлов для автомобилей премиум-класса
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolio.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all">
-                <img 
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover"
-                />
-                <CardHeader>
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
-                  <CardDescription>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Icon name="Car" size={16} />
-                      <span>{item.car}</span>
-                    </div>
-                    <div className="flex items-center gap-2 mt-1">
-                      <Icon name="Calendar" size={16} />
-                      <span>{item.year} год</span>
-                    </div>
-                  </CardDescription>
+              <Card key={index} className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-border/50">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-primary text-primary-foreground">{item.year}</Badge>
+                  </div>
+                </div>
+                <CardHeader className="space-y-3">
+                  <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">{item.title}</CardTitle>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Icon name="Car" size={18} className="text-primary" />
+                    <span className="font-medium">{item.car}</span>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{item.work}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.work}</p>
+                  <Button variant="link" className="px-0 mt-4 text-primary">
+                    Подробнее о проекте
+                    <Icon name="ArrowRight" size={16} className="ml-1" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -183,32 +192,37 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="guarantees" className="py-20 px-4">
+      <section id="guarantees" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Качество и надёжность</Badge>
-            <h2 className="text-4xl font-bold mb-4">Почему выбирают нас</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Собственное производство, современное оборудование и многолетний опыт 
-              гарантируют высочайшее качество восстановления шлицевых соединений
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Преимущества</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Почему выбирают Мега Шлиц</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              Комплексный подход к восстановлению и контролю качества на каждом этапе производства
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6">
             {guarantees.map((guarantee, index) => (
-              <Card key={index} className="overflow-hidden">
-                <CardHeader className="bg-muted/50">
-                  <CardTitle className="flex items-center gap-3">
-                    <Icon name="ShieldCheck" className="text-primary" size={24} />
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm">
+                <CardHeader className="bg-gradient-to-br from-muted/50 to-muted/20 pb-6">
+                  <CardTitle className="flex items-center gap-3 text-xl">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Icon name="ShieldCheck" className="text-primary" size={24} />
+                    </div>
                     {guarantee.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {guarantee.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-muted-foreground">{item}</span>
+                      <li key={itemIndex} className="flex items-start gap-3 group/item">
+                        <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-primary/20 transition-colors">
+                          <Icon name="Check" className="text-primary" size={14} />
+                        </div>
+                        <span className="text-muted-foreground leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -252,47 +266,61 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-4 bg-muted/30">
+      <section id="contacts" className="py-24 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Контакты</Badge>
-            <h2 className="text-4xl font-bold mb-4">Как нас найти</h2>
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Контакты</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Свяжитесь с нами</h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              Работаем напрямую с автовладельцами и СТО. Бесплатная консультация и расчёт стоимости
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card>
+          <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+            <Card className="lg:col-span-2 border-border/50 bg-card/50 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Контактная информация</CardTitle>
+                <CardTitle className="text-2xl">Производственная база</CardTitle>
+                <CardDescription>Приезжайте или отправьте детали</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Icon name="Phone" className="text-primary mt-1" size={20} />
+              <CardContent className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" className="text-primary" size={22} />
+                  </div>
                   <div>
-                    <div className="font-medium">Телефон</div>
-                    <a href="tel:+79001234567" className="text-primary hover:underline">+7 (900) 123-45-67</a>
-                    <div className="text-sm text-muted-foreground mt-1">Технические консультации</div>
+                    <div className="font-semibold text-lg mb-1">Телефон</div>
+                    <a href="tel:+79001234567" className="text-primary hover:underline text-lg font-medium">+7 (900) 123-45-67</a>
+                    <div className="text-sm text-muted-foreground mt-1">Технические консультации 24/7</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="MapPin" className="text-primary mt-1" size={20} />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" className="text-primary" size={22} />
+                  </div>
                   <div>
-                    <div className="font-medium">Производственная база</div>
-                    <div className="text-muted-foreground">г. Москва, ул. Промышленная, д. 28, стр. 3</div>
+                    <div className="font-semibold text-lg mb-1">Адрес</div>
+                    <div className="text-muted-foreground">г. Москва, ул. Промышленная,<br />д. 28, стр. 3</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Clock" className="text-primary mt-1" size={20} />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" className="text-primary" size={22} />
+                  </div>
                   <div>
-                    <div className="font-medium">Режим работы</div>
+                    <div className="font-semibold text-lg mb-1">Режим работы</div>
                     <div className="text-muted-foreground">Пн-Пт: 8:00 - 20:00</div>
                     <div className="text-muted-foreground">Сб: 9:00 - 18:00</div>
-                    <div className="text-sm text-primary mt-1">Срочные заказы - круглосуточно</div>
+                    <Badge className="mt-2 bg-primary/10 text-primary hover:bg-primary/20">Срочные заказы 24/7</Badge>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Mail" className="text-primary mt-1" size={20} />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" className="text-primary" size={22} />
+                  </div>
                   <div>
-                    <div className="font-medium">Email</div>
-                    <a href="mailto:info@mega-shlic.ru" className="text-primary hover:underline">
+                    <div className="font-semibold text-lg mb-1">Email</div>
+                    <a href="mailto:info@mega-shlic.ru" className="text-primary hover:underline font-medium">
                       info@mega-shlic.ru
                     </a>
                   </div>
@@ -300,47 +328,53 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="lg:col-span-3 border-border/50 bg-gradient-to-br from-card/50 to-primary/5 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Отправить заявку на расчёт</CardTitle>
-                <CardDescription>Опишите задачу - мы рассчитаем стоимость и сроки</CardDescription>
+                <CardTitle className="text-2xl">Получить расчёт стоимости</CardTitle>
+                <CardDescription className="text-base">Отправьте запрос — мы рассчитаем стоимость и сроки восстановления в течение 30 минут</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form className="space-y-5">
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="text-sm font-semibold mb-2 block">Ваше имя *</label>
+                      <input 
+                        type="text" 
+                        className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                        placeholder="Иван Иванов"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-semibold mb-2 block">Телефон *</label>
+                      <input 
+                        type="tel" 
+                        className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                        placeholder="+7 (___) ___-__-__"
+                      />
+                    </div>
+                  </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Ваше имя</label>
+                    <label className="text-sm font-semibold mb-2 block">Автомобиль / деталь *</label>
                     <input 
                       type="text" 
-                      className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Иван Иванов"
+                      className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+                      placeholder="BMW X5 E70 / карданный вал"
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Телефон</label>
-                    <input 
-                      type="tel" 
-                      className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="+7 (___) ___-__-__"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Автомобиль / деталь</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="BMW X5 / карданный вал"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Описание задачи</label>
+                    <label className="text-sm font-semibold mb-2 block">Опишите задачу *</label>
                     <textarea 
-                      className="w-full px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary min-h-24"
-                      placeholder="Например: износ шлицов карданного вала, требуется восстановление"
+                      className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary min-h-32 bg-background"
+                      placeholder="Например: износ шлицов карданного вала, люфт при движении, требуется диагностика и восстановление"
                     />
                   </div>
-                  <Button className="w-full" size="lg">
-                    <Icon name="Send" size={18} className="mr-2" />
-                    Отправить заявку
+                  <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
+                    <Icon name="Clock" className="text-primary" size={20} />
+                    <p className="text-sm text-muted-foreground">Ответим в течение 30 минут в рабочее время</p>
+                  </div>
+                  <Button className="w-full h-12 text-base" size="lg">
+                    <Icon name="Send" size={20} className="mr-2" />
+                    Получить расчёт
                   </Button>
                 </form>
               </CardContent>
