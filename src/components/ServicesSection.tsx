@@ -634,6 +634,32 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           </div>
+
+          <div className="mt-12 max-w-6xl mx-auto">
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3 text-2xl">
+                  <Icon name="MapPin" className="text-primary" size={28} />
+                  Как нас найти
+                </CardTitle>
+                <CardDescription className="text-base">
+                  г. Нижний Новгород, Восточный проезд, 11/1
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="w-full h-[450px]">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb6c8e3f8d8c0e5f8e8e8e8e8e8e8e8e&amp;source=constructor"
+                    width="100%"
+                    height="450"
+                    frameBorder="0"
+                    title="Карта проезда"
+                    className="w-full h-full"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </>
