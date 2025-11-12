@@ -43,7 +43,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">лет опыта</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">2100+</div>
+                <div className="text-4xl font-bold text-primary mb-2">100+</div>
                 <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">узлов восстановлено</div>
               </div>
               <div>
