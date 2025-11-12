@@ -221,11 +221,9 @@ const ServicesSection = () => {
                   <Icon name="Shield" className="text-primary" size={40} />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-1">15+</div>
+                  <div className="text-3xl font-bold text-primary mb-1">5+</div>
                   <p className="text-sm font-semibold text-foreground mb-2">Лет опыта</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Работаем с 2009 года. Более 50 корпоративных клиентов
-                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Работаем с 2023 года. Более 50 корпоративных клиентов</p>
                 </div>
               </CardContent>
             </Card>
