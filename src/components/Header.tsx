@@ -12,13 +12,11 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button onClick={() => scrollToSection('home')} className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Icon name="Cog" className="text-primary" size={24} />
-            </div>
-            <div className="flex flex-col items-start">
-              <span className="text-xl font-bold text-foreground">Мега Шлиц</span>
-              <span className="text-xs text-muted-foreground">Эксперты по VW Tiguan I</span>
-            </div>
+            <img 
+              src="https://cdn.poehali.dev/files/a81aa78f-4b50-4b53-819a-bb02a592678a.jpg"
+              alt="Мега Шлиц"
+              className="h-12 w-auto object-contain"
+            />
           </button>
           <div className="hidden lg:flex items-center space-x-2">
             {['home', 'services', 'portfolio', 'guarantees', 'contacts'].map((section) => (
