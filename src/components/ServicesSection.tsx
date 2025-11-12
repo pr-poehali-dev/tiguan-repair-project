@@ -9,19 +9,24 @@ const ServicesSection = () => {
 
   const galleryImages = [
     {
+      url: 'https://cdn.poehali.dev/files/90506945-c80c-4a2c-bc39-960d87906952.jpg',
+      title: 'До и после восстановления',
+      description: 'Наглядное сравнение изношенных и восстановленных шлицов'
+    },
+    {
       url: 'https://cdn.poehali.dev/files/6bfcc366-0e54-412a-88e5-69e2a5b8ddc0.jpg',
       title: 'Восстановленные шлицевые соединения',
       description: 'Высокоточная обработка на станках с ЧПУ'
     },
     {
-      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg',
-      title: 'Приводной вал Volkswagen Tiguan I',
-      description: 'До и после восстановления шлицов'
-    },
-    {
       url: 'https://cdn.poehali.dev/files/3670ad1e-8c6b-43b5-9081-66a9d5aff82d.jpg',
       title: 'Раздаточная коробка Tiguan',
       description: 'Восстановленные шлицы в сборе с новыми подшипниками'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg',
+      title: 'Приводной вал Volkswagen Tiguan I',
+      description: 'Процесс восстановления шлицевого соединения'
     },
     {
       url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg',
@@ -343,7 +348,7 @@ const ServicesSection = () => {
               <h3 className="text-3xl font-bold mb-4">Галерея работ</h3>
               <p className="text-muted-foreground">Нажмите на фото для просмотра в полном размере</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               {galleryImages.map((image, index) => (
                 <div 
                   key={index}
