@@ -13,7 +13,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <Badge className="bg-primary/10 text-primary hover:bg-primary/20">Специализация: Volkswagen Tiguan I</Badge>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-[#000000]">Ремонт полного привода под ключ  Восстановлением шлицевого соединения</h1>
+            <h1 className="md:text-6xl leading-tight text-[#000000] text-6xl font-semibold">Ремонт полного привода под ключ 115000 руб.</h1>
             <p className="text-lg text-muted-foreground">
               Профессиональный ремонт трансмиссии и ходовой части Volkswagen Tiguan. 
               Гарантия качества 12 месяцев. Оригинальные запчасти и современное оборудование.
