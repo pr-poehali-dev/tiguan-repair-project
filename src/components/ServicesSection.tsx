@@ -1039,7 +1039,7 @@ const ServicesSection = () => {
                     <label className="text-sm font-semibold mb-2 block">Опишите задачу *</label>
                     <textarea 
                       className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary min-h-32 bg-background"
-                      placeholder="Например: износ шлицов карданного вала, люфт при движении, требуется диагностика и восстановление"
+                      placeholder="Например: восстановить шлицы и ремонт под ключ"
                     />
                   </div>
                   <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
