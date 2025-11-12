@@ -524,10 +524,7 @@ const ServicesSection = () => {
 
           <Card className="mt-16 max-w-4xl mx-auto border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-2xl">
-                <Icon name="ShieldCheck" className="text-primary" size={28} />
-                Гарантия качества 18 месяцев
-              </CardTitle>
+              <CardTitle className="flex items-center gap-3 text-2xl">Гарантия качества </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-6 text-lg">
