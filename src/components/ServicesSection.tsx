@@ -494,9 +494,7 @@ const ServicesSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  От 1 до 5 рабочих дней с момента получения деталей — зависит от загрузки производства. Точные сроки сообщим после диагностики и оценки степени износа.
-                </p>
+                <p className="text-muted-foreground leading-relaxed">Восстановление занимает от 1 до 5 рабочих дней с момента получения деталей. Это зависит от загруженности производства. Однако благодаря отлаженному процессу, мы справляемся за 2 дня. </p>
               </CardContent>
             </Card>
 
