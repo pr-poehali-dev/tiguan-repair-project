@@ -12,7 +12,7 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="https://cdn.poehali.dev/files/ee0a5ef4-bf03-4f3d-9cca-0715c95a466c.jpg"
+                src="https://cdn.poehali.dev/files/91564d46-9c4b-434e-9dcf-d231a1c4ff2d.jpg"
                 alt="Мега Шлиц"
                 className="h-12 w-auto object-contain"
               />
