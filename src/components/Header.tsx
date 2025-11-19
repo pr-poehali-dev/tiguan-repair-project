@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -9,16 +10,42 @@ interface HeaderProps {
 }
 
 const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <motion.nav 
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="fixed top-0 w-full bg-gradient-to-r from-background/95 via-background/90 to-background/95 backdrop-blur-lg border-b border-border/50 z-50 shadow-lg"
+      animate={{ 
+        y: 0,
+        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)'
+      }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className={`fixed top-0 w-full bg-gradient-to-r from-background/95 via-background/90 to-background/95 backdrop-blur-lg border-b z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'border-border/80 shadow-xl' 
+          : 'border-border/50 shadow-lg'
+      }`}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none" />
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none"
+        animate={{ opacity: isScrolled ? 0.3 : 1 }}
+        transition={{ duration: 0.3 }}
+      />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between h-20">
+        <motion.div 
+          className="flex items-center justify-between"
+          animate={{ height: isScrolled ? '4rem' : '5rem' }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
           <motion.button 
             onClick={() => scrollToSection('home')} 
             className="flex items-center space-x-3 group"
@@ -32,15 +59,29 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <img 
+              <motion.img 
                 src="https://cdn.poehali.dev/files/ee0a5ef4-bf03-4f3d-9cca-0715c95a466c.jpg"
                 alt="Мега Шлиц"
-                className="h-14 w-auto object-contain relative z-10 rounded-lg"
+                className="w-auto object-contain relative z-10 rounded-lg"
+                animate={{ height: isScrolled ? '3rem' : '3.5rem' }}
+                transition={{ duration: 0.3 }}
               />
             </motion.div>
             <div className="flex flex-col items-start">
-              <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-              <span className="text-xs text-muted-foreground hidden sm:block group-hover:text-primary transition-colors duration-300">Эксперты по VW Tiguan I</span>
+              <motion.span 
+                className="font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300"
+                animate={{ fontSize: isScrolled ? '1.125rem' : '1.25rem' }}
+                transition={{ duration: 0.3 }}
+              >
+                Мега Шлиц<sup className="text-xs ml-0.5">®</sup>
+              </motion.span>
+              <motion.span 
+                className="text-xs text-muted-foreground hidden sm:block group-hover:text-primary transition-colors duration-300"
+                animate={{ opacity: isScrolled ? 0 : 1, height: isScrolled ? 0 : 'auto' }}
+                transition={{ duration: 0.3 }}
+              >
+                Эксперты по VW Tiguan I
+              </motion.span>
             </div>
           </motion.button>
           <div className="hidden lg:flex items-center space-x-2">
@@ -53,7 +94,9 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(section)}
-                className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all relative overflow-hidden ${
+                className={`rounded-xl text-sm font-semibold transition-all relative overflow-hidden ${
+                  isScrolled ? 'px-4 py-2' : 'px-5 py-2.5'
+                } ${
                   activeSection === section
                     ? 'bg-gradient-to-r from-primary to-primary/90 text-primary-foreground shadow-lg shadow-primary/30'
                     : 'text-muted-foreground hover:text-foreground hover:bg-gradient-to-r hover:from-muted/50 hover:to-muted/30'
@@ -88,19 +131,31 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="h-11 px-6 shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
+              <motion.div
+                animate={{ height: isScrolled ? '2.5rem' : '2.75rem' }}
+                transition={{ duration: 0.3 }}
+              >
+                <Button className={`shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 ${
+                  isScrolled ? 'h-10 px-4 text-sm' : 'h-11 px-6'
+                }`}>
                 <motion.div
                   animate={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
                 >
                   <Icon name="Phone" size={18} className="mr-2" />
                 </motion.div>
-                +7 (920) 252-03-52
+                <motion.span
+                  animate={{ fontSize: isScrolled ? '0.875rem' : '1rem' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  +7 (920) 252-03-52
+                </motion.span>
               </Button>
+              </motion.div>
             </motion.a>
             <MobileMenu activeSection={activeSection} scrollToSection={scrollToSection} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.nav>
   );
