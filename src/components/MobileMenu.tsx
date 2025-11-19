@@ -37,7 +37,7 @@ const MobileMenu = ({ activeSection, scrollToSection }: MobileMenuProps) => {
           <div className="fixed top-20 left-0 right-0 bg-background border-b border-border shadow-2xl z-50 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col space-y-2">
-                {['home', 'services', 'turnkey', 'guarantees', 'faq', 'contacts'].map((section) => (
+                {['home', 'services', 'patents', 'faq', 'turnkey', 'guarantees', 'gallery', 'contacts'].map((section) => (
                   <button
                     key={section}
                     onClick={() => handleNavClick(section)}
@@ -48,10 +48,12 @@ const MobileMenu = ({ activeSection, scrollToSection }: MobileMenuProps) => {
                     }`}
                   >
                     {section === 'home' && 'Главная'}
-                    {section === 'services' && 'Технологии'}
+                    {section === 'services' && 'Услуги'}
+                    {section === 'patents' && 'Патенты'}
+                    {section === 'faq' && 'FAQ'}
                     {section === 'turnkey' && 'Под ключ'}
-                    {section === 'guarantees' && 'Порядок работ'}
-                    {section === 'faq' && 'Вопросы'}
+                    {section === 'guarantees' && 'Порядок работы'}
+                    {section === 'gallery' && 'Галерея'}
                     {section === 'contacts' && 'Контакты'}
                   </button>
                 ))}

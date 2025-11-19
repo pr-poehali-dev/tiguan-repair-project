@@ -27,10 +27,12 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           <div>
             <h3 className="font-bold mb-3 text-sm">Быстрые ссылки</h3>
             <div className="space-y-1.5 text-xs">
-              <div><button onClick={() => scrollToSection('services')} className="hover:underline">Технологии</button></div>
-              <div><button onClick={() => scrollToSection('turnkey')} className="hover:underline">Ремонт под ключ</button></div>
-              <div><button onClick={() => scrollToSection('guarantees')} className="hover:underline">Порядок работ</button></div>
-              <div><button onClick={() => scrollToSection('faq')} className="hover:underline">Вопросы</button></div>
+              <div><button onClick={() => scrollToSection('services')} className="hover:underline">Услуги</button></div>
+              <div><button onClick={() => scrollToSection('patents')} className="hover:underline">Патенты</button></div>
+              <div><button onClick={() => scrollToSection('faq')} className="hover:underline">FAQ</button></div>
+              <div><button onClick={() => scrollToSection('turnkey')} className="hover:underline">Под ключ</button></div>
+              <div><button onClick={() => scrollToSection('guarantees')} className="hover:underline">Порядок работы</button></div>
+              <div><button onClick={() => scrollToSection('gallery')} className="hover:underline">Галерея</button></div>
               <div><button onClick={() => scrollToSection('contacts')} className="hover:underline">Контакты</button></div>
             </div>
           </div>

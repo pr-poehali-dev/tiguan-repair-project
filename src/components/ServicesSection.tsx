@@ -204,7 +204,7 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section className="py-12 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+      <section id="patents" className="py-12 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-8">

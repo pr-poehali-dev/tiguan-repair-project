@@ -85,7 +85,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
             </div>
           </motion.button>
           <div className="hidden lg:flex items-center space-x-2">
-            {['home', 'services', 'turnkey', 'guarantees', 'faq', 'contacts'].map((section, index) => (
+            {['home', 'services', 'patents', 'faq', 'turnkey', 'guarantees', 'gallery', 'contacts'].map((section, index) => (
               <motion.button
                 key={section}
                 initial={{ opacity: 0, y: -20 }}
@@ -112,10 +112,12 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
                 )}
                 <span className="relative z-10">
                   {section === 'home' && 'Главная'}
-                  {section === 'services' && 'Технологии'}
+                  {section === 'services' && 'Услуги'}
+                  {section === 'patents' && 'Патенты'}
+                  {section === 'faq' && 'FAQ'}
                   {section === 'turnkey' && 'Под ключ'}
-                  {section === 'guarantees' && 'Порядок работ'}
-                  {section === 'faq' && 'Вопросы'}
+                  {section === 'guarantees' && 'Порядок работы'}
+                  {section === 'gallery' && 'Галерея'}
                   {section === 'contacts' && 'Контакты'}
                 </span>
               </motion.button>
