@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import VisitorCounter from '@/components/VisitorCounter';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -22,7 +21,6 @@ const Index = () => {
       <ServicesSection />
       <Footer scrollToSection={scrollToSection} />
       <WhatsAppButton />
-      <VisitorCounter />
     </div>
   );
 };

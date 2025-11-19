@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import VisitorCounter from '@/components/VisitorCounter';
 
 interface FooterProps {
   scrollToSection: (id: string) => void;
@@ -43,7 +44,12 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           </div>
         </div>
         <div className="border-t border-secondary-foreground/20 pt-8 text-center text-sm text-secondary-foreground/60">
-          <p>© 2024 Мега Шлиц<sup className="text-xs">®</sup>. Все права защищены.</p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="order-2 md:order-1">© 2024 Мега Шлиц<sup className="text-xs">®</sup>. Все права защищены.</p>
+            <div className="order-1 md:order-2">
+              <VisitorCounter />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

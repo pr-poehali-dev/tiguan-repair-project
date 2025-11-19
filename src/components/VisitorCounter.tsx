@@ -23,11 +23,11 @@ const VisitorCounter = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 bg-background/95 backdrop-blur-sm border border-border rounded-lg px-4 py-2 shadow-lg flex items-center gap-2 z-50">
-      <Eye size={18} className="text-primary" />
+    <div className="bg-secondary-foreground/10 backdrop-blur-sm border border-secondary-foreground/20 rounded-lg px-4 py-2 flex items-center gap-2">
+      <Eye size={18} className="text-secondary-foreground" />
       <div className="flex flex-col">
-        <span className="text-xs text-muted-foreground">Посещений</span>
-        <span className="text-lg font-bold text-foreground">{count.toLocaleString('ru-RU')}</span>
+        <span className="text-xs text-secondary-foreground/70">Посещений</span>
+        <span className="text-lg font-bold text-secondary-foreground">{count.toLocaleString('ru-RU')}</span>
       </div>
     </div>
   );
