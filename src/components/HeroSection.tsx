@@ -13,7 +13,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section id="home" className="relative pt-24 pb-16 px-4 overflow-hidden">
+    <section id="home" className="relative pt-20 pb-12 px-4 overflow-hidden">
       <motion.div 
         className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"
         style={{ y, opacity }}
@@ -25,25 +25,25 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <motion.div 
-            className="space-y-6"
+            className="space-y-4"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.div 
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20"
+              className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-primary">Производственная компания</span>
+              <span className="text-xs font-medium text-primary">Производственная компания</span>
             </motion.div>
 
             <motion.h1 
-              className="text-4xl lg:text-6xl font-bold leading-tight"
+              className="text-3xl lg:text-5xl font-bold leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -58,7 +58,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </motion.h1>
 
             <motion.p 
-              className="text-lg text-muted-foreground leading-relaxed max-w-xl"
+              className="text-base text-muted-foreground leading-relaxed max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -73,17 +73,17 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               transition={{ delay: 0.5 }}
             >
               <Button 
-                size="lg" 
-                className="h-12 px-6 text-base shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105" 
+                size="default" 
+                className="h-10 px-5 text-sm shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all hover:scale-105" 
                 onClick={() => scrollToSection('services')}
               >
                 <Icon name="ArrowRight" size={20} className="mr-2" />
                 Подробнее о технологиях
               </Button>
               <Button 
-                size="lg" 
+                size="default" 
                 variant="outline" 
-                className="h-12 px-6 text-base hover:scale-105 transition-all" 
+                className="h-10 px-5 text-sm hover:scale-105 transition-all" 
                 onClick={() => scrollToSection('contacts')}
               >
                 <Icon name="Phone" size={20} className="mr-2" />
@@ -92,7 +92,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </motion.div>
 
             <motion.div 
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50"
+              className="grid grid-cols-3 gap-4 pt-6 border-t border-border/50"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -110,7 +110,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative">
-                    <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent mb-1.5">
+                    <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent mb-1">
                       <AnimatedCounter 
                         end={stat.value} 
                         suffix={stat.suffix}
@@ -118,7 +118,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                         duration={2.5}
                       />
                     </div>
-                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                       {stat.label}
                     </div>
                   </div>
@@ -141,20 +141,20 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <motion.img 
                 src="https://cdn.poehali.dev/files/3ea564e1-504c-4086-937c-2ac7babaa779.jpg"
                 alt="Детали трансмиссии Volkswagen Tiguan"
-                className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover border border-border/50"
+                className="relative rounded-2xl shadow-2xl w-full h-[400px] object-cover border border-border/50"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               />
               
               <motion.div 
-                className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-md p-5 rounded-xl border border-border/50 shadow-2xl"
+                className="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur-md p-4 rounded-xl border border-border/50 shadow-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <Icon name="Car" className="text-primary" size={24} />
-                  <span className="font-bold text-lg">Эксперты по Volkswagen Tiguan I</span>
+                <div className="flex items-center gap-2 mb-2">
+                  <Icon name="Car" className="text-primary" size={20} />
+                  <span className="font-bold text-base">Эксперты по Volkswagen Tiguan I</span>
                 </div>
                 <p className="text-sm text-muted-foreground">Восстановление шлицевых соединений трансмиссии с гарантией</p>
               </motion.div>

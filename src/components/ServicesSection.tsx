@@ -155,20 +155,20 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-16 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
+      <section id="services" className="py-12 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <motion.div 
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Технологии</span>
               </motion.div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Специализация — Volkswagen Tiguan I (5N)
               </h2>
-              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
+              <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
                 Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
               </p>
             </div>
@@ -182,16 +182,16 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="group h-full border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
-                    <CardHeader className="space-y-3">
+                    <CardHeader className="space-y-2 pb-4">
                       <motion.div 
-                        className="w-14 h-14 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-1.5 shadow-lg"
+                        className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-1 shadow-lg"
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon name={service.icon} className="text-primary" size={28} />
+                        <Icon name={service.icon} className="text-primary" size={24} />
                       </motion.div>
-                      <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">{service.description}</CardDescription>
+                      <CardTitle className="text-base font-bold">{service.title}</CardTitle>
+                      <CardDescription className="text-xs leading-relaxed">{service.description}</CardDescription>
                     </CardHeader>
                   </Card>
                 </motion.div>
@@ -203,29 +203,29 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section className="py-12 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
+      <section className="py-10 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <motion.div 
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Сертификация</span>
               </motion.div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Патенты и лицензии
               </h2>
-              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
+              <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
                 Запатентованные технологии восстановления и полный пакет разрешительной документации
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: 'Award', number: '№2829377', title: 'Патент РФ', desc: 'Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях' },
               { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества', desc: 'Система менеджмента качества производства' },
@@ -238,16 +238,16 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="h-full border-border/50 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 text-center">
-                    <CardContent className="pt-6 pb-5 space-y-3">
+                    <CardContent className="pt-5 pb-4 space-y-2">
                       <motion.div 
-                        className="w-14 h-14 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-xl flex items-center justify-center mx-auto shadow-lg"
+                        className="w-12 h-12 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-lg flex items-center justify-center mx-auto shadow-lg"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon name={item.icon} className="text-primary" size={28} />
+                        <Icon name={item.icon} className="text-primary" size={24} />
                       </motion.div>
                       <div>
-                        <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                        <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-0.5">
                           {item.number}
                         </div>
                         <p className="text-xs font-semibold text-foreground mb-1.5">{item.title}</p>
@@ -262,9 +262,9 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
-              <CardContent className="p-6">
+              <CardContent className="p-5">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <img 
@@ -303,9 +303,9 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-16 px-4 bg-muted/20">
+      <section id="faq" className="py-12 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <div className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4">
               <span className="text-xs font-semibold text-primary uppercase tracking-wide">FAQ</span>
             </div>
@@ -417,9 +417,9 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="turnkey" className="py-16 px-4 bg-gradient-to-b from-background to-muted/30">
+      <section id="turnkey" className="py-12 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <div className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4">
               <span className="text-xs font-semibold text-primary uppercase tracking-wide">Комплексное решение</span>
             </div>
@@ -430,11 +430,11 @@ const ServicesSection = () => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
               <Card className="border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <CardTitle className="flex items-center gap-3 text-xl">
-                    <Icon name="CheckCircle" className="text-primary" size={24} />
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Icon name="CheckCircle" className="text-primary" size={20} />
                     Что входит в услугу
                   </CardTitle>
                 </CardHeader>
@@ -481,9 +481,9 @@ const ServicesSection = () => {
               </Card>
 
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <CardTitle className="flex items-center gap-3 text-xl">
-                    <Icon name="Star" className="text-primary" size={24} />
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Icon name="Star" className="text-primary" size={20} />
                     Преимущества
                   </CardTitle>
                 </CardHeader>
