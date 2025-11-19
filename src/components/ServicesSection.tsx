@@ -203,29 +203,29 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section className="py-20 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
+      <section className="py-12 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <motion.div 
-                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Сертификация</span>
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Сертификация</span>
               </motion.div>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Патенты и лицензии
               </h2>
-              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
                 Запатентованные технологии восстановления и полный пакет разрешительной документации
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: 'Award', number: '№2829377', title: 'Патент РФ', desc: 'Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях' },
               { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества', desc: 'Система менеджмента качества производства' },
@@ -238,19 +238,19 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="h-full border-border/50 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 text-center">
-                    <CardContent className="pt-8 pb-6 space-y-4">
+                    <CardContent className="pt-6 pb-5 space-y-3">
                       <motion.div 
-                        className="w-20 h-20 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-2xl flex items-center justify-center mx-auto shadow-lg"
+                        className="w-14 h-14 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-xl flex items-center justify-center mx-auto shadow-lg"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon name={item.icon} className="text-primary" size={40} />
+                        <Icon name={item.icon} className="text-primary" size={28} />
                       </motion.div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
                           {item.number}
                         </div>
-                        <p className="text-sm font-semibold text-foreground mb-2">{item.title}</p>
+                        <p className="text-xs font-semibold text-foreground mb-1.5">{item.title}</p>
                         <p className="text-xs text-muted-foreground leading-relaxed">
                           {item.desc}
                         </p>
@@ -262,9 +262,9 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <div className="mt-12">
+          <div className="mt-8">
             <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
-              <CardContent className="p-8">
+              <CardContent className="p-6">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <img 
