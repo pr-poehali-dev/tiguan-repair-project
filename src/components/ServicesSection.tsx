@@ -174,12 +174,13 @@ const ServicesSection = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ type: 'spring', stiffness: 300 }}
+                  className="w-full max-w-sm"
                 >
                   <Card className="group h-full border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
                     <CardHeader className="space-y-2 pb-4">
