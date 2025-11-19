@@ -41,6 +41,23 @@ const ServicesSection = () => {
     setSelectedImage(imageUrl);
   };
 
+  const handleShare = (e: React.MouseEvent, item: { title: string; image: string; description: string }) => {
+    e.stopPropagation();
+    const shareUrl = window.location.href;
+    const shareText = `${item.title} - Мега Шлиц: ${item.description}`;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: item.title,
+        text: shareText,
+        url: shareUrl
+      }).catch(() => {});
+    } else {
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+
   const galleryImages = [
     {
       url: 'https://cdn.poehali.dev/files/90506945-c80c-4a2c-bc39-960d87906952.jpg',
@@ -865,11 +882,18 @@ const ServicesSection = () => {
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-3 left-3 right-3">
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
                           <div className="flex items-center gap-2 text-white">
                             <Icon name="ZoomIn" size={18} />
                             <span className="text-sm font-semibold">Увеличить фото</span>
                           </div>
+                          <button
+                            onClick={(e) => handleShare(e, item)}
+                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg transition-colors text-white text-sm font-semibold"
+                          >
+                            <Icon name="Share2" size={16} />
+                            <span className="hidden sm:inline">Поделиться</span>
+                          </button>
                         </div>
                       </div>
                     </div>
