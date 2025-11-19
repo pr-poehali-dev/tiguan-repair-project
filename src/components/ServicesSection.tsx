@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import AnimatedSection from '@/components/AnimatedSection';
+import SectionDivider from '@/components/SectionDivider';
 
 const ServicesSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -152,102 +155,113 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технологии</span>
+      <section id="services" className="py-24 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        
+        <div className="container mx-auto relative z-10">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <motion.div 
+                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технологии</span>
+              </motion.div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Специализация — Volkswagen Tiguan I (5N)
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+                Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
+              </p>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Специализация — Volkswagen Tiguan I (5N)</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
-            </p>
-          </div>
+          </AnimatedSection>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 bg-card/50 backdrop-blur-sm">
-                <CardHeader className="space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                    <Icon name={service.icon} className="text-primary" size={32} />
-                  </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
-                </CardHeader>
-
-              </Card>
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Card className="group h-full border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+                    <CardHeader className="space-y-4">
+                      <motion.div 
+                        className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mb-2 shadow-lg"
+                        whileHover={{ rotate: 360, scale: 1.1 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <Icon name={service.icon} className="text-primary" size={32} />
+                      </motion.div>
+                      <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
+                      <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-r from-primary/5 via-background to-accent/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Сертификация</span>
+      <SectionDivider variant="gradient" />
+
+      <section className="py-20 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+        
+        <div className="container mx-auto relative z-10">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <motion.div 
+                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Сертификация</span>
+              </motion.div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Патенты и лицензии
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+                Запатентованные технологии восстановления и полный пакет разрешительной документации
+              </p>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Патенты и лицензии</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              Запатентованные технологии восстановления и полный пакет разрешительной документации
-            </p>
-          </div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
-              <CardContent className="pt-8 pb-6 space-y-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Icon name="Award" className="text-primary" size={40} />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">№2829377</div>
-                  <p className="text-sm font-semibold text-foreground mb-2">Патент РФ</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
-              <CardContent className="pt-8 pb-6 space-y-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Icon name="FileCheck" className="text-primary" size={40} />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">ISO 9001</div>
-                  <p className="text-sm font-semibold text-foreground mb-2">Сертификат качества</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Система менеджмента качества производства
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
-              <CardContent className="pt-8 pb-6 space-y-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Icon name="Shield" className="text-primary" size={40} />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">5+</div>
-                  <p className="text-sm font-semibold text-foreground mb-2">Лет опыта</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">Работаем с 2023 года. Более 50 корпоративных клиентов</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
-              <CardContent className="pt-8 pb-6 space-y-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <Icon name="Users" className="text-primary" size={40} />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-1">100%</div>
-                  <p className="text-sm font-semibold text-foreground mb-2">Легально</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">ООО с полным пакетом документов. Без НДС</p>
-                </div>
-              </CardContent>
-            </Card>
+            {[
+              { icon: 'Award', number: '№2829377', title: 'Патент РФ', desc: 'Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях' },
+              { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества', desc: 'Система менеджмента качества производства' },
+              { icon: 'Shield', number: '5+', title: 'Лет опыта', desc: 'Работаем с 2023 года. Более 50 корпоративных клиентов' },
+              { icon: 'Users', number: '100%', title: 'Легально', desc: 'ООО с полным пакетом документов. Без НДС' }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Card className="h-full border-border/50 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 text-center">
+                    <CardContent className="pt-8 pb-6 space-y-4">
+                      <motion.div 
+                        className="w-20 h-20 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-2xl flex items-center justify-center mx-auto shadow-lg"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <Icon name={item.icon} className="text-primary" size={40} />
+                      </motion.div>
+                      <div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                          {item.number}
+                        </div>
+                        <p className="text-sm font-semibold text-foreground mb-2">{item.title}</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
           </div>
 
           <div className="mt-12">
