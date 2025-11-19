@@ -663,7 +663,7 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          <Card className="mt-16 max-w-4xl mx-auto border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
+          <Card className="mt-16 border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
             <CardHeader className="text-center">
               <CardTitle className="flex items-center justify-center gap-3 text-2xl mb-2">
                 <Icon name="ShieldCheck" className="text-primary" size={28} />
