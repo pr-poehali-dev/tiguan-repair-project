@@ -184,7 +184,7 @@ const ServicesSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="group hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm text-center">
               <CardContent className="pt-8 pb-6 space-y-4">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
@@ -242,7 +242,7 @@ const ServicesSection = () => {
             </Card>
           </div>
 
-          <div className="mt-12 max-w-4xl mx-auto">
+          <div className="mt-12">
             <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -295,7 +295,7 @@ const ServicesSection = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="space-y-4">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-start gap-3 text-lg">
@@ -553,7 +553,7 @@ const ServicesSection = () => {
             </h3>
           </div>
           
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative group">
               <Card className="border-2 border-dashed border-primary/30 bg-card/80 backdrop-blur-sm hover:border-primary/60 transition-all duration-300 h-full">
                 <CardContent className="pt-12 pb-8 text-center">
@@ -698,7 +698,7 @@ const ServicesSection = () => {
             </CardContent>
           </Card>
 
-          <div className="mt-12 max-w-5xl mx-auto">
+          <div className="mt-12">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center gap-3 text-2xl">
@@ -813,7 +813,7 @@ const ServicesSection = () => {
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Примеры восстановленных шлицевых соединений с высокоточной обработкой на станках с ЧПУ и термообработкой</p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
                   onClick={() => setSelectedImage('https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg')}>
               <div className="relative overflow-hidden">
@@ -888,7 +888,7 @@ const ServicesSection = () => {
           </div>
 
           <div className="mt-12 space-y-8">
-            <Card className="max-w-4xl mx-auto border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+            <Card className="border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center gap-3 text-2xl">
                   <Icon name="Video" className="text-primary" size={28} />
@@ -923,7 +923,7 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
 
-            <Card className="max-w-3xl mx-auto border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+            <Card className="border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
               <CardContent className="py-8 px-6">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
