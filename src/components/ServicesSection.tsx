@@ -263,7 +263,7 @@ const ServicesSection = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-4">
             <AnimatedSection delay={0.1}>
               <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
                 <CardContent className="p-6">
@@ -351,7 +351,7 @@ const ServicesSection = () => {
           </div>
 
           <AnimatedSection delay={0.3}>
-            <Card className="mt-6 border-border/50 bg-card/50 backdrop-blur-sm">
+            <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
