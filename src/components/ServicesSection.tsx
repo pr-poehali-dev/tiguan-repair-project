@@ -195,7 +195,7 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-12 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
+      <section id="services" className="py-8 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -244,7 +244,7 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section id="patents" className="py-12 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+      <section id="patents" className="py-8 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -370,7 +370,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-12 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="faq" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
             <div className="text-center mb-10">
@@ -489,7 +489,7 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="turnkey" className="py-12 px-4 bg-gradient-to-b from-background via-muted/5 to-muted/20">
+      <section id="turnkey" className="py-8 px-4 bg-gradient-to-b from-background via-muted/5 to-muted/20">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -589,7 +589,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="guarantees" className="py-12 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="guarantees" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -809,7 +809,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="gallery" className="py-12 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+      <section id="gallery" className="py-8 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-10">
@@ -976,7 +976,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-12 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="contacts" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-10">
