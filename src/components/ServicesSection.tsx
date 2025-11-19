@@ -297,7 +297,7 @@ const ServicesSection = () => {
                       </div>
                     </div>
 
-                    <div className="pt-3 border-t border-border/50">
+                    <div className="pt-2 border-t border-border/50">
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="secondary" className="text-xs">
                           <Icon name="MapPin" className="mr-1" size={12} />
@@ -321,7 +321,7 @@ const ServicesSection = () => {
             <AnimatedSection delay={0.2}>
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full overflow-hidden">
                 <CardContent className="p-0 h-full flex flex-col">
-                  <div className="p-4 border-b border-border/50">
+                  <div className="p-3 border-b border-border/50">
                     <div className="flex items-center gap-2 mb-1">
                       <Icon name="FileText" className="text-primary" size={20} />
                       <h3 className="text-base font-bold">Свидетельство о патенте</h3>
@@ -329,7 +329,7 @@ const ServicesSection = () => {
                     <p className="text-xs text-muted-foreground">Официальный документ Роспатента</p>
                   </div>
                   
-                  <div className="flex-1 p-4 flex items-center justify-center bg-muted/20">
+                  <div className="flex-1 p-3 flex items-center justify-center bg-muted/20">
                     <motion.img 
                       src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
                       alt="Патент на изобретение №2829377"
@@ -352,7 +352,7 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.3}>
             <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
+              <CardContent className="p-4">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Lightbulb" className="text-accent-foreground" size={24} />
@@ -447,7 +447,7 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.6}>
             <Card className="mt-6 border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardContent className="p-5">
+              <CardContent className="p-4">
                 <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="MessageCircle" className="text-primary" size={24} />
@@ -528,11 +528,11 @@ const ServicesSection = () => {
             ].map((step, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-5">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                  <CardContent className="p-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-2">
                       <Icon name={step.icon} className="text-primary" size={24} />
                     </div>
-                    <h3 className="font-bold mb-3">{step.title}</h3>
+                    <h3 className="font-bold mb-2">{step.title}</h3>
                     <ul className="space-y-1.5">
                       {step.items.map((item, i) => (
                         <li key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -549,8 +549,8 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.4}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 via-primary/3 to-accent/5 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-3 gap-6 items-center">
+              <CardContent className="p-4">
+                <div className="grid md:grid-cols-3 gap-4 items-center">
                   <div className="text-center">
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                       <Icon name="Calendar" className="text-primary" size={28} />
@@ -574,8 +574,8 @@ const ServicesSection = () => {
                   </div>
                 </div>
                 
-                <div className="mt-6 pt-6 border-t border-border/50 text-center">
-                  <p className="text-sm font-semibold mb-3">Узнайте стоимость вашего ремонта</p>
+                <div className="mt-4 pt-4 border-t border-border/50 text-center">
+                  <p className="text-sm font-semibold mb-2">Узнайте стоимость вашего ремонта</p>
                   <a href="tel:+79202520352">
                     <Button size="lg" className="font-bold">
                       <Icon name="Phone" size={20} className="mr-2" />
@@ -675,14 +675,14 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.6}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4 mb-4">
+              <CardContent className="p-4">
+                <div className="flex items-start gap-3 mb-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="ShieldCheck" className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">Гарантия качества 18 месяцев</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <h3 className="text-lg font-bold mb-1.5">Гарантия качества 18 месяцев</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
                       Официальная гарантия без ограничения пробега. Уверены в качестве — работаем по патентованной технологии.
                     </p>
                   </div>
@@ -704,7 +704,7 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
 
-          <div className="mt-12">
+          <div className="mt-6">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center gap-3 text-2xl">
@@ -716,13 +716,13 @@ const ServicesSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 gap-8 mb-6">
-                  <div className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-6 mb-4">
+                  <div className="space-y-3">
                     <h4 className="font-bold text-lg flex items-center gap-2">
                       <Icon name="PackageOpen" className="text-primary" size={20} />
                       Отправка деталей к нам
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2">
                       <li className="flex items-start gap-3">
                         <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
                         <span className="text-sm text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
@@ -738,12 +738,12 @@ const ServicesSection = () => {
                     </ul>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <h4 className="font-bold text-lg flex items-center gap-2">
                       <Icon name="PackageCheck" className="text-primary" size={20} />
                       Возврат восстановленных деталей
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2">
                       <li className="flex items-start gap-3">
                         <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
                         <span className="text-sm text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
@@ -760,9 +760,9 @@ const ServicesSection = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-6">
-                    <div className="flex items-start gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
+                    <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon name="Info" className="text-primary" size={24} />
                       </div>
@@ -780,8 +780,8 @@ const ServicesSection = () => {
                     </div>
                   </div>
 
-                  <div className="bg-accent/5 border border-accent/20 rounded-xl p-6">
-                    <div className="flex items-start gap-4">
+                  <div className="bg-accent/5 border border-accent/20 rounded-xl p-4">
+                    <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon name="Calculator" className="text-accent-foreground" size={24} />
                       </div>
@@ -907,7 +907,7 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <div className="mt-8 grid md:grid-cols-2 gap-5">
+          <div className="mt-6 grid md:grid-cols-2 gap-4">
             <AnimatedSection delay={0.4}>
               <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
                 <CardContent className="p-6">
@@ -922,7 +922,7 @@ const ServicesSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-4">
+                  <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-3">
                     <iframe
                       src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
                       frameBorder="0"
@@ -948,12 +948,12 @@ const ServicesSection = () => {
 
             <AnimatedSection delay={0.5}>
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
-                <CardContent className="p-6 h-full flex flex-col justify-center">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <CardContent className="p-4 h-full flex flex-col justify-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
                     <Icon name="Camera" className="text-primary" size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Фотоотчёт каждого заказа</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     Документируем все этапы: от получения детали до финального контроля. Вы видите весь процесс восстановления вашей детали.
                   </p>
                   <div className="space-y-2">
@@ -995,7 +995,7 @@ const ServicesSection = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-5 mb-8">
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
             {[
               {
                 icon: 'Phone',
@@ -1058,10 +1058,10 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.5}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row items-start gap-6">
+              <CardContent className="p-4">
+                <div className="flex flex-col md:flex-row items-start gap-4">
                   <div className="flex-1">
-                    <div className="flex items-start gap-3 mb-4">
+                    <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon name="MessageSquare" className="text-primary" size={20} />
                       </div>
@@ -1073,7 +1073,7 @@ const ServicesSection = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-2">
                       <a href="tel:+79202520352">
                         <Button size="lg" className="w-full justify-start font-bold">
                           <Icon name="Phone" size={20} className="mr-2" />
@@ -1116,9 +1116,9 @@ const ServicesSection = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={0.6}>
-            <Card className="mt-6 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+            <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="p-5 border-b border-border/50">
+                <div className="p-4 border-b border-border/50">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                       <Icon name="MapPin" className="text-primary" size={20} />
