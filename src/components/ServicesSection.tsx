@@ -1084,17 +1084,28 @@ const ServicesSection = () => {
                   />
                 </div>
                 <div className="p-4 bg-muted/20 border-t border-border/50">
-                  <a 
-                    href="https://yandex.ru/maps/?rtext=~56.253544,43.914851" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <Button variant="outline" className="w-full">
-                      <Icon name="Navigation" size={18} className="mr-2" />
-                      Проложить маршрут
-                    </Button>
-                  </a>
+                  <div className="grid grid-cols-2 gap-3">
+                    <a 
+                      href="https://yandex.ru/maps/?rtext=~56.253544,43.914851" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" className="w-full">
+                        <Icon name="Navigation" size={18} className="mr-2" />
+                        Яндекс.Карты
+                      </Button>
+                    </a>
+                    <a 
+                      href="https://www.google.com/maps/dir/?api=1&destination=56.253544,43.914851" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" className="w-full">
+                        <Icon name="MapPin" size={18} className="mr-2" />
+                        Google Maps
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
