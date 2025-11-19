@@ -373,7 +373,7 @@ const ServicesSection = () => {
       <section id="faq" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <motion.div 
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
@@ -812,7 +812,7 @@ const ServicesSection = () => {
       <section id="gallery" className="py-8 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <motion.div 
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
@@ -979,7 +979,7 @@ const ServicesSection = () => {
       <section id="contacts" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <motion.div 
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}

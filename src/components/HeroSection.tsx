@@ -13,7 +13,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section id="home" className="relative pt-20 pb-12 px-4 overflow-hidden">
+    <section id="home" className="relative pt-20 pb-8 px-4 overflow-hidden">
       <motion.div 
         className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"
         style={{ y, opacity }}

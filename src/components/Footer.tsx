@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer = ({ scrollToSection }: FooterProps) => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-6 px-4">
+    <footer className="bg-secondary text-secondary-foreground py-8 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-4 mb-4">
           <div>
