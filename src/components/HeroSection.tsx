@@ -98,7 +98,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               transition={{ delay: 0.6 }}
             >
               {[
-                { value: 5, suffix: '+', label: 'лет опыта', decimal: false },
+                { value: 15, suffix: '+', label: 'лет опыта', decimal: false },
                 { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
                 { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
               ].map((stat, index) => (
