@@ -11,10 +11,15 @@ interface HeaderProps {
 
 const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (window.scrollY / windowHeight) * 100;
+      setScrollProgress(scrolled);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,6 +40,13 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
           : 'border-border/50 shadow-lg'
       }`}
     >
+      <motion.div
+        className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary via-accent to-primary"
+        style={{ width: `${scrollProgress}%` }}
+        initial={{ width: 0 }}
+        animate={{ width: `${scrollProgress}%` }}
+        transition={{ duration: 0.1, ease: 'easeOut' }}
+      />
       <motion.div 
         className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none"
         animate={{ opacity: isScrolled ? 0.3 : 1 }}
