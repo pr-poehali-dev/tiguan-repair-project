@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,6 +17,29 @@ const ServicesSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [imageViews, setImageViews] = useState<{ [key: string]: number }>({});
+
+  useEffect(() => {
+    const storedViews = localStorage.getItem('galleryViews');
+    if (storedViews) {
+      setImageViews(JSON.parse(storedViews));
+    } else {
+      const initialViews = {
+        'gallery-1': 245,
+        'gallery-2': 189,
+        'gallery-3': 156
+      };
+      setImageViews(initialViews);
+      localStorage.setItem('galleryViews', JSON.stringify(initialViews));
+    }
+  }, []);
+
+  const handleImageView = (imageId: string, imageUrl: string) => {
+    const newViews = { ...imageViews, [imageId]: (imageViews[imageId] || 0) + 1 };
+    setImageViews(newViews);
+    localStorage.setItem('galleryViews', JSON.stringify(newViews));
+    setSelectedImage(imageUrl);
+  };
 
   const galleryImages = [
     {
@@ -791,18 +814,21 @@ const ServicesSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
+                id: 'gallery-1',
                 image: 'https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg',
                 title: 'Готовые детали',
                 description: 'Восстановленные шлицы после ЧПУ и термообработки',
                 badge: null
               },
               {
+                id: 'gallery-2',
                 image: 'https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg',
                 title: 'До и после',
                 description: 'Наглядное сравнение изношенных и восстановленных шлицов',
                 badge: 'До / После'
               },
               {
+                id: 'gallery-3',
                 image: 'https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg',
                 title: 'Дифференциал и вал',
                 description: 'Восстановление до заводского состояния',
@@ -817,7 +843,7 @@ const ServicesSection = () => {
                 >
                   <Card 
                     className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
-                    onClick={() => setSelectedImage(item.image)}
+                    onClick={() => handleImageView(item.id, item.image)}
                   >
                     <div className="relative overflow-hidden">
                       <img 
@@ -825,6 +851,12 @@ const ServicesSection = () => {
                         alt={item.title}
                         className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
+                      <div className="absolute top-3 left-3">
+                        <Badge className="bg-background/90 text-foreground shadow-lg text-xs backdrop-blur-sm">
+                          <Icon name="Eye" size={12} className="mr-1" />
+                          {imageViews[item.id] || 0}
+                        </Badge>
+                      </div>
                       {item.badge && (
                         <div className="absolute top-3 right-3">
                           <Badge className="bg-primary text-primary-foreground shadow-lg text-xs">
