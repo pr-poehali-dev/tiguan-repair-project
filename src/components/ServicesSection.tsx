@@ -222,8 +222,8 @@ const ServicesSection = () => {
               { icon: 'Users', number: '100%', title: 'Легально' }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm text-center">
-                  <CardContent className="pt-4 pb-3">
+                <Card className="border-border/50 bg-card/50 backdrop-blur-sm text-center h-full">
+                  <CardContent className="pt-4 pb-3 h-full flex flex-col justify-center">
                     <Icon name={item.icon} className="text-primary mx-auto mb-2" size={20} />
                     <div className="text-lg font-bold text-primary mb-1">
                       {item.number}
@@ -398,7 +398,7 @@ const ServicesSection = () => {
 
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 mb-8">
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm h-full">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Icon name="CheckCircle" className="text-primary" size={20} />
@@ -427,7 +427,7 @@ const ServicesSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Icon name="Star" className="text-primary" size={20} />
@@ -713,7 +713,7 @@ const ServicesSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                   onClick={() => setSelectedImage('https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg')}>
               <div className="relative overflow-hidden">
                 <img 
@@ -730,13 +730,13 @@ const ServicesSection = () => {
                   </div>
                 </div>
               </div>
-              <CardContent className="pt-4">
+              <CardContent className="pt-4 flex-1 flex flex-col">
                 <h3 className="font-bold text-lg mb-2">Восстановленные детали трансмиссии</h3>
-                <p className="text-sm text-muted-foreground">Шлицевые соединения после механической обработки и термообработки</p>
+                <p className="text-sm text-muted-foreground flex-1">Шлицевые соединения после механической обработки и термообработки</p>
               </CardContent>
             </Card>
 
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                   onClick={() => setSelectedImage('https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg')}>
               <div className="relative overflow-hidden">
                 <img 
@@ -756,13 +756,13 @@ const ServicesSection = () => {
                   </div>
                 </div>
               </div>
-              <CardContent className="pt-4">
+              <CardContent className="pt-4 flex-1 flex flex-col">
                 <h3 className="font-bold text-lg mb-2">Сравнение: изношенная и восстановленная деталь</h3>
-                <p className="text-sm text-muted-foreground">Наглядная демонстрация качества восстановления шлицов</p>
+                <p className="text-sm text-muted-foreground flex-1">Наглядная демонстрация качества восстановления шлицов</p>
               </CardContent>
             </Card>
 
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
                   onClick={() => setSelectedImage('https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg')}>
               <div className="relative overflow-hidden">
                 <img 
@@ -779,9 +779,9 @@ const ServicesSection = () => {
                   </div>
                 </div>
               </div>
-              <CardContent className="pt-4">
+              <CardContent className="pt-4 flex-1 flex flex-col">
                 <h3 className="font-bold text-lg mb-2">Восстановленный дифференциал и вал раздатки</h3>
-                <p className="text-sm text-muted-foreground">Восстановленные детали до заводского состояния</p>
+                <p className="text-sm text-muted-foreground flex-1">Восстановленные детали до заводского состояния</p>
               </CardContent>
             </Card>
           </div>
