@@ -960,14 +960,14 @@ const ServicesSection = () => {
                 title: 'Email',
                 content: 'megashlic@yandex.ru',
                 link: 'mailto:megashlic@yandex.ru',
-                subtitle: 'Ответим в течение часа'
+                subtitle: 'Напишите нам'
               },
               {
                 icon: 'MessageCircle',
                 title: 'WhatsApp',
                 content: 'Написать в мессенджер',
                 link: 'https://wa.me/79202520352',
-                subtitle: 'Быстрый ответ'
+                subtitle: 'Удобная связь'
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
