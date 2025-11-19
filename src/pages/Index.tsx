@@ -4,6 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ScrollToTop from '@/components/ScrollToTop';
+import ChatBot from '@/components/ChatBot';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -21,6 +23,8 @@ const Index = () => {
       <ServicesSection />
       <Footer scrollToSection={scrollToSection} />
       <WhatsAppButton />
+      <ScrollToTop />
+      <ChatBot />
     </div>
   );
 };

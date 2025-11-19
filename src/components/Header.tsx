@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import MobileMenu from '@/components/MobileMenu';
 
 interface HeaderProps {
   activeSection: string;
@@ -19,7 +20,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
             />
             <div className="flex flex-col items-start">
               <span className="text-xl font-bold text-foreground">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-              <span className="text-xs text-muted-foreground">Эксперты по VW Tiguan I</span>
+              <span className="text-xs text-muted-foreground hidden sm:block">Эксперты по VW Tiguan I</span>
             </div>
           </button>
           <div className="hidden lg:flex items-center space-x-2">
@@ -42,12 +43,15 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               </button>
             ))}
           </div>
-          <a href="tel:+79202520352">
-            <Button className="hidden md:flex h-11 px-6 shadow-lg">
-              <Icon name="Phone" size={18} className="mr-2" />
-              +7 (920) 252-03-52
-            </Button>
-          </a>
+          <div className="flex items-center gap-2">
+            <a href="tel:+79202520352" className="hidden md:block">
+              <Button className="h-11 px-6 shadow-lg">
+                <Icon name="Phone" size={18} className="mr-2" />
+                +7 (920) 252-03-52
+              </Button>
+            </a>
+            <MobileMenu activeSection={activeSection} scrollToSection={scrollToSection} />
+          </div>
         </div>
       </div>
     </nav>
