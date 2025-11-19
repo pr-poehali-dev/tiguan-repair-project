@@ -180,10 +180,10 @@ const ServicesSection = () => {
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className="w-full max-w-sm"
+                  className="w-full max-w-sm h-full"
                 >
-                  <Card className="group h-full border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
-                    <CardHeader className="space-y-2 pb-4">
+                  <Card className="group h-full flex flex-col border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+                    <CardHeader className="space-y-2 pb-4 flex-1 flex flex-col">
                       <motion.div 
                         className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-1 shadow-lg"
                         whileHover={{ rotate: 360, scale: 1.1 }}
@@ -192,7 +192,7 @@ const ServicesSection = () => {
                         <Icon name={service.icon} className="text-primary" size={24} />
                       </motion.div>
                       <CardTitle className="text-base font-bold">{service.title}</CardTitle>
-                      <CardDescription className="text-xs leading-relaxed">{service.description}</CardDescription>
+                      <CardDescription className="text-xs leading-relaxed flex-1">{service.description}</CardDescription>
                     </CardHeader>
                   </Card>
                 </motion.div>
