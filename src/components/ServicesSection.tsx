@@ -155,26 +155,26 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-24 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
+      <section id="services" className="py-16 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <motion.div 
-                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-sm font-semibold text-primary uppercase tracking-wide">Технологии</span>
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Технологии</span>
               </motion.div>
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Специализация — Volkswagen Tiguan I (5N)
               </h2>
-              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-muted-foreground text-base max-w-2xl mx-auto leading-relaxed">
                 Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
@@ -182,16 +182,16 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="group h-full border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
-                    <CardHeader className="space-y-4">
+                    <CardHeader className="space-y-3">
                       <motion.div 
-                        className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mb-2 shadow-lg"
+                        className="w-14 h-14 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center mb-1.5 shadow-lg"
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon name={service.icon} className="text-primary" size={32} />
+                        <Icon name={service.icon} className="text-primary" size={28} />
                       </motion.div>
-                      <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                      <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                      <CardTitle className="text-lg font-bold">{service.title}</CardTitle>
+                      <CardDescription className="text-sm leading-relaxed">{service.description}</CardDescription>
                     </CardHeader>
                   </Card>
                 </motion.div>
@@ -303,94 +303,94 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-24 px-4 bg-muted/20">
+      <section id="faq" className="py-16 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">FAQ</span>
+          <div className="text-center mb-10">
+            <div className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">FAQ</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Частые вопросы</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Частые вопросы</h2>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
               Ответы на популярные вопросы о восстановлении шлицевых соединений Volkswagen Tiguan I
             </p>
           </div>
 
           <div className="space-y-4">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Как понять, что шлицы на Tiguan I изношены?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Основные признаки: вибрация при разгоне и торможении, металлический стук при трогании с места, рывки при переключении передач, гул со стороны раздаточной коробки. Если заметили хотя бы один симптом — необходима диагностика.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Сколько времени занимает восстановление?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">Восстановление занимает от 1 до 5 рабочих дней с момента получения деталей. Это зависит от загруженности производства. Однако благодаря отлаженному процессу, мы справляемся за 2 дня. </p>
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">Восстановление занимает от 1 до 5 рабочих дней с момента получения деталей. Это зависит от загруженности производства. Однако благодаря отлаженному процессу, мы справляемся за 2 дня. </p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Можно ли восстановить сильно изношенные шлицы?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">Да, наша запатентованная технология позволяет восстанавливать даже критически изношенные шлицы. Мы изготавливаем новое шлицевое соединение на станках с ЧПУ и проводим термообработку. Восстановленная деталь не уступает новой по прочности.</p>
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">Да, наша запатентованная технология позволяет восстанавливать даже критически изношенные шлицы. Мы изготавливаем новое шлицевое соединение на станках с ЧПУ и проводим термообработку. Восстановленная деталь не уступает новой по прочности.</p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Какая гарантия на восстановленные детали?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   На восстановление шлицевых соединений Volkswagen Tiguan I предоставляем гарантию 18 месяцев без ограничения пробега. Гарантия оформляется официальным талоном с печатью организации.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Нужно ли снимать детали с автомобиля самостоятельно?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Мы работаем только с уже снятыми деталями — занимаемся восстановлением, а не демонтажем. Вы можете снять детали самостоятельно или обратиться в любой автосервис. После этого привезите их к нам или отправьте транспортной компанией.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-start gap-3 text-lg">
-                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={22} />
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-start gap-3 text-base">
+                  <Icon name="HelpCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
                   Работаете ли вы только с Tiguan I?
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">Tiguan первого поколения — наша главная специализация, но мы также восстанавливаем шлицевые соединения на других автомобилях полноприводных моделях. Звоните — проконсультируем по вашему случаю.</p>
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground text-sm leading-relaxed">Tiguan первого поколения — наша главная специализация, но мы также восстанавливаем шлицевые соединения на других автомобилях полноприводных моделях. Звоните — проконсультируем по вашему случаю.</p>
               </CardContent>
             </Card>
           </div>
@@ -417,32 +417,32 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="turnkey" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
+      <section id="turnkey" className="py-16 px-4 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Комплексное решение</span>
+          <div className="text-center mb-10">
+            <div className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Комплексное решение</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ремонт под ключ</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ремонт под ключ</h2>
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
               Полный цикл восстановления трансмиссии Volkswagen Tiguan I — от диагностики до установки на автомобиль
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
               <Card className="border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-2xl">
-                    <Icon name="CheckCircle" className="text-primary" size={28} />
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center gap-3 text-xl">
+                    <Icon name="CheckCircle" className="text-primary" size={24} />
                     Что входит в услугу
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Icon name="Search" className="text-primary" size={18} />
+                <CardContent className="pt-0">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-7 h-7 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Search" className="text-primary" size={16} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Диагностика и дефектовка</h4>
@@ -450,8 +450,8 @@ const ServicesSection = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Icon name="Settings" className="text-primary" size={18} />
+                      <div className="w-7 h-7 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Settings" className="text-primary" size={16} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Восстановление шлицов</h4>
@@ -459,8 +459,8 @@ const ServicesSection = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Icon name="Package" className="text-primary" size={18} />
+                      <div className="w-7 h-7 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Package" className="text-primary" size={16} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Замена расходников</h4>
@@ -468,8 +468,8 @@ const ServicesSection = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Icon name="Wrench" className="text-primary" size={18} />
+                      <div className="w-7 h-7 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Wrench" className="text-primary" size={16} />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Сборка и контроль</h4>
@@ -481,44 +481,44 @@ const ServicesSection = () => {
               </Card>
 
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-2xl">
-                    <Icon name="Star" className="text-primary" size={28} />
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center gap-3 text-xl">
+                    <Icon name="Star" className="text-primary" size={24} />
                     Преимущества
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={20} />
+                <CardContent className="pt-0">
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2.5">
+                      <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={18} />
                       <div>
                         <h4 className="font-semibold mb-1">Экономия времени</h4>
                         <p className="text-sm text-muted-foreground">Не нужно искать мастеров под каждую операцию — делаем всё сами</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="DollarSign" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <div className="flex items-start gap-2.5">
+                      <Icon name="DollarSign" className="text-primary flex-shrink-0 mt-1" size={18} />
                       <div>
                         <h4 className="font-semibold mb-1">Выгоднее, чем по отдельности</h4>
                         <p className="text-sm text-muted-foreground">Комплексный ремонт дешевле суммы отдельных работ</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <div className="flex items-start gap-2.5">
+                      <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={18} />
                       <div>
                         <h4 className="font-semibold mb-1">Единая гарантия 18 месяцев</h4>
                         <p className="text-sm text-muted-foreground">Гарантия на весь узел целиком, а не на отдельные детали</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="UserCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <div className="flex items-start gap-2.5">
+                      <Icon name="UserCheck" className="text-primary flex-shrink-0 mt-1" size={18} />
                       <div>
                         <h4 className="font-semibold mb-1">Работаем с одним специалистом</h4>
                         <p className="text-sm text-muted-foreground">Вы общаетесь с одним мастером от начала до конца</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Icon name="FileText" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <div className="flex items-start gap-2.5">
+                      <Icon name="FileText" className="text-primary flex-shrink-0 mt-1" size={18} />
                       <div>
                         <h4 className="font-semibold mb-1">Полный фотоотчёт</h4>
                         <p className="text-sm text-muted-foreground">Фиксируем каждый этап работы с вашими деталями</p>
