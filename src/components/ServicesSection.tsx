@@ -769,325 +769,315 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="gallery" className="py-24 px-4 bg-muted/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Портфолио</span>
+      <section id="gallery" className="py-12 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <motion.div 
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Наши работы</span>
+              </motion.div>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Примеры восстановленных деталей
+              </h2>
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
+              </p>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Наши работы</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Примеры восстановленных шлицевых соединений с высокоточной обработкой на станках с ЧПУ и термообработкой</p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                image: 'https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg',
+                title: 'Готовые детали',
+                description: 'Восстановленные шлицы после ЧПУ и термообработки',
+                badge: null
+              },
+              {
+                image: 'https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg',
+                title: 'До и после',
+                description: 'Наглядное сравнение изношенных и восстановленных шлицов',
+                badge: 'До / После'
+              },
+              {
+                image: 'https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg',
+                title: 'Дифференциал и вал',
+                description: 'Восстановление до заводского состояния',
+                badge: null
+              }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="h-full"
+                >
+                  <Card 
+                    className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
+                    onClick={() => setSelectedImage(item.image)}
+                  >
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {item.badge && (
+                        <div className="absolute top-3 right-3">
+                          <Badge className="bg-primary text-primary-foreground shadow-lg text-xs">
+                            {item.badge}
+                          </Badge>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-3 left-3 right-3">
+                          <div className="flex items-center gap-2 text-white">
+                            <Icon name="ZoomIn" size={18} />
+                            <span className="text-sm font-semibold">Увеличить фото</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <CardContent className="pt-4 pb-4 flex-1 flex flex-col">
+                      <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground flex-1">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
-                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg')}>
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg"
-                  alt="Восстановленные шлицевые детали"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center gap-2 text-white">
-                      <Icon name="ZoomIn" size={20} />
-                      <span className="text-sm font-semibold">Увеличить</span>
+          <div className="mt-8 grid md:grid-cols-2 gap-5">
+            <AnimatedSection delay={0.4}>
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon name="Video" className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Видео процесса</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Смотрите, как мы восстанавливаем шлицы на нашем канале RuTube
+                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <CardContent className="pt-4 flex-1 flex flex-col">
-                <h3 className="font-bold text-lg mb-2">Восстановленные детали трансмиссии</h3>
-                <p className="text-sm text-muted-foreground flex-1">Шлицевые соединения после механической обработки и термообработки</p>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
-                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg')}>
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg"
-                  alt="До и после восстановления"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-primary text-primary-foreground shadow-lg">До / После</Badge>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center gap-2 text-white">
-                      <Icon name="ZoomIn" size={20} />
-                      <span className="text-sm font-semibold">Увеличить</span>
-                    </div>
+                  <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-4">
+                    <iframe
+                      src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
+                      frameBorder="0"
+                      allow="clipboard-write; autoplay"
+                      allowFullScreen
+                      className="w-full h-full"
+                      title="Видео восстановления шлицов"
+                    />
                   </div>
-                </div>
-              </div>
-              <CardContent className="pt-4 flex-1 flex flex-col">
-                <h3 className="font-bold text-lg mb-2">Сравнение: изношенная и восстановленная деталь</h3>
-                <p className="text-sm text-muted-foreground flex-1">Наглядная демонстрация качества восстановления шлицов</p>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
-                  onClick={() => setSelectedImage('https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg')}>
-              <div className="relative overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg"
-                  alt="Восстановление дифференциала"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center gap-2 text-white">
-                      <Icon name="ZoomIn" size={20} />
-                      <span className="text-sm font-semibold">Увеличить</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <CardContent className="pt-4 flex-1 flex flex-col">
-                <h3 className="font-bold text-lg mb-2">Восстановленный дифференциал и вал раздатки</h3>
-                <p className="text-sm text-muted-foreground flex-1">Восстановленные детали до заводского состояния</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 space-y-8">
-            <Card className="border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardHeader className="text-center">
-                <CardTitle className="flex items-center justify-center gap-3 text-2xl">
-                  <Icon name="Video" className="text-primary" size={28} />
-                  Видео наших работ
-                </CardTitle>
-                <CardDescription className="text-base">
-                  Процесс восстановления шлицевых соединений на нашем производстве
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="aspect-video rounded-xl overflow-hidden bg-black/5">
-                  <iframe
-                    src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
-                    frameBorder="0"
-                    allow="clipboard-write; autoplay"
-                    allowFullScreen
-                    className="w-full h-full"
-                    title="Видео работ по восстановлению шлицевых соединений"
-                  />
-                </div>
-                <div className="mt-6 text-center">
                   <a 
                     href="https://rutube.ru/channel/35843934/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-colors font-semibold"
                   >
-                    <Icon name="ExternalLink" size={20} />
-                    Больше видео на RuTube
+                    <Button variant="outline" className="w-full">
+                      <Icon name="ExternalLink" size={16} className="mr-2" />
+                      Больше видео на RuTube
+                    </Button>
                   </a>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
 
-            <Card className="border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardContent className="py-8 px-6">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Camera" className="text-primary" size={32} />
+            <AnimatedSection delay={0.5}>
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
+                <CardContent className="p-6 h-full flex flex-col justify-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <Icon name="Camera" className="text-primary" size={28} />
                   </div>
-                  <div className="text-center md:text-left flex-1">
-                    <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
-                    <p className="text-muted-foreground">
-                      Документируем все этапы восстановления: от получения детали до финального контроля качества
-                    </p>
+                  <h3 className="text-xl font-bold mb-3">Фотоотчёт каждого заказа</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    Документируем все этапы: от получения детали до финального контроля. Вы видите весь процесс восстановления вашей детали.
+                  </p>
+                  <div className="space-y-2">
+                    {[
+                      'Состояние при получении',
+                      'Процесс наплавки и обработки',
+                      'Термообработка и закалка',
+                      'Финальный контроль качества'
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                        <span className="text-xs">{item}</span>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      <section id="contacts" className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">Контакты</span>
+      <section id="contacts" className="py-12 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+        <div className="container mx-auto max-w-5xl">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <motion.div 
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Свяжитесь с нами</span>
+              </motion.div>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Узнайте стоимость восстановления
+              </h2>
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                Бесплатная консультация. Расчёт стоимости за 15 минут.
+              </p>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Узнайте точную стоимость</h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">Цена зависит от восстанавливаемой детали. Бесплатная консультация и расчёт.</p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-5 mb-8">
+            {[
+              {
+                icon: 'Phone',
+                title: 'Телефон',
+                content: '+7 (920) 252-03-52',
+                link: 'tel:+79202520352',
+                subtitle: 'Консультации 24/7'
+              },
+              {
+                icon: 'MapPin',
+                title: 'Адрес производства',
+                content: 'г. Нижний Новгород, Восточный проезд, 11/1',
+                link: null,
+                subtitle: 'Пн-Пт: 9:30 - 17:30'
+              },
+              {
+                icon: 'Mail',
+                title: 'Email',
+                content: 'megashlic@yandex.ru',
+                link: 'mailto:megashlic@yandex.ru',
+                subtitle: 'Ответим в течение часа'
+              },
+              {
+                icon: 'MessageCircle',
+                title: 'WhatsApp',
+                content: 'Написать в мессенджер',
+                link: 'https://wa.me/79202520352',
+                subtitle: 'Быстрый ответ'
+              }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                    <CardContent className="p-5">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon name={item.icon} className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-xs font-semibold text-muted-foreground mb-1">{item.title}</div>
+                          {item.link ? (
+                            <a href={item.link} className="text-sm font-bold text-foreground hover:text-primary transition-colors break-words">
+                              {item.content}
+                            </a>
+                          ) : (
+                            <div className="text-sm font-bold text-foreground break-words">{item.content}</div>
+                          )}
+                          <div className="text-xs text-muted-foreground mt-1">{item.subtitle}</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-            <Card className="lg:col-span-2 border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-2xl">Производственная база</CardTitle>
-                <CardDescription>Приезжайте или отправьте детали</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Phone" className="text-primary" size={22} />
+          <AnimatedSection delay={0.5}>
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="MessageSquare" className="text-primary" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold mb-1">Получить расчёт стоимости</h3>
+                        <p className="text-sm text-muted-foreground">
+                          Позвоните или напишите — рассчитаем стоимость за 15 минут
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <a href="tel:+79202520352">
+                        <Button size="lg" className="w-full justify-start font-bold">
+                          <Icon name="Phone" size={20} className="mr-2" />
+                          +7 (920) 252-03-52
+                        </Button>
+                      </a>
+                      
+                      <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
+                        <Button size="lg" variant="outline" className="w-full justify-start font-bold">
+                          <Icon name="MessageCircle" size={20} className="mr-2" />
+                          Написать в WhatsApp
+                        </Button>
+                      </a>
+                      
+                      <a href="mailto:megashlic@yandex.ru">
+                        <Button size="lg" variant="outline" className="w-full justify-start font-bold">
+                          <Icon name="Mail" size={20} className="mr-2" />
+                          megashlic@yandex.ru
+                        </Button>
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-lg mb-1">Телефон</div>
-                    <a href="tel:+79202520352" className="text-primary hover:underline text-lg font-medium">+7 (920) 252-03-52</a>
-                    <div className="text-sm text-muted-foreground mt-1">Технические консультации 24/7</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="MapPin" className="text-primary" size={22} />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-lg mb-1">Адрес</div>
-                    <div className="text-muted-foreground">г. Нижний Новгород,<br />Восточный проезд, 11/1</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Clock" className="text-primary" size={22} />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-lg mb-1">Режим работы</div>
-                    <div className="text-muted-foreground">Пн-Пт: 9:30 - 17:30</div>
-                    <div className="text-muted-foreground">Сб-Вс: Выходной</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Mail" className="text-primary" size={22} />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-lg mb-1">Email</div>
-                    <a href="mailto:megashlic@yandex.ru" className="text-primary hover:underline font-medium">
-                      megashlic@yandex.ru
-                    </a>
+                  
+                  <div className="w-full md:w-72 p-4 bg-muted/30 rounded-xl">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Icon name="Clock" className="text-primary" size={18} />
+                      <span className="text-xs font-semibold">Режим работы</span>
+                    </div>
+                    <div className="space-y-1.5 text-xs text-muted-foreground">
+                      <div>Пн-Пт: 9:30 - 17:30</div>
+                      <div>Сб-Вс: Выходной</div>
+                      <div className="pt-2 border-t border-border/50 text-primary font-medium">
+                        Консультации по телефону 24/7
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
+          </AnimatedSection>
 
-            <Card className="lg:col-span-3 border-border/50 bg-gradient-to-br from-card/50 to-primary/5 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-2xl">Получить расчёт стоимости</CardTitle>
-                <CardDescription className="text-base">Отправьте запрос — мы рассчитаем стоимость и сроки восстановления</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={(e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-                  
-                  // Формируем сообщение для отправки
-                  const message = `Новая заявка с сайта:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nАвтомобиль: ${formData.car}\nСообщение: ${formData.message}`;
-                  
-                  // Отправляем в Telegram через WhatsApp (можно заменить на email или Telegram Bot)
-                  const phoneNumber = '79202520352';
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                  
-                  // Открываем WhatsApp
-                  window.open(whatsappUrl, '_blank');
-                  
-                  // Показываем успех
-                  setSubmitStatus('success');
-                  setIsSubmitting(false);
-                  
-                  // Очищаем форму
-                  setFormData({ name: '', phone: '', car: '', message: '' });
-                  
-                  // Сбрасываем статус через 5 секунд
-                  setTimeout(() => setSubmitStatus('idle'), 5000);
-                }} className="space-y-5">
-                  {submitStatus === 'success' && (
-                    <div className="flex items-center gap-3 p-4 bg-primary/10 border border-primary/30 rounded-xl">
-                      <Icon name="CheckCircle" className="text-primary" size={20} />
-                      <p className="text-sm text-primary font-semibold">Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
-                    </div>
-                  )}
-                  <div className="grid md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-sm font-semibold mb-2 block">Ваше имя *</label>
-                      <input 
-                        type="text" 
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                        placeholder="Иван Иванов"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm font-semibold mb-2 block">Телефон *</label>
-                      <input 
-                        type="tel" 
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                        placeholder="+7 (___) ___-__-__"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-sm font-semibold mb-2 block">Автомобиль / деталь *</label>
-                    <input 
-                      type="text" 
-                      required
-                      value={formData.car}
-                      onChange={(e) => setFormData({...formData, car: e.target.value})}
-                      className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
-                      placeholder="Volkswagen Tiguan I (5N)"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-semibold mb-2 block">Опишите задачу *</label>
-                    <textarea 
-                      required
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary min-h-32 bg-background"
-                      placeholder="Например: Ремонт шлицевых соединений. Комплексные услуги &quot;под ключ&quot;."
-                    />
-                  </div>
-                  <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
-                    <Icon name="Clock" className="text-primary" size={20} />
-                    <p className="text-sm text-muted-foreground">Ответим в рабочее время</p>
-                  </div>
-                  <Button type="submit" disabled={isSubmitting} className="w-full h-12 text-base" size="lg">
-                    {isSubmitting ? (
-                      <>
-                        <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
-                        Отправка...
-                      </>
-                    ) : (
-                      <>
-                        <Icon name="Send" size={20} className="mr-2" />
-                        Получить расчёт
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 max-w-6xl mx-auto">
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-2xl">
-                  <Icon name="MapPin" className="text-primary" size={28} />
-                  Как нас найти
-                </CardTitle>
-                <CardDescription className="text-base">
-                  г. Нижний Новгород, Восточный проезд, 11/1
-                </CardDescription>
-              </CardHeader>
+          <AnimatedSection delay={0.6}>
+            <Card className="mt-6 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="w-full h-[450px]">
+                <div className="p-5 border-b border-border/50">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="MapPin" className="text-primary" size={20} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-base">Производственная база</h3>
+                      <p className="text-sm text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full h-80">
                   <iframe
                     src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
                     width="100%"
-                    height="450"
+                    height="320"
                     frameBorder="0"
                     title="Карта проезда"
                     className="w-full h-full"
@@ -1095,7 +1085,7 @@ const ServicesSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </>
