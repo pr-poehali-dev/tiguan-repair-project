@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 interface HeroSectionProps {
   scrollToSection: (id: string) => void;
@@ -98,20 +98,29 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               transition={{ delay: 0.6 }}
             >
               {[
-                { value: '5+', label: 'лет опыта' },
-                { value: '100+', label: 'узлов восстановлено' },
-                { value: '99.2%', label: 'успешных работ' }
+                { value: 5, suffix: '+', label: 'лет опыта', decimal: false },
+                { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
+                { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 300 }}
+                  className="relative group"
                 >
-                  <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                    {stat.label}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative">
+                    <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary via-primary/90 to-accent bg-clip-text text-transparent mb-2">
+                      <AnimatedCounter 
+                        end={stat.value} 
+                        suffix={stat.suffix}
+                        decimal={stat.decimal}
+                        duration={2.5}
+                      />
+                    </div>
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                      {stat.label}
+                    </div>
                   </div>
                 </motion.div>
               ))}
