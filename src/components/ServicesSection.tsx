@@ -204,69 +204,129 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section className="py-8 px-4 bg-muted/10">
-        <div className="container mx-auto">
+      <section className="py-12 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+        <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-6">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Патенты и лицензии
+            <div className="text-center mb-8">
+              <motion.div 
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Патентованная технология</span>
+              </motion.div>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                Защищённая интеллектуальная собственность
               </h2>
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                Наша технология восстановления шлицов защищена патентом РФ
+              </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-4 gap-3">
-            {[
-              { icon: 'Award', number: '№2829377', title: 'Патент РФ' },
-              { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества' },
-              { icon: 'Shield', number: '5+', title: 'Лет опыта' },
-              { icon: 'Users', number: '100%', title: 'Легально' }
-            ].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <Card className="border-border/50 bg-card/50 backdrop-blur-sm text-center h-full">
-                  <CardContent className="pt-4 pb-3 h-full flex flex-col justify-center">
-                    <Icon name={item.icon} className="text-primary mx-auto mb-2" size={20} />
-                    <div className="text-lg font-bold text-primary mb-1">
-                      {item.number}
+          <div className="grid lg:grid-cols-2 gap-6">
+            <AnimatedSection delay={0.1}>
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon name="Award" className="text-primary" size={28} />
                     </div>
-                    <p className="text-xs text-muted-foreground">{item.title}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
+                    <div>
+                      <h3 className="text-xl font-bold mb-1">Патент РФ №2829377</h3>
+                      <p className="text-sm text-muted-foreground">Выдан 30 октября 2024 года</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <p className="text-sm leading-relaxed">
+                      <span className="font-semibold">Способ восстановления шлицевого соединения</span> на полноприводных автомобилях с использованием высокоточной механической обработки и термообработки.
+                    </p>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                        <span className="text-sm">Восстановление изношенных шлицов методом наплавки и механической обработки на станках с ЧПУ</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                        <span className="text-sm">Термообработка для восстановления твёрдости поверхности до заводских параметров</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
+                        <span className="text-sm">Гарантированное качество и долговечность восстановленных деталей</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-3 border-t border-border/50">
+                      <div className="flex flex-wrap gap-2">
+                        <Badge variant="secondary" className="text-xs">
+                          <Icon name="MapPin" className="mr-1" size={12} />
+                          Российская Федерация
+                        </Badge>
+                        <Badge variant="secondary" className="text-xs">
+                          <Icon name="Calendar" className="mr-1" size={12} />
+                          2024
+                        </Badge>
+                        <Badge variant="secondary" className="text-xs">
+                          <Icon name="ShieldCheck" className="mr-1" size={12} />
+                          Действующий
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full overflow-hidden">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="p-4 border-b border-border/50">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Icon name="FileText" className="text-primary" size={20} />
+                      <h3 className="text-base font-bold">Свидетельство о патенте</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground">Официальный документ Роспатента</p>
+                  </div>
+                  
+                  <div className="flex-1 p-4 flex items-center justify-center bg-muted/20">
+                    <motion.img 
+                      src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
+                      alt="Патент на изобретение №2829377"
+                      className="rounded-lg shadow-lg border-2 border-border max-h-80 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      onClick={() => setSelectedImage('https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg')}
+                    />
+                  </div>
+                  
+                  <div className="p-3 bg-muted/30 text-center">
+                    <p className="text-xs text-muted-foreground">
+                      <Icon name="MousePointer2" className="inline mr-1" size={12} />
+                      Нажмите для увеличения
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
 
-          <div className="mt-4">
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-4">
-                  <img 
-                    src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
-                    alt="Патент на изобретение"
-                    className="rounded-lg shadow-md border border-border w-32 h-32 object-cover"
-                  />
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Award" className="text-primary" size={20} />
-                      <h3 className="text-base font-bold">Патент на изобретение №2829377</h3>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      Запатентованная технология восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях
+          <AnimatedSection delay={0.3}>
+            <Card className="mt-6 border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-6">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Lightbulb" className="text-accent-foreground" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2">Почему это важно для вас?</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Патент подтверждает уникальность и эффективность нашей технологии. Это не просто ремонт — это научно обоснованный, проверенный и защищённый государством способ восстановления деталей. Вы получаете гарантию качества на 18 месяцев, потому что мы уверены в результате.
                     </p>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="text-xs">
-                        <Icon name="Check" className="text-primary mr-1" size={12} />
-                        30.10.2024
-                      </Badge>
-                      <Badge variant="secondary" className="text-xs">
-                        <Icon name="Check" className="text-primary mr-1" size={12} />
-                        РФ
-                      </Badge>
-                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
