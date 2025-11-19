@@ -6,6 +6,14 @@ import Icon from '@/components/ui/icon';
 
 const ServicesSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    car: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const galleryImages = [
     {
@@ -1008,12 +1016,44 @@ const ServicesSection = () => {
                 <CardDescription className="text-base">Отправьте запрос — мы рассчитаем стоимость и сроки восстановления</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-5">
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  
+                  // Формируем сообщение для отправки
+                  const message = `Новая заявка с сайта:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nАвтомобиль: ${formData.car}\nСообщение: ${formData.message}`;
+                  
+                  // Отправляем в Telegram через WhatsApp (можно заменить на email или Telegram Bot)
+                  const phoneNumber = '79202520352';
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  
+                  // Открываем WhatsApp
+                  window.open(whatsappUrl, '_blank');
+                  
+                  // Показываем успех
+                  setSubmitStatus('success');
+                  setIsSubmitting(false);
+                  
+                  // Очищаем форму
+                  setFormData({ name: '', phone: '', car: '', message: '' });
+                  
+                  // Сбрасываем статус через 5 секунд
+                  setTimeout(() => setSubmitStatus('idle'), 5000);
+                }} className="space-y-5">
+                  {submitStatus === 'success' && (
+                    <div className="flex items-center gap-3 p-4 bg-primary/10 border border-primary/30 rounded-xl">
+                      <Icon name="CheckCircle" className="text-primary" size={20} />
+                      <p className="text-sm text-primary font-semibold">Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
+                    </div>
+                  )}
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label className="text-sm font-semibold mb-2 block">Ваше имя *</label>
                       <input 
                         type="text" 
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
                         className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                         placeholder="Иван Иванов"
                       />
@@ -1022,6 +1062,9 @@ const ServicesSection = () => {
                       <label className="text-sm font-semibold mb-2 block">Телефон *</label>
                       <input 
                         type="tel" 
+                        required
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                         placeholder="+7 (___) ___-__-__"
                       />
@@ -1031,6 +1074,9 @@ const ServicesSection = () => {
                     <label className="text-sm font-semibold mb-2 block">Автомобиль / деталь *</label>
                     <input 
                       type="text" 
+                      required
+                      value={formData.car}
+                      onChange={(e) => setFormData({...formData, car: e.target.value})}
                       className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary bg-background"
                       placeholder="Volkswagen Tiguan I (5N)"
                     />
@@ -1038,6 +1084,9 @@ const ServicesSection = () => {
                   <div>
                     <label className="text-sm font-semibold mb-2 block">Опишите задачу *</label>
                     <textarea 
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary min-h-32 bg-background"
                       placeholder="Например: Ремонт шлицевых соединений. Комплексные услуги &quot;под ключ&quot;."
                     />
@@ -1046,9 +1095,18 @@ const ServicesSection = () => {
                     <Icon name="Clock" className="text-primary" size={20} />
                     <p className="text-sm text-muted-foreground">Ответим в рабочее время</p>
                   </div>
-                  <Button className="w-full h-12 text-base" size="lg">
-                    <Icon name="Send" size={20} className="mr-2" />
-                    Получить расчёт
+                  <Button type="submit" disabled={isSubmitting} className="w-full h-12 text-base" size="lg">
+                    {isSubmitting ? (
+                      <>
+                        <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
+                        Отправка...
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="Send" size={20} className="mr-2" />
+                        Получить расчёт
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
