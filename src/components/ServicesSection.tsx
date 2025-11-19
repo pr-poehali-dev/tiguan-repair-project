@@ -203,97 +203,63 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section className="py-10 px-4 bg-gradient-to-r from-primary/10 via-background to-accent/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-        
-        <div className="container mx-auto relative z-10">
+      <section className="py-8 px-4 bg-muted/10">
+        <div className="container mx-auto">
           <AnimatedSection>
-            <div className="text-center mb-8">
-              <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Сертификация</span>
-              </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <div className="text-center mb-6">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Патенты и лицензии
               </h2>
-              <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
-                Запатентованные технологии восстановления и полный пакет разрешительной документации
-              </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-4 gap-3">
             {[
-              { icon: 'Award', number: '№2829377', title: 'Патент РФ', desc: 'Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях' },
-              { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества', desc: 'Система менеджмента качества производства' },
-              { icon: 'Shield', number: '5+', title: 'Лет опыта', desc: 'Работаем с 2023 года. Более 50 корпоративных клиентов' },
-              { icon: 'Users', number: '100%', title: 'Легально', desc: 'ООО с полным пакетом документов. Без НДС' }
+              { icon: 'Award', number: '№2829377', title: 'Патент РФ' },
+              { icon: 'FileCheck', number: 'ISO 9001', title: 'Сертификат качества' },
+              { icon: 'Shield', number: '5+', title: 'Лет опыта' },
+              { icon: 'Users', number: '100%', title: 'Легально' }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Card className="h-full border-border/50 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 text-center">
-                    <CardContent className="pt-5 pb-4 space-y-2">
-                      <motion.div 
-                        className="w-12 h-12 bg-gradient-to-br from-primary/30 via-primary/15 to-accent/15 rounded-lg flex items-center justify-center mx-auto shadow-lg"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <Icon name={item.icon} className="text-primary" size={24} />
-                      </motion.div>
-                      <div>
-                        <div className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-0.5">
-                          {item.number}
-                        </div>
-                        <p className="text-xs font-semibold text-foreground mb-1.5">{item.title}</p>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                <Card className="border-border/50 bg-card/50 backdrop-blur-sm text-center">
+                  <CardContent className="pt-4 pb-3">
+                    <Icon name={item.icon} className="text-primary mx-auto mb-2" size={20} />
+                    <div className="text-lg font-bold text-primary mb-1">
+                      {item.number}
+                    </div>
+                    <p className="text-xs text-muted-foreground">{item.title}</p>
+                  </CardContent>
+                </Card>
               </AnimatedSection>
             ))}
           </div>
 
-          <div className="mt-6">
-            <Card className="border-primary/20 bg-gradient-to-r from-card/80 to-primary/5 backdrop-blur-sm">
-              <CardContent className="p-5">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="mt-4">
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
+                    alt="Патент на изобретение"
+                    className="rounded-lg shadow-md border border-border w-32 h-32 object-cover"
+                  />
                   <div>
-                    <img 
-                      src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
-                      alt="Патент на изобретение"
-                      className="rounded-xl shadow-lg border border-border w-full"
-                    />
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <Icon name="Award" className="text-primary" size={32} />
-                      <h3 className="text-2xl font-bold">Патент на изобретение</h3>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon name="Award" className="text-primary" size={20} />
+                      <h3 className="text-base font-bold">Патент на изобретение №2829377</h3>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Наша компания является правообладателем патента на изобретение <span className="font-semibold text-foreground">№2829377</span> "Способ восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях".
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      Запатентованная технология восстановления шлицевого соединения на Volkswagen Tiguan I и других полноприводных автомобилях
                     </p>
-                    <div className="space-y-2 pt-4">
-                      <div className="flex items-center gap-2 text-sm">
-                        <Icon name="Check" className="text-primary" size={16} />
-                        <span>Дата регистрации: 30 октября 2024 г.</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <Icon name="Check" className="text-primary" size={16} />
-                        <span>Действует на территории РФ</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <Icon name="Check" className="text-primary" size={16} />
-                        <span>Запатентованная технология восстановления</span>
-                      </div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="text-xs">
+                        <Icon name="Check" className="text-primary mr-1" size={12} />
+                        30.10.2024
+                      </Badge>
+                      <Badge variant="secondary" className="text-xs">
+                        <Icon name="Check" className="text-primary mr-1" size={12} />
+                        РФ
+                      </Badge>
                     </div>
                   </div>
                 </div>
