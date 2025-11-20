@@ -31,26 +31,26 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               Ремонт полного привода
               <br />
               <span className="text-primary">
-                Volkswagen Tiguan I под ключ
+                Volkswagen Tiguan I
               </span>
             </h1>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный ремонт — 1 день. Гарантия 12 месяцев.
+              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный ремонт за 1 день. Гарантия 12 месяцев. Без ограничения пробега.
             </p>
             
-            <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex flex-wrap gap-3 text-sm">
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
                 <Icon name="Clock" className="text-primary" size={16} />
-                <span className="font-semibold">1 день</span>
+                <span className="font-semibold">Ремонт за 1 день</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
                 <Icon name="Award" className="text-primary" size={16} />
-                <span className="font-semibold">Гарантия 12 месяцев</span>
+                <span className="font-semibold">12 месяцев гарантии</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
-                <Icon name="CheckCircle" className="text-primary" size={16} />
-                <span className="font-semibold">Под ключ</span>
+                <Icon name="Gauge" className="text-primary" size={16} />
+                <span className="font-semibold">Без ограничения пробега</span>
               </div>
             </div>
 
