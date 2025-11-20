@@ -475,39 +475,23 @@ const ServicesSection = () => {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       <SectionDivider variant="gradient" />
 
-      <motion.section 
+      <section 
         id="patents" 
         className="py-4 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Защищённая интеллектуальная собственность
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Наша технология восстановления шлицов защищена патентом РФ
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
