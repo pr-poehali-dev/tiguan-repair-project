@@ -226,10 +226,10 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="gallery" className="py-6 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+      <section id="gallery" className="py-4 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -374,10 +374,10 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section id="services" className="py-6 px-4 bg-muted/5 relative overflow-hidden">
+      <section id="services" className="py-4 px-4 bg-muted/5 relative overflow-hidden">
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -457,10 +457,10 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section id="patents" className="py-6 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+      <section id="patents" className="py-4 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -589,10 +589,10 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="warranty" className="py-6 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
+      <section id="warranty" className="py-4 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -740,10 +740,10 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="faq" className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -865,10 +865,10 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="guarantees" className="py-6 px-4 bg-muted/10">
+      <section id="guarantees" className="py-4 px-4 bg-muted/10">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
@@ -1129,10 +1129,10 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="contacts" className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <motion.h2 
                 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
                 initial={{ opacity: 0, y: 20 }}
