@@ -1154,69 +1154,8 @@ const ServicesSection = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-3 mb-4">
-            {[
-              {
-                icon: 'Phone',
-                title: 'Телефон',
-                content: '+7 (920) 252-03-52',
-                link: 'tel:+79202520352',
-                subtitle: 'Консультации 24/7'
-              },
-              {
-                icon: 'MapPin',
-                title: 'Адрес производства',
-                content: 'г. Нижний Новгород, Восточный проезд, 11/1',
-                link: null,
-                subtitle: 'Пн-Пт: 9:30 - 17:30'
-              },
-              {
-                icon: 'Mail',
-                title: 'Email',
-                content: 'megashlic@yandex.ru',
-                link: 'mailto:megashlic@yandex.ru',
-                subtitle: 'Напишите нам'
-              },
-              {
-                icon: 'MessageCircle',
-                title: 'WhatsApp',
-                content: 'Написать в мессенджер',
-                link: 'https://wa.me/79202520352',
-                subtitle: 'Удобная связь'
-              }
-            ].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -4 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-5">
-                      <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Icon name={item.icon} className="text-primary" size={20} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-xs font-semibold text-muted-foreground mb-1">{item.title}</div>
-                          {item.link ? (
-                            <a href={item.link} className="text-sm font-bold text-foreground hover:text-primary transition-colors break-words">
-                              {item.content}
-                            </a>
-                          ) : (
-                            <div className="text-sm font-bold text-foreground break-words">{item.content}</div>
-                          )}
-                          <div className="text-xs text-muted-foreground mt-1">{item.subtitle}</div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection delay={0.5}>
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
+          <AnimatedSection delay={0.2}>
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mb-4">
               <CardContent className="p-4">
                 <div className="flex flex-col md:flex-row items-start gap-4">
                   <div className="w-full md:w-72 p-4 bg-muted/30 rounded-xl">
@@ -1273,6 +1212,67 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-3 mb-4">
+            {[
+              {
+                icon: 'Phone',
+                title: 'Телефон',
+                content: '+7 (920) 252-03-52',
+                link: 'tel:+79202520352',
+                subtitle: 'Консультации 24/7'
+              },
+              {
+                icon: 'MapPin',
+                title: 'Адрес производства',
+                content: 'г. Нижний Новгород, Восточный проезд, 11/1',
+                link: null,
+                subtitle: 'Пн-Пт: 9:30 - 17:30'
+              },
+              {
+                icon: 'Mail',
+                title: 'Email',
+                content: 'megashlic@yandex.ru',
+                link: 'mailto:megashlic@yandex.ru',
+                subtitle: 'Напишите нам'
+              },
+              {
+                icon: 'MessageCircle',
+                title: 'WhatsApp',
+                content: 'Написать в мессенджер',
+                link: 'https://wa.me/79202520352',
+                subtitle: 'Удобная связь'
+              }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={0.4 + index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                    <CardContent className="p-5">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon name={item.icon} className="text-primary" size={20} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-xs font-semibold text-muted-foreground mb-1">{item.title}</div>
+                          {item.link ? (
+                            <a href={item.link} className="text-sm font-bold text-foreground hover:text-primary transition-colors break-words">
+                              {item.content}
+                            </a>
+                          ) : (
+                            <div className="text-sm font-bold text-foreground break-words">{item.content}</div>
+                          )}
+                          <div className="text-xs text-muted-foreground mt-1">{item.subtitle}</div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
 
           <AnimatedSection delay={0.6}>
             <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
