@@ -7,51 +7,34 @@ interface FooterProps {
 
 const Footer = ({ scrollToSection }: FooterProps) => {
   return (
-    <footer className="bg-black text-white py-4 px-4">
-      <div className="container mx-auto">
-        <div className="grid md:grid-cols-3 gap-3 mb-3">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <img 
-                src="https://cdn.poehali.dev/files/91564d46-9c4b-434e-9dcf-d231a1c4ff2d.jpg"
-                alt="Мега Шлиц"
-                className="h-8 w-auto object-contain rounded-lg"
-                style={{ background: 'transparent' }}
-              />
-              <span className="text-sm font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
-            </div>
-            <p className="text-white/70 text-xs">
-              Профессиональное восстановление и изготовление шлицевых соединений. Собственное производство.
-            </p>
+    <footer className="bg-black text-white py-3 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2">
+            <img 
+              src="https://cdn.poehali.dev/files/91564d46-9c4b-434e-9dcf-d231a1c4ff2d.jpg"
+              alt="Мега Шлиц"
+              className="h-6 w-auto object-contain rounded"
+              style={{ background: 'transparent' }}
+            />
+            <span className="font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
           </div>
-          <div>
-            <h3 className="font-bold mb-2 text-xs">Быстрые ссылки</h3>
-            <div className="space-y-1 text-xs">
-              <div><button onClick={() => scrollToSection('services')} className="hover:underline">Услуги</button></div>
-              <div><button onClick={() => scrollToSection('patents')} className="hover:underline">Патенты</button></div>
-              <div><button onClick={() => scrollToSection('faq')} className="hover:underline">FAQ</button></div>
-              <div><button onClick={() => scrollToSection('turnkey')} className="hover:underline">Под ключ</button></div>
-              <div><button onClick={() => scrollToSection('guarantees')} className="hover:underline">Порядок работы</button></div>
-              <div><button onClick={() => scrollToSection('gallery')} className="hover:underline">Галерея</button></div>
-              <div><button onClick={() => scrollToSection('contacts')} className="hover:underline">Контакты</button></div>
-            </div>
+          
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-white/70">
+            <a href="tel:+79202520352" className="hover:text-white transition-colors">+7 (920) 252-03-52</a>
+            <span className="hidden md:inline">•</span>
+            <a href="mailto:megashlic@yandex.ru" className="hover:text-white transition-colors">megashlic@yandex.ru</a>
+            <span className="hidden md:inline">•</span>
+            <span>г. Нижний Новгород</span>
           </div>
-          <div>
-            <h3 className="font-bold mb-2 text-xs">Контакты</h3>
-            <div className="space-y-1 text-xs text-white/70">
-              <div>+7 (920) 252-03-52</div>
-              <div>megashlic@yandex.ru</div>
-              <div>г. Нижний Новгород, Восточный проезд, 11/1</div>
-            </div>
+          
+          <div className="flex items-center gap-3">
+            <VisitorCounter />
           </div>
         </div>
-        <div className="border-t border-white/20 pt-3 text-center text-xs text-white/60">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <p className="order-2 md:order-1">© 2024 Мега Шлиц<sup className="text-xs">®</sup>. Все права защищены.</p>
-            <div className="order-1 md:order-2">
-              <VisitorCounter />
-            </div>
-          </div>
+        
+        <div className="border-t border-white/20 mt-3 pt-2 text-center text-xs text-white/50">
+          © 2024 Мега Шлиц<sup className="text-xs">®</sup>
         </div>
       </div>
     </footer>
