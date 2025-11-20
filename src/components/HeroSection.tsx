@@ -62,15 +62,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 pt-3">
-            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+            <div className="flex items-center gap-2 px-4 py-3 backdrop-blur-sm rounded-xl border border-primary/20">
               <Icon name="Clock" className="text-primary" size={20} />
               <span className="font-semibold">Ремонт за 1 день</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+            <div className="flex items-center gap-2 px-4 py-3 backdrop-blur-sm rounded-xl border border-primary/20">
               <Icon name="Award" className="text-primary" size={20} />
               <span className="font-semibold">12 месяцев гарантии</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+            <div className="flex items-center gap-2 px-4 py-3 backdrop-blur-sm rounded-xl border border-primary/20">
               <Icon name="Gauge" className="text-primary" size={20} />
               <span className="font-semibold">Без ограничения пробега</span>
             </div>
@@ -88,7 +88,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="h-12 px-8 text-base bg-background/90 backdrop-blur hover:bg-background transition-all shadow-md" 
+              className="h-12 px-8 text-base backdrop-blur-sm border-primary/30 hover:bg-primary/10 transition-all" 
               onClick={() => scrollToSection('contacts')}
             >
               <Icon name="Phone" size={20} className="mr-2" />
@@ -102,7 +102,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
               { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
             ].map((stat, index) => (
-              <div key={index} className="bg-background/85 backdrop-blur-md rounded-xl p-5 border border-border/50 shadow-lg text-center">
+              <div key={index} className="backdrop-blur-sm rounded-xl p-5 border border-primary/20 text-center">
                 <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                     <AnimatedCounter 
                       end={stat.value} 
