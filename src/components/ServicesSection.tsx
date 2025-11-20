@@ -720,13 +720,13 @@ const ServicesSection = () => {
                 className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Этапы работы</span>
+                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Работаем по всей России</span>
               </motion.div>
               <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
-                Как мы работаем
+                Как мы работаем с регионами
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                Прозрачный процесс от заявки до получения восстановленных деталей
+                Находимся в Нижнем Новгороде, принимаем детали со всей России. Доставка СДЭК 2-5 дней.
               </p>
             </div>
           </AnimatedSection>
@@ -827,18 +827,58 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
 
+          <AnimatedSection delay={0.7}>
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-6">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-2">
+                    <Icon name="MapPin" className="text-primary" size={24} />
+                    География и доставка
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Работаем по всей России через СДЭК — от Калининграда до Владивостока
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  {[
+                    { region: 'Москва, СПб', days: '1-2 дня', price: 'от 350₽' },
+                    { region: 'Центральная Россия', days: '2-3 дня', price: 'от 400₽' },
+                    { region: 'Урал, Сибирь', days: '3-5 дней', price: 'от 500₽' },
+                    { region: 'Дальний Восток', days: '5-7 дней', price: 'от 700₽' },
+                    { region: 'Юг России', days: '3-4 дня', price: 'от 450₽' },
+                    { region: 'Поволжье', days: '1-2 дня', price: 'от 300₽' }
+                  ].map((item, index) => (
+                    <div key={index} className="bg-background/80 rounded-lg p-3 text-center">
+                      <div className="font-bold text-sm mb-1">{item.region}</div>
+                      <div className="text-xs text-primary font-semibold">{item.days}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{item.price}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-background/50 rounded-xl p-4 text-center">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Точный расчёт стоимости и сроков доставки
+                  </p>
+                  <a 
+                    href="https://www.cdek.ru/ru/calculate" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm">
+                      <Icon name="ExternalLink" size={16} className="mr-2" />
+                      Калькулятор СДЭК
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
           <div className="mt-6">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardHeader className="text-center">
-                <CardTitle className="flex items-center justify-center gap-3 text-2xl">
-                  <Icon name="Truck" className="text-primary" size={28} />
-                  Доставка по всей России
-                </CardTitle>
-                <CardDescription className="text-base">
-                  Работаем с транспортной компанией СДЭК — быстро и надёжно
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+              <CardContent className="p-6">
                 <div className="grid md:grid-cols-2 gap-6 mb-4">
                   <div className="space-y-3">
                     <h4 className="font-bold text-lg flex items-center gap-2">
@@ -906,22 +946,23 @@ const ServicesSection = () => {
                   <div className="bg-accent/5 border border-accent/20 rounded-xl p-4">
                     <div className="flex items-start gap-3">
                       <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Calculator" className="text-accent-foreground" size={24} />
+                        <Icon name="Package" className="text-accent-foreground" size={24} />
                       </div>
                       <div className="space-y-3 flex-1">
-                        <h4 className="font-bold">Рассчитать стоимость доставки</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Узнайте точную стоимость и сроки доставки из вашего города
-                        </p>
-                        <a 
-                          href="https://www.cdek.ru/ru/calculate" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-semibold"
-                        >
-                          <Icon name="ExternalLink" size={16} />
-                          Калькулятор СДЭК
-                        </a>
+                        <h4 className="font-bold">Как упаковать детали</h4>
+                        <div className="space-y-1.5">
+                          {[
+                            'Прочная картонная коробка',
+                            'Оберните в плёнку или бумагу',
+                            'Заполните пустоты пенопластом',
+                            'Заклейте скотчем со всех сторон'
+                          ].map((item, index) => (
+                            <div key={index} className="flex items-start gap-2 text-xs">
+                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
+                              <span className="text-muted-foreground">{item}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1096,291 +1137,6 @@ const ServicesSection = () => {
               </Card>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      <section id="regions" className="py-12 px-4 bg-gradient-to-b from-background via-accent/5 to-background">
-        <div className="container mx-auto max-w-5xl">
-          <AnimatedSection>
-            <div className="text-center mb-10">
-              <motion.div 
-                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-sm font-bold text-primary uppercase tracking-wider">География работы</span>
-              </motion.div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
-                Работаем со всей Россией
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Находимся в Нижнем Новгороде, но принимаем заказы из любого города. Быстрая доставка через СДЭК.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
-            {[
-              {
-                icon: 'MapPin',
-                title: 'Нижний Новгород',
-                subtitle: 'Наше производство',
-                description: 'Привозите детали лично или отправляйте транспортной компанией'
-              },
-              {
-                icon: 'Truck',
-                title: 'СДЭК по России',
-                subtitle: 'Доставка 2-5 дней',
-                description: 'Работаем с любым регионом — от Калининграда до Владивостока'
-              },
-              {
-                icon: 'Package',
-                title: 'Удобная упаковка',
-                subtitle: 'Надёжная защита',
-                description: 'Упакуем детали для безопасной транспортировки обратно'
-              }
-            ].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6 text-center">
-                    <motion.div
-                      className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <Icon name={item.icon} className="text-primary" size={32} />
-                    </motion.div>
-                    <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                    <div className="text-sm font-semibold text-primary mb-3">{item.subtitle}</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection delay={0.3}>
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm shadow-xl mb-8">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-3">Схема работы для регионов</h3>
-                  <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                    Простой процесс без визита в наш сервис — всё дистанционно через СДЭК
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-5 gap-4">
-                  {[
-                    {
-                      step: '1',
-                      icon: 'Phone',
-                      title: 'Звонок',
-                      description: 'Консультация и предварительная оценка стоимости'
-                    },
-                    {
-                      step: '2',
-                      icon: 'PackageOpen',
-                      title: 'Отправка',
-                      description: 'Упакуйте детали и отправьте через СДЭК'
-                    },
-                    {
-                      step: '3',
-                      icon: 'Search',
-                      title: 'Диагностика',
-                      description: 'Получаем, проверяем, согласовываем цену'
-                    },
-                    {
-                      step: '4',
-                      icon: 'Settings',
-                      title: 'Ремонт',
-                      description: 'Восстанавливаем с фотоотчётом'
-                    },
-                    {
-                      step: '5',
-                      icon: 'PackageCheck',
-                      title: 'Возврат',
-                      description: 'Отправляем обратно с гарантией'
-                    }
-                  ].map((item, index) => (
-                    <div key={index} className="relative">
-                      <Card className="border-border/50 bg-background/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-4 text-center">
-                          <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-3 shadow-lg">
-                            {item.step}
-                          </div>
-                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                            <Icon name={item.icon} className="text-primary" size={20} />
-                          </div>
-                          <h4 className="text-sm font-bold mb-2">{item.title}</h4>
-                          <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
-                        </CardContent>
-                      </Card>
-                      {index < 4 && (
-                        <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
-                          <Icon name="ChevronRight" className="text-primary" size={24} />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-border/50">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-background/50 rounded-xl p-6">
-                      <div className="flex items-start gap-3 mb-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <Icon name="Clock" className="text-primary" size={24} />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-lg mb-1">Сроки доставки</h4>
-                          <p className="text-sm text-muted-foreground">По России через СДЭК</p>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        {[
-                          'Москва, Санкт-Петербург — 1-2 дня',
-                          'Центральная Россия — 2-3 дня',
-                          'Урал, Сибирь — 3-5 дней',
-                          'Дальний Восток — 5-7 дней'
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-center gap-2 text-sm">
-                            <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-background/50 rounded-xl p-6">
-                      <div className="flex items-start gap-3 mb-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <Icon name="Calculator" className="text-primary" size={24} />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-lg mb-1">Стоимость доставки</h4>
-                          <p className="text-sm text-muted-foreground">Зависит от веса и города</p>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        {[
-                          'Детали до 5 кг — от 350₽',
-                          'Детали до 10 кг — от 500₽',
-                          'Крупногабарит — рассчитывается',
-                          'Точный расчёт на сайте СДЭК'
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-center gap-2 text-sm">
-                            <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 bg-background/50 rounded-xl p-6 text-center">
-                  <div className="flex items-center justify-center gap-3 mb-3">
-                    <Icon name="Phone" className="text-primary" size={28} />
-                    <h4 className="text-xl font-bold">Нужна консультация?</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Позвоните или напишите — расскажем, как правильно упаковать детали и рассчитаем полную стоимость с доставкой
-                  </p>
-                  <div className="flex flex-wrap justify-center gap-4">
-                    <a href="tel:+79202520352">
-                      <Button size="lg" className="font-bold">
-                        <Icon name="Phone" size={20} className="mr-2" />
-                        +7 (920) 252-03-52
-                      </Button>
-                    </a>
-                    <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
-                      <Button size="lg" variant="outline" className="font-bold">
-                        <Icon name="MessageCircle" size={20} className="mr-2" />
-                        WhatsApp
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.5}>
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Info" className="text-primary" size={28} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Адрес для отправки деталей</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Свяжитесь с нами перед отправкой — поможем правильно оформить и рассчитаем сроки
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-muted/30 rounded-xl p-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-bold mb-3">Данные получателя:</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-start gap-2">
-                          <Icon name="Building" className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                          <div>
-                            <div className="font-semibold">Организация:</div>
-                            <div className="text-muted-foreground">ООО "Мега Шлиц"</div>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <Icon name="MapPin" className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                          <div>
-                            <div className="font-semibold">Адрес:</div>
-                            <div className="text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</div>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <Icon name="Phone" className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                          <div>
-                            <div className="font-semibold">Телефон:</div>
-                            <div className="text-muted-foreground">+7 (920) 252-03-52</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-bold mb-3">Как упаковать:</h4>
-                      <div className="space-y-2 text-sm">
-                        {[
-                          'Используйте прочную картонную коробку',
-                          'Оберните детали в плёнку или бумагу',
-                          'Заполните пустоты пенопластом',
-                          'Заклейте скотчем со всех сторон'
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-start gap-2">
-                            <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                            <span className="text-muted-foreground">{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-border/50 text-center">
-                  <a 
-                    href="https://www.cdek.ru/ru/calculate" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
-                  >
-                    <Icon name="ExternalLink" size={18} />
-                    Рассчитать стоимость доставки на сайте СДЭК
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
         </div>
       </section>
 
