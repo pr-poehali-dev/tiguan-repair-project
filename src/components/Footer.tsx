@@ -29,6 +29,15 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           </div>
           
           <div className="flex items-center gap-3">
+            <a 
+              href="https://wa.me/79202520352" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+            >
+              <Icon name="MessageCircle" size={14} />
+              <span className="font-medium">WhatsApp</span>
+            </a>
             <VisitorCounter />
           </div>
         </div>
