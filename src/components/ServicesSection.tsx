@@ -1220,7 +1220,7 @@ const ServicesSection = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
-              <a href="mailto:megashlic@yandex.ru?subject=Запрос на восстановление шлицов Volkswagen Tiguan">
+              <a href="mailto:megashlic@yandex.ru">
                 <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
                   <CardContent className="p-4 text-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
