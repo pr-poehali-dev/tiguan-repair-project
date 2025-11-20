@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,6 +8,7 @@ import SectionDivider from '@/components/SectionDivider';
 
 const ServicesSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -17,6 +18,8 @@ const ServicesSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -81,6 +84,75 @@ const ServicesSection = () => {
       const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
       window.open(whatsappUrl, '_blank');
     }
+  };
+
+  const allGalleryImages = [
+    {
+      url: 'https://cdn.poehali.dev/files/90506945-c80c-4a2c-bc39-960d87906952.jpg',
+      title: 'До и после восстановления',
+      description: 'Наглядное сравнение изношенных и восстановленных шлицов'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/6bfcc366-0e54-412a-88e5-69e2a5b8ddc0.jpg',
+      title: 'Восстановленные шлицевые соединения',
+      description: 'Высокоточная обработка на станках с ЧПУ'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/3670ad1e-8c6b-43b5-9081-66a9d5aff82d.jpg',
+      title: 'Раздаточная коробка Tiguan',
+      description: 'Восстановленные шлицы в сборе с новыми подшипниками'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/344af438-2cf3-462d-8a1c-07004361e676.jpg',
+      title: 'Приводной вал Volkswagen Tiguan I',
+      description: 'Процесс восстановления шлицевого соединения'
+    },
+    {
+      url: 'https://cdn.poehali.dev/projects/2ebda34c-8a7e-48ca-8c9a-1d778db06372/files/23cc98d7-15e4-431a-982c-9d2217d5d79a.jpg',
+      title: 'Готовые детали',
+      description: 'Контроль качества после термообработки'
+    }
+  ];
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!selectedImage) return;
+    
+    const swipeThreshold = 50;
+    const swipeDistance = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0) {
+        handleNextImage();
+      } else {
+        handlePrevImage();
+      }
+    }
+  };
+
+  const handleNextImage = () => {
+    const nextIndex = (currentImageIndex + 1) % allGalleryImages.length;
+    setCurrentImageIndex(nextIndex);
+    setSelectedImage(allGalleryImages[nextIndex].url);
+  };
+
+  const handlePrevImage = () => {
+    const prevIndex = currentImageIndex === 0 ? allGalleryImages.length - 1 : currentImageIndex - 1;
+    setCurrentImageIndex(prevIndex);
+    setSelectedImage(allGalleryImages[prevIndex].url);
+  };
+
+  const handleImageClick = (imageUrl: string, imageId: string) => {
+    const index = allGalleryImages.findIndex(img => img.url === imageUrl);
+    setCurrentImageIndex(index);
+    handleImageView(imageId, imageUrl);
   };
 
   const galleryImages = [
@@ -294,7 +366,7 @@ const ServicesSection = () => {
               <AnimatedSection key={index} delay={index * 0.1}>
                 <Card 
                   className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
-                  onClick={() => handleImageView(item.id, item.image)}
+                  onClick={() => handleImageClick(item.image, item.id)}
                 >
                     <div className="relative overflow-hidden">
                       <img 
@@ -814,20 +886,49 @@ const ServicesSection = () => {
       {selectedImage && (
         <div 
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-pointer animate-in fade-in duration-200"
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 cursor-pointer animate-in fade-in duration-200"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <button 
             onClick={() => setSelectedImage(null)}
-            className="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors z-10"
+            className="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors z-10 active:scale-95"
           >
             <Icon name="X" className="text-white" size={24} />
           </button>
-          <img 
-            src={selectedImage}
-            alt="Просмотр фото"
-            className="max-w-full max-h-full object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
+
+          <button
+            onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all z-10 active:scale-95"
+          >
+            <Icon name="ChevronLeft" className="text-white" size={28} />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); handleNextImage(); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all z-10 active:scale-95"
+          >
+            <Icon name="ChevronRight" className="text-white" size={28} />
+          </button>
+
+          <div className="relative max-w-full max-h-full">
+            <img 
+              src={selectedImage}
+              alt="Просмотр фото"
+              className="max-w-full max-h-[85vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-sm rounded-full px-4 py-2">
+              <span className="text-white text-sm font-semibold">
+                {currentImageIndex + 1} / {allGalleryImages.length}
+              </span>
+            </div>
+          </div>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-xs hidden md:block">
+            Свайпните влево/вправо для навигации
+          </div>
         </div>
       )}
 
