@@ -24,7 +24,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20">
               <Icon name="Zap" className="text-primary" size={14} />
-              <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт от 1 дня</span>
+              <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт за 1 день</span>
             </div>
 
             <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-foreground">
@@ -36,13 +36,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </h1>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Диагностика, ремонт, гарантия 12 месяцев. Работаем от 1 дня.
+              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный ремонт — 1 день. Гарантия 12 месяцев.
             </p>
             
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
                 <Icon name="Clock" className="text-primary" size={16} />
-                <span className="font-semibold">От 1 дня</span>
+                <span className="font-semibold">1 день</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
                 <Icon name="Award" className="text-primary" size={16} />

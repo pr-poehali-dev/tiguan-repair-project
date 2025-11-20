@@ -100,7 +100,7 @@ const ServicesSection = () => {
         'Тестирование после ремонта'
       ],
       price: 'от 95 000 ₽',
-      duration: 'от 1 дня'
+      duration: '1 день'
     },
     {
       icon: 'Cog',
@@ -113,7 +113,7 @@ const ServicesSection = () => {
         'Контроль геометрии и твердости'
       ],
       price: 'от 12 000 ₽',
-      duration: 'от 1 дня'
+      duration: '1 день'
     },
     {
       icon: 'Gauge',
@@ -126,7 +126,7 @@ const ServicesSection = () => {
         'Заправка оригинальным маслом'
       ],
       price: 'от 45 000 ₽',
-      duration: 'от 1 дня'
+      duration: '1 день'
     },
     {
       icon: 'Wrench',
@@ -139,7 +139,7 @@ const ServicesSection = () => {
         'Герметизация корпуса'
       ],
       price: 'от 38 000 ₽',
-      duration: 'от 1 дня'
+      duration: '1 день'
     },
 
     {
@@ -153,7 +153,7 @@ const ServicesSection = () => {
         'Очистка фильтра муфты'
       ],
       price: 'от 15 000 ₽',
-      duration: 'от 1 дня'
+      duration: '1 день'
     }
   ];
 
@@ -240,7 +240,7 @@ const ServicesSection = () => {
                 Ремонт полного привода Volkswagen Tiguan I под ключ
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения, карданный вал. Полный цикл работ с гарантией 12 месяцев без ограничения пробега.
+                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный срок ремонта — 1 день. Гарантия 12 месяцев без ограничения пробега.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
@@ -249,7 +249,7 @@ const ServicesSection = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="Clock" className="text-primary" size={18} />
-                  <span className="font-semibold">Срок от 1 дня</span>
+                  <span className="font-semibold">Срок 1 день</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="CheckCircle" className="text-primary" size={18} />
