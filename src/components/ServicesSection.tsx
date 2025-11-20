@@ -1032,89 +1032,89 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
 
-          <div className="mt-6">
+          <div className="mt-3">
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="grid md:grid-cols-2 gap-6 mb-4">
-                  <div className="space-y-3">
-                    <h4 className="font-bold text-lg flex items-center gap-2">
-                      <Icon name="PackageOpen" className="text-primary" size={20} />
+              <CardContent className="p-4">
+                <div className="grid md:grid-cols-2 gap-3 mb-3">
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-sm flex items-center gap-2">
+                      <Icon name="PackageOpen" className="text-primary" size={16} />
                       Отправка деталей к нам
                     </h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
+                    <ul className="space-y-1">
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Отправьте в ближайший пункт СДЭК на наш адрес</span>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Отправьте в ближайший пункт СДЭК на наш адрес</span>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Стоимость доставки рассчитывается индивидуально на сайте СДЭК</span>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Стоимость доставки рассчитывается индивидуально на сайте СДЭК</span>
                       </li>
                     </ul>
                   </div>
                   
-                  <div className="space-y-3">
-                    <h4 className="font-bold text-lg flex items-center gap-2">
-                      <Icon name="PackageCheck" className="text-primary" size={20} />
+                  <div className="space-y-2">
+                    <h4 className="font-bold text-sm flex items-center gap-2">
+                      <Icon name="PackageCheck" className="text-primary" size={16} />
                       Возврат восстановленных деталей
                     </h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
+                    <ul className="space-y-1">
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Отправка в течение 1 рабочего дня после оплаты</span>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Отправка в течение 1 рабочего дня после оплаты</span>
                       </li>
-                      <li className="flex items-start gap-3">
-                        <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
-                        <span className="text-sm text-muted-foreground">Доставка в любой город России за 2-5 дней</span>
+                      <li className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
+                        <span className="text-xs text-muted-foreground">Доставка в любой город России за 2-5 дней</span>
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Info" className="text-primary" size={24} />
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="bg-primary/5 border border-primary/20 rounded-lg p-3">
+                    <div className="flex items-start gap-2">
+                      <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="Info" className="text-primary" size={16} />
                       </div>
-                      <div className="space-y-2">
-                        <h4 className="font-bold">Адрес для отправки через СДЭК</h4>
-                        <p className="text-sm text-muted-foreground">
+                      <div className="space-y-1">
+                        <h4 className="font-bold text-sm">Адрес для отправки через СДЭК</h4>
+                        <p className="text-xs text-muted-foreground">
                           <strong>Получатель:</strong> ООО "Мега Шлиц"<br />
                           <strong>Адрес:</strong> г. Нижний Новгород, Восточный проезд, 11/1<br />
                           <strong>Телефон:</strong> +7 (920) 252-03-52
                         </p>
-                        <p className="text-sm text-primary font-medium mt-3">
+                        <p className="text-xs text-primary font-medium mt-2">
                           Свяжитесь с нами перед отправкой — поможем правильно оформить доставку
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-accent/5 border border-accent/20 rounded-xl p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="Package" className="text-accent-foreground" size={24} />
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-3">
+                    <div className="flex items-start gap-2">
+                      <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="Package" className="text-accent-foreground" size={16} />
                       </div>
-                      <div className="space-y-3 flex-1">
-                        <h4 className="font-bold">Как упаковать детали</h4>
-                        <div className="space-y-1.5">
+                      <div className="space-y-2 flex-1">
+                        <h4 className="font-bold text-sm">Как упаковать детали</h4>
+                        <div className="space-y-1">
                           {[
                             'Прочная картонная коробка',
                             'Оберните в плёнку или бумагу',
                             'Заполните пустоты пенопластом',
                             'Заклейте скотчем со всех сторон'
                           ].map((item, index) => (
-                            <div key={index} className="flex items-start gap-2 text-xs">
-                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
+                            <div key={index} className="flex items-start gap-1.5 text-xs">
+                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={12} />
                               <span className="text-muted-foreground">{item}</span>
                             </div>
                           ))}
