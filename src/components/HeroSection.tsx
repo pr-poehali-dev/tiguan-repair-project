@@ -36,7 +36,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             </h1>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения приводных валов. Диагностика, ремонт, гарантия 12 месяцев. Работаем от 1 дня.
+              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Диагностика, ремонт, гарантия 12 месяцев. Работаем от 1 дня.
             </p>
             
             <div className="flex flex-wrap gap-4 text-sm">
