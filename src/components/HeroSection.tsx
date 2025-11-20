@@ -79,8 +79,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   </div>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           <div className="relative hidden lg:block">
             <div className="relative">
