@@ -17,6 +17,31 @@ const ServicesSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const mailtoLink = `mailto:megashlic@yandex.ru?subject=Заявка на восстановление шлицов&body=Имя: ${encodeURIComponent(formData.name)}%0D%0AТелефон: ${encodeURIComponent(formData.phone)}%0D%0AАвтомобиль: ${encodeURIComponent(formData.car)}%0D%0AСообщение: ${encodeURIComponent(formData.message)}`;
+    
+    window.location.href = mailtoLink;
+    
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({ name: '', phone: '', car: '', message: '' });
+      
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 3000);
+    }, 500);
+  };
   const [imageViews, setImageViews] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
@@ -1292,6 +1317,113 @@ const ServicesSection = () => {
                     </div>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.6}>
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-4">
+              <CardHeader>
+                <CardTitle className="text-xl flex items-center gap-2">
+                  <Icon name="MessageSquare" className="text-primary" size={24} />
+                  Форма обратной связи
+                </CardTitle>
+                <CardDescription>
+                  Оставьте заявку и мы свяжемся с вами в ближайшее время
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Ваше имя *
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="Иван"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-sm font-medium">
+                        Телефон *
+                      </label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                        placeholder="+7 (920) 123-45-67"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="car" className="text-sm font-medium">
+                      Автомобиль
+                    </label>
+                    <input
+                      id="car"
+                      name="car"
+                      type="text"
+                      value={formData.car}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                      placeholder="Volkswagen Tiguan"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Сообщение
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                      placeholder="Опишите вашу проблему или задайте вопрос"
+                    />
+                  </div>
+
+                  {submitStatus === 'success' && (
+                    <div className="bg-green-500/10 border border-green-500/30 rounded-md p-3 text-sm text-green-700 dark:text-green-400 flex items-center gap-2">
+                      <Icon name="CheckCircle" size={16} />
+                      Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full"
+                    size="lg"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Icon name="Loader2" size={16} className="mr-2 animate-spin" />
+                        Отправка...
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="Send" size={16} className="mr-2" />
+                        Отправить заявку
+                      </>
+                    )}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </AnimatedSection>
