@@ -1219,6 +1219,20 @@ const ServicesSection = () => {
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
               <CardContent className="p-4">
                 <div className="flex flex-col md:flex-row items-start gap-4">
+                  <div className="w-full md:w-72 p-4 bg-muted/30 rounded-xl">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Icon name="Clock" className="text-primary" size={18} />
+                      <span className="text-xs font-semibold">Режим работы</span>
+                    </div>
+                    <div className="space-y-1.5 text-xs text-muted-foreground">
+                      <div>Пн-Пт: 9:30 - 17:30</div>
+                      <div>Сб-Вс: Выходной</div>
+                      <div className="pt-2 border-t border-border/50 text-primary font-medium">
+                        Консультации по телефону 24/7
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div className="flex-1">
                     <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1253,20 +1267,6 @@ const ServicesSection = () => {
                           megashlic@yandex.ru
                         </Button>
                       </a>
-                    </div>
-                  </div>
-                  
-                  <div className="w-full md:w-72 p-4 bg-muted/30 rounded-xl">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Icon name="Clock" className="text-primary" size={18} />
-                      <span className="text-xs font-semibold">Режим работы</span>
-                    </div>
-                    <div className="space-y-1.5 text-xs text-muted-foreground">
-                      <div>Пн-Пт: 9:30 - 17:30</div>
-                      <div>Сб-Вс: Выходной</div>
-                      <div className="pt-2 border-t border-border/50 text-primary font-medium">
-                        Консультации по телефону 24/7
-                      </div>
                     </div>
                   </div>
                 </div>
