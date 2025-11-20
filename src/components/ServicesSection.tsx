@@ -1016,45 +1016,38 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.7}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-3">
-              <CardContent className="p-4">
-                <div className="text-center mb-3">
-                  <h3 className="text-base font-bold mb-1 flex items-center justify-center gap-2">
-                    <Icon name="MapPin" className="text-primary" size={18} />
-                    География и доставка
-                  </h3>
-                  <p className="text-xs text-muted-foreground">
-                    Работаем по всей России через СДЭК — от Калининграда до Владивостока
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3">
-                  {[
-                    { region: 'Москва, СПб', days: '1-2 дня', price: 'от 350₽' },
-                    { region: 'Центральная Россия', days: '2-3 дня', price: 'от 400₽' },
-                    { region: 'Урал, Сибирь', days: '3-5 дней', price: 'от 500₽' },
-                    { region: 'Дальний Восток', days: '5-7 дней', price: 'от 700₽' },
-                    { region: 'Юг России', days: '3-4 дня', price: 'от 450₽' },
-                    { region: 'Поволжье', days: '1-2 дня', price: 'от 300₽' }
-                  ].map((item, index) => (
-                    <div key={index} className="bg-background/80 rounded-lg p-2 text-center">
-                      <div className="font-bold text-xs mb-0.5">{item.region}</div>
-                      <div className="text-xs text-primary font-semibold">{item.days}</div>
-                      <div className="text-xs text-muted-foreground">{item.price}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="bg-background/50 rounded-lg p-2 text-center">
+              <CardContent className="p-3">
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <div className="flex items-center gap-2">
+                    <Icon name="MapPin" className="text-primary" size={16} />
+                    <h3 className="text-sm font-bold">География и доставка</h3>
+                  </div>
                   <a 
                     href="https://www.cdek.ru/ru/calculate" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="sm" className="text-xs h-8">
-                      <Icon name="ExternalLink" size={14} className="mr-1.5" />
-                      Калькулятор СДЭК
+                    <Button variant="outline" size="sm" className="text-xs h-7 px-2">
+                      <Icon name="ExternalLink" size={12} className="mr-1" />
+                      СДЭК
                     </Button>
                   </a>
+                </div>
+
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
+                  {[
+                    { region: 'Москва, СПб', days: '1-2 дня' },
+                    { region: 'ЦФО', days: '2-3 дня' },
+                    { region: 'Урал, Сибирь', days: '3-5 дн' },
+                    { region: 'Дальний Восток', days: '5-7 дн' },
+                    { region: 'Юг России', days: '3-4 дня' },
+                    { region: 'Поволжье', days: '1-2 дня' }
+                  ].map((item, index) => (
+                    <div key={index} className="bg-background/80 rounded p-1.5 text-center">
+                      <div className="font-bold text-xs mb-0.5 leading-tight">{item.region}</div>
+                      <div className="text-xs text-primary font-semibold">{item.days}</div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
