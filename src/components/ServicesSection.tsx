@@ -1203,62 +1203,92 @@ const ServicesSection = () => {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-3 mb-4">
+          <div className="grid md:grid-cols-3 gap-3 mb-4">
             <AnimatedSection delay={0.2}>
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name="MessageSquare" className="text-primary" size={20} />
+              <a href="tel:+79202520352">
+                <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Icon name="Phone" className="text-primary" size={32} />
                     </div>
-                    <div>
-                      <h3 className="text-base font-bold mb-1">Связаться с нами</h3>
-                      <p className="text-xs text-muted-foreground">Консультации 24/7</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <a href="tel:+79202520352">
-                      <Button size="default" className="w-full justify-start animate-pulse-shadow">
-                        <Icon name="Phone" size={18} className="mr-2" />
-                        +7 (920) 252-03-52
-                      </Button>
-                    </a>
-                    
-                    <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="group">
-                      <Button size="default" variant="outline" className="w-full justify-start group-hover:scale-105 transition-transform duration-200">
-                        <Icon name="MessageCircle" size={18} className="mr-2" />
-                        WhatsApp
-                      </Button>
-                    </a>
-                    
-                    <a href="mailto:megashlic@yandex.ru">
-                      <Button size="default" variant="outline" className="w-full justify-start">
-                        <Icon name="Mail" size={18} className="mr-2" />
-                        megashlic@yandex.ru
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+                    <h3 className="text-base font-bold mb-2">Позвонить</h3>
+                    <p className="text-sm text-primary font-semibold mb-1">+7 (920) 252-03-52</p>
+                    <p className="text-xs text-muted-foreground">Консультации 24/7</p>
+                    <Button size="sm" className="w-full mt-3 animate-pulse-shadow">
+                      Позвонить сейчас
+                    </Button>
+                  </CardContent>
+                </Card>
+              </a>
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden h-full flex flex-col">
-                <CardContent className="p-0">
-                  <div className="p-4 border-b border-border/50">
-                    <div className="flex items-start gap-3">
+              <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
+                <Card className="border-green-500/30 bg-gradient-to-br from-green-500/5 to-green-600/5 backdrop-blur-sm h-full hover:border-green-500/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-16 h-16 bg-green-500/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Icon name="MessageCircle" className="text-green-600" size={32} />
+                    </div>
+                    <h3 className="text-base font-bold mb-2">WhatsApp</h3>
+                    <p className="text-sm text-green-600 font-semibold mb-1">+7 (920) 252-03-52</p>
+                    <p className="text-xs text-muted-foreground">Быстрые ответы</p>
+                    <Button size="sm" variant="outline" className="w-full mt-3 border-green-500/30 text-green-700 hover:bg-green-500/10 group-hover:scale-105 transition-transform duration-200">
+                      Написать в WhatsApp
+                    </Button>
+                  </CardContent>
+                </Card>
+              </a>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <a href="mailto:megashlic@yandex.ru">
+                <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Icon name="Mail" className="text-primary" size={32} />
+                    </div>
+                    <h3 className="text-base font-bold mb-2">Email</h3>
+                    <p className="text-sm text-primary font-semibold mb-1">megashlic@yandex.ru</p>
+                    <p className="text-xs text-muted-foreground">Подробные запросы</p>
+                    <Button size="sm" variant="outline" className="w-full mt-3">
+                      Написать письмо
+                    </Button>
+                  </CardContent>
+                </Card>
+              </a>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection delay={0.5}>
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid md:grid-cols-2">
+                  <div className="p-4 bg-muted/20">
+                    <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon name="MapPin" className="text-primary" size={20} />
                       </div>
                       <div>
                         <h3 className="text-base font-bold mb-1">Адрес производства</h3>
-                        <p className="text-xs text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
+                        <p className="text-sm text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="Clock" className="text-primary" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold mb-1">Режим работы</h3>
+                        <div className="space-y-1 text-sm text-muted-foreground">
+                          <div>Пн-Пт: 9:30 - 17:30</div>
+                          <div>Сб-Вс: Выходной</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="w-full h-64">
+                  <div className="w-full h-64 md:h-auto">
                     <iframe
                       src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
                       width="100%"
@@ -1268,21 +1298,10 @@ const ServicesSection = () => {
                       className="w-full h-full"
                     />
                   </div>
-                  
-                  <div className="p-3 bg-muted/20 border-t border-border/50">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="Clock" className="text-primary" size={16} />
-                      <span className="text-xs font-semibold">Режим работы</span>
-                    </div>
-                    <div className="space-y-1 text-xs text-muted-foreground">
-                      <div>Пн-Пт: 9:30 - 17:30</div>
-                      <div>Сб-Вс: Выходной</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          </div>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
         </div>
       </motion.section>
     </>
