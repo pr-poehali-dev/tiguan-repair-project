@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer = ({ scrollToSection }: FooterProps) => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-8 px-4">
+    <footer className="bg-black text-white py-8 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-4 mb-4">
           <div>
@@ -20,7 +20,7 @@ const Footer = ({ scrollToSection }: FooterProps) => {
               />
               <span className="text-base font-bold">Мега Шлиц<sup className="text-xs ml-0.5">®</sup></span>
             </div>
-            <p className="text-secondary-foreground/80 text-sm">
+            <p className="text-white/70 text-sm">
               Профессиональное восстановление и изготовление шлицевых соединений. Собственное производство.
             </p>
           </div>
@@ -38,14 +38,14 @@ const Footer = ({ scrollToSection }: FooterProps) => {
           </div>
           <div>
             <h3 className="font-bold mb-3 text-sm">Контакты</h3>
-            <div className="space-y-1.5 text-xs text-secondary-foreground/80">
+            <div className="space-y-1.5 text-xs text-white/70">
               <div>+7 (920) 252-03-52</div>
               <div>megashlic@yandex.ru</div>
               <div>г. Нижний Новгород, Восточный проезд, 11/1</div>
             </div>
           </div>
         </div>
-        <div className="border-t border-secondary-foreground/20 pt-6 text-center text-xs text-secondary-foreground/60">
+        <div className="border-t border-white/20 pt-6 text-center text-xs text-white/60">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="order-2 md:order-1">© 2024 Мега Шлиц<sup className="text-xs">®</sup>. Все права защищены.</p>
             <div className="order-1 md:order-2">
