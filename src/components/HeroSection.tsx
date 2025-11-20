@@ -24,80 +24,88 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
 
       <div className="container mx-auto relative z-10 h-full flex items-center">
-        <div className="max-w-2xl space-y-4 py-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20">
-            <Icon name="Zap" className="text-primary" size={14} />
-            <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт за 1 день</span>
+        <div className="max-w-3xl space-y-5 py-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20 shadow-sm">
+            <Icon name="Zap" className="text-primary" size={16} />
+            <span className="text-sm font-bold text-primary uppercase tracking-wider">Ремонт за 1 день</span>
           </div>
 
-          <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-foreground">
+          <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-foreground">
             <span className="text-primary">Volkswagen Tiguan I</span>
             <br />
             Ремонт полного привода под ключ
           </h1>
 
-          <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-base">
-            <div className="flex items-center gap-2">
-              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
-              <span>Восстановление муфты Haldex</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3 text-base pt-2">
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Восстановление муфты Haldex</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
-              <span>Восстановление шлицевых соединений</span>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Восстановление шлицевых соединений</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
-              <span>Диагностика системы 4Motion</span>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Диагностика системы 4Motion</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
-              <span>Ремонт раздаточной коробки</span>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Ремонт раздаточной коробки</span>
             </div>
           </div>
           
-          <div className="flex flex-wrap gap-2 pt-2">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background/90 backdrop-blur rounded-lg border border-border/50 text-sm">
-              <Icon name="Clock" className="text-primary" size={16} />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 pt-3">
+            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+              <Icon name="Clock" className="text-primary" size={20} />
               <span className="font-semibold">Ремонт за 1 день</span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background/90 backdrop-blur rounded-lg border border-border/50 text-sm">
-              <Icon name="Award" className="text-primary" size={16} />
+            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+              <Icon name="Award" className="text-primary" size={20} />
               <span className="font-semibold">12 месяцев гарантии</span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background/90 backdrop-blur rounded-lg border border-border/50 text-sm">
-              <Icon name="Gauge" className="text-primary" size={16} />
+            <div className="flex items-center gap-2 px-4 py-3 bg-background/90 backdrop-blur-md rounded-xl border border-border/50 shadow-md">
+              <Icon name="Gauge" className="text-primary" size={20} />
               <span className="font-semibold">Без ограничения пробега</span>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3 pt-4">
+          <div className="flex flex-wrap gap-4 pt-4">
             <Button 
-              size="default" 
-              className="h-10 px-5 text-sm shadow-lg hover:shadow-xl transition-all" 
+              size="lg" 
+              className="h-12 px-8 text-base shadow-xl hover:shadow-2xl transition-all" 
               onClick={() => scrollToSection('services')}
             >
-              <Icon name="ArrowRight" size={18} className="mr-2" />
+              <Icon name="ArrowRight" size={20} className="mr-2" />
               Подробнее о технологиях
             </Button>
             <Button 
-              size="default" 
+              size="lg" 
               variant="outline" 
-              className="h-10 px-5 text-sm bg-background/90 backdrop-blur hover:bg-background transition-colors" 
+              className="h-12 px-8 text-base bg-background/90 backdrop-blur hover:bg-background transition-all shadow-md" 
               onClick={() => scrollToSection('contacts')}
             >
-              <Icon name="Phone" size={18} className="mr-2" />
+              <Icon name="Phone" size={20} className="mr-2" />
               Консультация
             </Button>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 pt-6">
+          <div className="grid grid-cols-3 gap-5 pt-8">
             {[
               { value: 15, suffix: '+', label: 'лет опыта', decimal: false },
               { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
               { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
             ].map((stat, index) => (
-              <div key={index} className="bg-background/80 backdrop-blur rounded-lg p-3 border border-border/50">
-                <div className="text-2xl lg:text-3xl font-bold text-primary mb-0.5">
+              <div key={index} className="bg-background/85 backdrop-blur-md rounded-xl p-5 border border-border/50 shadow-lg text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                     <AnimatedCounter 
                       end={stat.value} 
                       suffix={stat.suffix}
@@ -105,7 +113,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                       duration={2.5}
                     />
                 </div>
-                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider leading-tight">
                   {stat.label}
                 </div>
               </div>
