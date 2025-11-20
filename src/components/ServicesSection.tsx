@@ -1105,7 +1105,7 @@ const ServicesSection = () => {
                   </div>
                   <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-3">
                     <iframe
-                      src="https://rutube.ru/play/embed/a2c345d99a6b40181efac28a33770cb9/"
+                      src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
                       frameBorder="0"
                       allow="clipboard-write; autoplay"
                       allowFullScreen
