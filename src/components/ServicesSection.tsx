@@ -239,9 +239,15 @@ const ServicesSection = () => {
               >
                 Специализация по Volkswagen Tiguan I
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Полный цикл восстановления системы полного привода 4Motion с гарантией качества
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
@@ -316,9 +322,15 @@ const ServicesSection = () => {
               >
                 Защищённая интеллектуальная собственность
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Наша технология восстановления шлицов защищена патентом РФ
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
@@ -442,9 +454,15 @@ const ServicesSection = () => {
               >
                 Гарантия 12 месяцев без ограничения пробега
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
@@ -587,9 +605,15 @@ const ServicesSection = () => {
               >
                 Частые вопросы о восстановлении шлицов
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Всё, что нужно знать о технологии восстановления шлицевых соединений Volkswagen Tiguan I
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
@@ -706,9 +730,15 @@ const ServicesSection = () => {
               >
                 Как мы работаем с регионами
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Находимся в Нижнем Новгороде, принимаем детали со всей России. Доставка СДЭК 2-5 дней.
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
           
@@ -967,9 +997,15 @@ const ServicesSection = () => {
               >
                 Примеры восстановленных деталей
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
@@ -1134,9 +1170,15 @@ const ServicesSection = () => {
               >
                 Узнайте стоимость восстановления
               </motion.h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 Бесплатная консультация. Расчёт стоимости за 15 минут.
-              </p>
+              </motion.p>
             </div>
           </AnimatedSection>
 
