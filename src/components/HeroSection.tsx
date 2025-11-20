@@ -96,7 +96,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   <span className="font-bold text-base">Эксперты по Volkswagen Tiguan I</span>
                 </div>
                 <p className="text-sm text-muted-foreground">Восстановление шлицевых соединений трансмиссии с гарантией</p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
