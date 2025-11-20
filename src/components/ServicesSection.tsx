@@ -230,7 +230,7 @@ const ServicesSection = () => {
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Специализация по Volkswagen Tiguan I
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
@@ -301,7 +301,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Защищённая интеллектуальная собственность
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
@@ -421,7 +421,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Гарантия 12 месяцев без ограничения пробега
               </h2>
               <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
@@ -560,7 +560,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Частые вопросы о восстановлении шлицов
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
@@ -673,7 +673,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Как мы работаем с регионами
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
@@ -928,7 +928,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Примеры восстановленных деталей
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
@@ -1089,7 +1089,7 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Узнайте стоимость восстановления
               </h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
