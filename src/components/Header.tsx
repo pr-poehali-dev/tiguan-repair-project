@@ -89,8 +89,8 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
                   isScrolled ? 'px-3 py-1.5' : 'px-4 py-2'
                 } ${
                   activeSection === section
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                    : 'text-foreground/60 hover:text-foreground hover:bg-muted/80 hover:scale-105'
                 }`}
               >
 
