@@ -261,7 +261,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Примеры восстановленных деталей
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
               </p>
             </div>
@@ -332,8 +332,8 @@ const ServicesSection = () => {
                       </div>
                     </div>
                     <CardContent className="pt-4 pb-4 flex-1 flex flex-col">
-                      <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
-                      <p className="text-xs text-muted-foreground flex-1">{item.description}</p>
+                      <h3 className="font-bold text-lg mb-1.5">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground flex-1">{item.description}</p>
                     </CardContent>
                   </Card>
               </AnimatedSection>
@@ -349,8 +349,8 @@ const ServicesSection = () => {
                       <Icon name="Video" className="text-primary" size={24} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1">Видео процесса</h3>
-                      <p className="text-sm text-muted-foreground">
+                      <h3 className="font-bold text-xl mb-1">Видео процесса</h3>
+                      <p className="text-base text-muted-foreground">
                         Смотрите, как мы восстанавливаем шлицы на нашем канале RuTube
                       </p>
                     </div>
@@ -392,7 +392,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Специализация по Volkswagen Tiguan I
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Полный цикл восстановления системы полного привода 4Motion с гарантией качества
               </p>
             </div>
@@ -421,7 +421,7 @@ const ServicesSection = () => {
                             </div>
                           </div>
                           
-                          <p className="text-xs text-muted-foreground leading-snug mb-2">
+                          <p className="text-sm text-muted-foreground leading-snug mb-2">
                             {service.description}
                           </p>
                           
@@ -470,7 +470,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Защищённая интеллектуальная собственность
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Наша технология восстановления шлицов защищена патентом РФ
               </p>
             </div>
@@ -592,7 +592,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Гарантия 12 месяцев без ограничения пробега
               </h2>
-              <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
                 Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
               </p>
             </div>
@@ -730,7 +730,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Частые вопросы о восстановлении шлицов
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Всё, что нужно знать о технологии восстановления шлицевых соединений Volkswagen Tiguan I
               </p>
             </div>
@@ -841,7 +841,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Как мы работаем с регионами
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Находимся в Нижнем Новгороде, принимаем детали со всей России. Доставка СДЭК 2-5 дней.
               </p>
             </div>
@@ -1055,7 +1055,7 @@ const ServicesSection = () => {
               <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Узнайте стоимость восстановления
               </h2>
-              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Бесплатная консультация и расчёт стоимости.
               </p>
             </div>
