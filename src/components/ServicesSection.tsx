@@ -303,60 +303,60 @@ const ServicesSection = () => {
 
       <SectionDivider variant="gradient" />
 
-      <section id="patents" className="py-8 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+      <section id="patents" className="py-6 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Патентованная технология</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Защищённая интеллектуальная собственность
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Наша технология восстановления шлицов защищена патентом РФ
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-3">
             <AnimatedSection delay={0.1}>
               <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon name="Award" className="text-primary" size={28} />
+                <CardContent className="p-4">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon name="Award" className="text-primary" size={20} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-1">Патент РФ №2829377</h3>
-                      <p className="text-sm text-muted-foreground">Выдан 30 октября 2024 года</p>
+                      <h3 className="text-base font-bold mb-0.5">Патент РФ №2829377</h3>
+                      <p className="text-xs text-muted-foreground">Выдан 30 октября 2024 года</p>
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
-                    <p className="text-sm leading-relaxed">
+                  <div className="space-y-2">
+                    <p className="text-xs leading-snug">
                       <span className="font-semibold">Способ восстановления шлицевого соединения</span> на полноприводных автомобилях с использованием высокоточной механической обработки и термообработки.
                     </p>
                     
-                    <div className="space-y-2">
-                      <div className="flex items-start gap-2">
-                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                        <span className="text-sm">Восстановление изношенных шлицов методом механической обработки на станках с ЧПУ</span>
+                    <div className="space-y-1">
+                      <div className="flex items-start gap-1.5">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
+                        <span className="text-xs">Восстановление изношенных шлицов методом механической обработки на станках с ЧПУ</span>
                       </div>
-                      <div className="flex items-start gap-2">
-                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                        <span className="text-sm">Термообработка для восстановления твёрдости поверхности до заводских параметров</span>
+                      <div className="flex items-start gap-1.5">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
+                        <span className="text-xs">Термообработка для восстановления твёрдости поверхности до заводских параметров</span>
                       </div>
-                      <div className="flex items-start gap-2">
-                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={16} />
-                        <span className="text-sm">Гарантированное качество и долговечность восстановленных деталей</span>
+                      <div className="flex items-start gap-1.5">
+                        <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
+                        <span className="text-xs">Гарантированное качество и долговечность восстановленных деталей</span>
                       </div>
                     </div>
 
-                    <div className="pt-2 border-t border-border/50">
+                    <div className="pt-1.5 border-t border-border/50">
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="secondary" className="text-xs">
                           <Icon name="MapPin" className="mr-1" size={12} />
@@ -380,25 +380,25 @@ const ServicesSection = () => {
             <AnimatedSection delay={0.2}>
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full overflow-hidden">
                 <CardContent className="p-0 h-full flex flex-col">
-                  <div className="p-3 border-b border-border/50">
-                    <div className="flex items-center gap-2 mb-1">
-                      <Icon name="FileText" className="text-primary" size={20} />
-                      <h3 className="text-base font-bold">Свидетельство о патенте</h3>
+                  <div className="p-2 border-b border-border/50">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <Icon name="FileText" className="text-primary" size={16} />
+                      <h3 className="text-sm font-bold">Свидетельство о патенте</h3>
                     </div>
                     <p className="text-xs text-muted-foreground">Официальный документ Роспатента</p>
                   </div>
                   
-                  <div className="flex-1 p-3 flex items-center justify-center bg-muted/20">
+                  <div className="flex-1 p-2 flex items-center justify-center bg-muted/20">
                     <motion.img 
                       src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
                       alt="Патент на изобретение №2829377"
-                      className="rounded-lg shadow-lg border-2 border-border max-h-80 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
+                      className="rounded-lg shadow-lg border-2 border-border max-h-60 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
                       whileHover={{ scale: 1.05 }}
                       onClick={() => setSelectedImage('https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg')}
                     />
                   </div>
                   
-                  <div className="p-3 bg-muted/30 text-center">
+                  <div className="p-2 bg-muted/30 text-center">
                     <p className="text-xs text-muted-foreground">
                       <Icon name="MousePointer2" className="inline mr-1" size={12} />
                       Нажмите для увеличения
@@ -410,15 +410,15 @@ const ServicesSection = () => {
           </div>
 
           <AnimatedSection delay={0.3}>
-            <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-4">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Lightbulb" className="text-accent-foreground" size={24} />
+            <Card className="mt-3 border-border/50 bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-3">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-3">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Lightbulb" className="text-accent-foreground" size={20} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-2">Почему это важно для вас?</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h3 className="font-bold text-sm mb-1">Почему это важно для вас?</h3>
+                    <p className="text-xs text-muted-foreground leading-snug">
                       Патент подтверждает уникальность и эффективность нашей технологии. Это не просто ремонт — это научно обоснованный, проверенный и защищённый государством способ восстановления деталей. Вы получаете гарантию качества на 12 месяцев, потому что мы уверены в результате.
                     </p>
                   </div>
@@ -429,26 +429,26 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="warranty" className="py-12 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
+      <section id="warranty" className="py-6 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-sm font-bold text-primary uppercase tracking-wider">Наше преимущество</span>
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">Наше преимущество</span>
               </motion.div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Гарантия 12 месяцев без ограничения пробега
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
                 Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-3 gap-3 mb-4">
             {[
               {
                 icon: 'ShieldCheck',
@@ -470,18 +470,18 @@ const ServicesSection = () => {
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6 text-center">
+                <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-4 text-center">
                     <motion.div
-                      className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
+                      className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2 shadow-lg"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <Icon name={item.icon} className="text-primary" size={32} />
+                      <Icon name={item.icon} className="text-primary" size={20} />
                     </motion.div>
-                    <div className="text-3xl font-bold text-primary mb-1">{item.title}</div>
-                    <div className="text-sm font-semibold text-muted-foreground mb-3">{item.subtitle}</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <div className="text-xl font-bold text-primary mb-0.5">{item.title}</div>
+                    <div className="text-xs font-semibold text-muted-foreground mb-2">{item.subtitle}</div>
+                    <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -490,78 +490,78 @@ const ServicesSection = () => {
 
           <AnimatedSection delay={0.3}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm shadow-xl">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-8">
+              <CardContent className="p-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="FileCheck" className="text-primary" size={28} />
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="FileCheck" className="text-primary" size={20} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2">Что входит в гарантию?</h3>
-                        <p className="text-sm text-muted-foreground">Полная защита вашего ремонта</p>
+                        <h3 className="text-base font-bold mb-1">Что входит в гарантию?</h3>
+                        <p className="text-xs text-muted-foreground">Полная защита вашего ремонта</p>
                       </div>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-1.5">
                       {[
                         'Бесплатное устранение любых дефектов нашей работы',
                         'Замена детали при выявлении производственного брака',
                         'Компенсация стоимости работ при гарантийном случае',
                         'Консультации и диагностика в течение гарантийного срока'
                       ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={18} />
-                          <span className="text-sm">{item}</span>
+                        <div key={index} className="flex items-start gap-2">
+                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
+                          <span className="text-xs">{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <div>
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon name="AlertCircle" className="text-primary" size={28} />
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="AlertCircle" className="text-primary" size={20} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2">Почему мы можем это дать?</h3>
-                        <p className="text-sm text-muted-foreground">Уверенность в технологии</p>
+                        <h3 className="text-base font-bold mb-1">Почему мы можем это дать?</h3>
+                        <p className="text-xs text-muted-foreground">Уверенность в технологии</p>
                       </div>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-1.5">
                       {[
                         'Патентованная технология восстановления шлицов',
                         'Высокоточное оборудование с ЧПУ',
                         'Термообработка до заводских параметров HRC 58-62',
                         'Многоступенчатый контроль качества на каждом этапе'
                       ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={18} />
-                          <span className="text-sm">{item}</span>
+                        <div key={index} className="flex items-start gap-2">
+                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
+                          <span className="text-xs">{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-border/50">
-                  <div className="bg-background/50 rounded-xl p-6 text-center">
-                    <div className="flex items-center justify-center gap-3 mb-3">
-                      <Icon name="BadgeCheck" className="text-primary" size={32} />
-                      <h4 className="text-2xl font-bold">Официальный гарантийный талон</h4>
+                <div className="mt-4 pt-4 border-t border-border/50">
+                  <div className="bg-background/50 rounded-lg p-4 text-center">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Icon name="BadgeCheck" className="text-primary" size={20} />
+                      <h4 className="text-base font-bold">Официальный гарантийный талон</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-6">
+                    <p className="text-xs text-muted-foreground max-w-2xl mx-auto mb-3">
                       На каждую восстановленную деталь выдаём официальный гарантийный талон с печатью организации, номером заказа и подписью мастера
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-2">
                       <a href="tel:+79202520352">
-                        <Button size="lg" className="font-bold">
-                          <Icon name="Phone" size={20} className="mr-2" />
+                        <Button size="sm" className="font-bold">
+                          <Icon name="Phone" size={16} className="mr-1.5" />
                           Узнать подробности
                         </Button>
                       </a>
                       <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
-                        <Button size="lg" variant="outline" className="font-bold">
-                          <Icon name="MessageCircle" size={20} className="mr-2" />
+                        <Button size="sm" variant="outline" className="font-bold">
+                          <Icon name="MessageCircle" size={16} className="mr-1.5" />
                           WhatsApp
                         </Button>
                       </a>
@@ -574,20 +574,20 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="faq" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Ответы на вопросы</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Частые вопросы о восстановлении шлицов
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Всё, что нужно знать о технологии восстановления шлицевых соединений Volkswagen Tiguan I
               </p>
             </div>
@@ -632,14 +632,14 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-5">
-                      <div className="flex items-start gap-3 mb-3">
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Icon name={item.icon} className="text-primary" size={20} />
+                    <CardContent className="p-3">
+                      <div className="flex items-start gap-2 mb-2">
+                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon name={item.icon} className="text-primary" size={16} />
                         </div>
-                        <h3 className="text-sm font-bold leading-tight pt-1">{item.question}</h3>
+                        <h3 className="text-xs font-bold leading-tight pt-1">{item.question}</h3>
                       </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed pl-13">
+                      <p className="text-xs text-muted-foreground leading-snug pl-10">
                         {item.answer}
                       </p>
                     </CardContent>
@@ -650,20 +650,20 @@ const ServicesSection = () => {
           </div>
 
           <AnimatedSection delay={0.6}>
-            <Card className="mt-6 border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
-              <CardContent className="p-4">
-                <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="MessageCircle" className="text-primary" size={24} />
+            <Card className="mt-3 border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 backdrop-blur-sm">
+              <CardContent className="p-3">
+                <div className="flex flex-col md:flex-row items-center gap-3 text-center md:text-left">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="MessageCircle" className="text-primary" size={20} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold mb-1">Не нашли ответ на свой вопрос?</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-bold mb-0.5 text-sm">Не нашли ответ на свой вопрос?</h3>
+                    <p className="text-xs text-muted-foreground">
                       Позвоните нам или оставьте заявку — ответим на любые вопросы о восстановлении шлицов
                     </p>
                   </div>
-                  <Button className="flex-shrink-0">
-                    <Icon name="Phone" size={18} className="mr-2" />
+                  <Button className="flex-shrink-0" size="sm">
+                    <Icon name="Phone" size={16} className="mr-1.5" />
                     Задать вопрос
                   </Button>
                 </div>
@@ -693,26 +693,26 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="guarantees" className="py-12 px-4 bg-muted/10">
+      <section id="guarantees" className="py-6 px-4 bg-muted/10">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Работаем по всей России</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Как мы работаем с регионами
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Находимся в Нижнем Новгороде, принимаем детали со всей России. Доставка СДЭК 2-5 дней.
               </p>
             </div>
           </AnimatedSection>
           
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <div className="grid md:grid-cols-3 gap-3 mb-4">
             {[
               {
                 step: 1,
@@ -757,17 +757,17 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-5">
-                      <div className="flex items-start gap-3 mb-3">
-                        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-primary-foreground font-bold flex-shrink-0">
+                    <CardContent className="p-3">
+                      <div className="flex items-start gap-2 mb-2">
+                        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold flex-shrink-0 text-sm">
                           {item.step}
                         </div>
                         <div className="flex-1">
-                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
-                            <Icon name={item.icon} className="text-primary" size={20} />
+                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-1.5">
+                            <Icon name={item.icon} className="text-primary" size={16} />
                           </div>
-                          <h3 className="text-sm font-bold mb-2">{item.title}</h3>
-                          <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
+                          <h3 className="text-xs font-bold mb-1">{item.title}</h3>
+                          <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -954,26 +954,26 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="gallery" className="py-8 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+      <section id="gallery" className="py-6 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Наши работы</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Примеры восстановленных деталей
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               {
                 id: 'gallery-1',
@@ -1011,7 +1011,7 @@ const ServicesSection = () => {
                       <img 
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute top-3 left-3">
                         <Badge className="bg-background/90 text-foreground shadow-lg text-xs backdrop-blur-sm">
@@ -1121,26 +1121,26 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="contacts" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Свяжитесь с нами</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
+              <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Узнайте стоимость восстановления
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Бесплатная консультация. Расчёт стоимости за 15 минут.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid md:grid-cols-2 gap-3 mb-4">
             {[
               {
                 icon: 'Phone',
