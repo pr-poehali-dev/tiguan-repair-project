@@ -226,68 +226,72 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-12 px-4 bg-muted/5 relative overflow-hidden">
+      <section id="services" className="py-8 px-4 bg-muted/5 relative overflow-hidden">
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
+            <div className="text-center mb-6">
               <motion.div 
-                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-5 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-sm font-bold text-primary uppercase tracking-wider">Наши услуги</span>
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">Наши услуги</span>
               </motion.div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Специализация по Volkswagen Tiguan I
               </h2>
-              <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
                 Полный цикл восстановления системы полного привода 4Motion с гарантией качества
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+          <div className="space-y-3 mb-6">
             {services.map((service, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
+              <AnimatedSection key={index} delay={index * 0.05}>
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={{ x: 4 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className="w-full h-full"
                 >
-                  <Card className="group h-full flex flex-col border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300">
-                    <CardHeader className="pb-4">
-                      <motion.div 
-                        className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-3"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Icon name={service.icon} className="text-primary" size={24} />
-                      </motion.div>
-                      <CardTitle className="text-lg font-bold text-foreground mb-2">
-                        {service.title}
-                      </CardTitle>
-                      <div className="flex items-center gap-2">
-                        <Badge variant="outline" className="text-primary border-primary/30">
-                          {service.price}
-                        </Badge>
-                        <Badge variant="outline" className="text-muted-foreground border-border">
-                          {service.duration}
-                        </Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="pt-0 flex-1">
-                      <CardDescription className="text-sm text-muted-foreground leading-relaxed mb-4">
-                        {service.description}
-                      </CardDescription>
-                      {service.features && service.features.length > 0 && (
-                        <div className="space-y-2 pt-4 border-t border-border/50">
-                          {service.features.slice(0, 4).map((feature: string, idx: number) => (
-                            <div key={idx} className="flex items-start gap-2 text-sm">
-                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={16} />
-                              <span className="text-foreground/90">{feature}</span>
+                  <Card className="group border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                    <CardContent className="p-4">
+                      <div className="flex items-start gap-4">
+                        <motion.div 
+                          className="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Icon name={service.icon} className="text-primary" size={20} />
+                        </motion.div>
+                        
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                            <h3 className="text-base font-bold text-foreground">{service.title}</h3>
+                            <div className="flex items-center gap-2 flex-shrink-0">
+                              <Badge variant="outline" className="text-primary border-primary/30 text-xs">
+                                {service.price}
+                              </Badge>
+                              <Badge variant="outline" className="text-muted-foreground border-border text-xs">
+                                {service.duration}
+                              </Badge>
                             </div>
-                          ))}
+                          </div>
+                          
+                          <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                            {service.description}
+                          </p>
+                          
+                          {service.features && service.features.length > 0 && (
+                            <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                              {service.features.slice(0, 4).map((feature: string, idx: number) => (
+                                <div key={idx} className="flex items-start gap-1.5 text-xs">
+                                  <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
+                                  <span className="text-foreground/80">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                      )}
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
