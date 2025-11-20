@@ -438,8 +438,153 @@ const ServicesSection = () => {
                   <div className="flex-1">
                     <h3 className="font-bold text-lg mb-2">Почему это важно для вас?</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Патент подтверждает уникальность и эффективность нашей технологии. Это не просто ремонт — это научно обоснованный, проверенный и защищённый государством способ восстановления деталей. Вы получаете гарантию качества на 18 месяцев, потому что мы уверены в результате.
+                      Патент подтверждает уникальность и эффективность нашей технологии. Это не просто ремонт — это научно обоснованный, проверенный и защищённый государством способ восстановления деталей. Вы получаете гарантию качества на 12 месяцев, потому что мы уверены в результате.
                     </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section id="warranty" className="py-12 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
+        <div className="container mx-auto max-w-5xl">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <motion.div 
+                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">Наше преимущество</span>
+              </motion.div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+                Гарантия 12 месяцев без ограничения пробега
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {[
+              {
+                icon: 'ShieldCheck',
+                title: '12 месяцев',
+                subtitle: 'Полная гарантия',
+                description: 'Официальная гарантия на год — дольше, чем у большинства конкурентов'
+              },
+              {
+                icon: 'Gauge',
+                title: 'Без ограничений',
+                subtitle: 'По пробегу',
+                description: 'Неважно, сколько километров вы проедете — гарантия действует'
+              },
+              {
+                icon: 'Award',
+                title: 'Патент РФ',
+                subtitle: 'Проверенная технология',
+                description: 'Качество подтверждено патентом на изобретение №2829377'
+              }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <motion.div
+                      className="w-16 h-16 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
+                      whileHover={{ rotate: 360, scale: 1.1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon name={item.icon} className="text-primary" size={32} />
+                    </motion.div>
+                    <div className="text-3xl font-bold text-primary mb-1">{item.title}</div>
+                    <div className="text-sm font-semibold text-muted-foreground mb-3">{item.subtitle}</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection delay={0.3}>
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm shadow-xl">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="FileCheck" className="text-primary" size={28} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Что входит в гарантию?</h3>
+                        <p className="text-sm text-muted-foreground">Полная защита вашего ремонта</p>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        'Бесплатное устранение любых дефектов нашей работы',
+                        'Замена детали при выявлении производственного брака',
+                        'Компенсация стоимости работ при гарантийном случае',
+                        'Консультации и диагностика в течение гарантийного срока'
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={18} />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon name="AlertCircle" className="text-primary" size={28} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Почему мы можем это дать?</h3>
+                        <p className="text-sm text-muted-foreground">Уверенность в технологии</p>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        'Патентованная технология восстановления шлицов',
+                        'Высокоточное оборудование с ЧПУ',
+                        'Термообработка до заводских параметров HRC 58-62',
+                        'Многоступенчатый контроль качества на каждом этапе'
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={18} />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <div className="bg-background/50 rounded-xl p-6 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-3">
+                      <Icon name="BadgeCheck" className="text-primary" size={32} />
+                      <h4 className="text-2xl font-bold">Официальный гарантийный талон</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-6">
+                      На каждую восстановленную деталь выдаём официальный гарантийный талон с печатью организации, номером заказа и подписью мастера
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <a href="tel:+79202520352">
+                        <Button size="lg" className="font-bold">
+                          <Icon name="Phone" size={20} className="mr-2" />
+                          Узнать подробности
+                        </Button>
+                      </a>
+                      <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
+                        <Button size="lg" variant="outline" className="font-bold">
+                          <Icon name="MessageCircle" size={20} className="mr-2" />
+                          WhatsApp
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -487,7 +632,7 @@ const ServicesSection = () => {
               {
                 icon: 'ShieldCheck',
                 question: 'Какая гарантия?',
-                answer: '18 месяцев без ограничения пробега. Официальный гарантийный талон с печатью организации.'
+                answer: '12 месяцев без ограничения пробега. Официальный гарантийный талон с печатью организации.'
               },
               {
                 icon: 'Car',
@@ -640,7 +785,7 @@ const ServicesSection = () => {
                     <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                       <Icon name="BadgeCheck" className="text-primary" size={28} />
                     </div>
-                    <div className="text-2xl font-bold text-primary mb-1">18 мес</div>
+                    <div className="text-2xl font-bold text-primary mb-1">12 мес</div>
                     <div className="text-xs text-muted-foreground">Гарантия без ограничений</div>
                   </div>
                   <div className="text-center">
@@ -722,7 +867,7 @@ const ServicesSection = () => {
                 step: 6,
                 icon: 'PackageCheck',
                 title: 'Отправка и гарантия',
-                description: 'После оплаты отправляем детали в течение 1 дня. Гарантия 18 месяцев без ограничения пробега.'
+                description: 'После оплаты отправляем детали в течение 1 дня. Гарантия 12 месяцев без ограничения пробега.'
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
@@ -759,7 +904,7 @@ const ServicesSection = () => {
                     <Icon name="ShieldCheck" className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-1.5">Гарантия качества 18 месяцев</h3>
+                    <h3 className="text-lg font-bold mb-1.5">Гарантия качества 12 месяцев</h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       Официальная гарантия без ограничения пробега. Уверены в качестве — работаем по патентованной технологии.
                     </p>
