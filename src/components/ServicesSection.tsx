@@ -226,7 +226,14 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="gallery" className="py-4 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+      <motion.section 
+        id="gallery" 
+        className="py-4 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -370,11 +377,18 @@ const ServicesSection = () => {
             </AnimatedSection>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <SectionDivider variant="gradient" />
 
-      <section id="services" className="py-4 px-4 bg-muted/5 relative overflow-hidden">
+      <motion.section 
+        id="services" 
+        className="py-4 px-4 bg-muted/5 relative overflow-hidden"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -453,11 +467,18 @@ const ServicesSection = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <SectionDivider variant="gradient" />
 
-      <section id="patents" className="py-4 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
+      <motion.section 
+        id="patents" 
+        className="py-4 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -587,9 +608,16 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="warranty" className="py-4 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
+      <motion.section 
+        id="warranty" 
+        className="py-4 px-4 bg-gradient-to-b from-background via-primary/5 to-background"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -738,9 +766,16 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="faq" className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <motion.section 
+        id="faq" 
+        className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -865,7 +900,14 @@ const ServicesSection = () => {
         </div>
       )}
 
-      <section id="guarantees" className="py-4 px-4 bg-muted/10">
+      <motion.section 
+        id="guarantees" 
+        className="py-4 px-4 bg-muted/10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -1127,9 +1169,16 @@ const ServicesSection = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="contacts" className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <motion.section 
+        id="contacts" 
+        className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
@@ -1235,7 +1284,7 @@ const ServicesSection = () => {
             </AnimatedSection>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
