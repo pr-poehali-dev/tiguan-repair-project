@@ -23,21 +23,36 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20">
-              <div className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-xs font-medium text-primary">Производственная компания</span>
+              <Icon name="Zap" className="text-primary" size={14} />
+              <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт от 1 дня</span>
             </div>
 
             <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-foreground">
-              Восстановление шлицевых соединений
+              Ремонт полного привода
               <br />
               <span className="text-primary">
-                Volkswagen Tiguan I
+                Volkswagen Tiguan I под ключ
               </span>
             </h1>
 
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Специализируемся на ремонте полноприводной трансмиссии Tiguan первого поколения (5N). Полный цикл: диагностика, восстановление шлицов, термообработка, балансировка на станках с ЧПУ.
+              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения, карданный вал. Диагностика, ремонт, гарантия 12 месяцев. Работаем от 1 дня.
             </p>
+            
+            <div className="flex flex-wrap gap-4 text-sm">
+              <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="Clock" className="text-primary" size={16} />
+                <span className="font-semibold">От 1 дня</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="Award" className="text-primary" size={16} />
+                <span className="font-semibold">Гарантия 12 месяцев</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="CheckCircle" className="text-primary" size={16} />
+                <span className="font-semibold">Под ключ</span>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4">
               <Button 
