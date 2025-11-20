@@ -330,9 +330,9 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <div className="mt-6 grid md:grid-cols-2 gap-4">
+          <div className="mt-6">
             <AnimatedSection delay={0.4}>
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -365,33 +365,6 @@ const ServicesSection = () => {
                       Больше видео на RuTube
                     </Button>
                   </a>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.5}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
-                <CardContent className="p-4 h-full flex flex-col justify-center">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                    <Icon name="Camera" className="text-primary" size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    Документируем все этапы: от получения детали до финального контроля. Вы видите весь процесс восстановления вашей детали.
-                  </p>
-                  <div className="space-y-2">
-                    {[
-                      'Состояние при получении',
-                      'Процесс восстановления и обработки',
-                      'Термообработка и закалка',
-                      'Финальный контроль качества'
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
-                        <span className="text-xs">{item}</span>
-                      </div>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
             </AnimatedSection>
