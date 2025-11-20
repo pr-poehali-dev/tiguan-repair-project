@@ -403,20 +403,12 @@ const ServicesSection = () => {
           <div className="space-y-2 mb-4">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.05}>
-                <motion.div
-                  whileHover={{ x: 4 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Card className="group border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-3">
-                      <div className="flex items-start gap-3">
-                        <motion.div 
-                          className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Icon name={service.icon} className="text-primary" size={16} />
-                        </motion.div>
+                <Card className="group border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name={service.icon} className="text-primary" size={16} />
+                      </div>
                         
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
@@ -464,7 +456,6 @@ const ServicesSection = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
               </AnimatedSection>
             ))}
           </div>
@@ -556,11 +547,10 @@ const ServicesSection = () => {
                   </div>
                   
                   <div className="flex-1 p-2 flex items-center justify-center bg-muted/20">
-                    <motion.img 
+                    <img 
                       src="https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg"
                       alt="Патент на изобретение №2829377"
                       className="rounded-lg shadow-lg border-2 border-border max-h-60 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
-                      whileHover={{ scale: 1.05 }}
                       onClick={() => setSelectedImage('https://cdn.poehali.dev/files/72de0a62-55b0-4414-8c96-a15fb577a0a3.jpg')}
                     />
                   </div>
@@ -784,12 +774,8 @@ const ServicesSection = () => {
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -4 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-3">
+                <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-3">
                       <div className="flex items-start gap-2 mb-2">
                         <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Icon name={item.icon} className="text-primary" size={16} />
@@ -801,7 +787,6 @@ const ServicesSection = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </motion.div>
               </AnimatedSection>
             ))}
           </div>
