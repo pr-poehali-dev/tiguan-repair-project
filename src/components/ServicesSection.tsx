@@ -878,7 +878,7 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
         </div>
-      </section>
+      </motion.section>
 
       {selectedImage && (
         <div 
