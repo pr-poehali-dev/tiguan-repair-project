@@ -1156,8 +1156,8 @@ const ServicesSection = () => {
 
           <div className="grid md:grid-cols-2 gap-3 mb-4">
             <AnimatedSection delay={0.2}>
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
-                <CardContent className="p-4">
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full flex flex-col">
+                <CardContent className="p-4 flex-1 flex flex-col">
                   <div className="flex items-start gap-3 mb-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon name="MessageSquare" className="text-primary" size={20} />
@@ -1168,7 +1168,7 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     <a href="tel:+79202520352">
                       <Button size="default" className="w-full justify-start">
                         <Icon name="Phone" size={18} className="mr-2" />
@@ -1195,7 +1195,7 @@ const ServicesSection = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden h-full flex flex-col">
                 <CardContent className="p-0">
                   <div className="p-4 border-b border-border/50">
                     <div className="flex items-start gap-3">
