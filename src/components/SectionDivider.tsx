@@ -28,7 +28,7 @@ const SectionDivider = ({ variant = 'gradient' }: SectionDividerProps) => {
 
   if (variant === 'dots') {
     return (
-      <div className="flex justify-center items-center gap-2 py-12">
+      <div className="flex justify-center items-center gap-2 py-3">
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
@@ -44,7 +44,7 @@ const SectionDivider = ({ variant = 'gradient' }: SectionDividerProps) => {
   }
 
   return (
-    <div className="relative h-px my-12">
+    <div className="relative h-px my-3">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <motion.div
         className="absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-primary/50 to-transparent"
