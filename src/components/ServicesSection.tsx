@@ -226,40 +226,26 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-8 px-4 bg-muted/10 relative overflow-hidden">
-        <div className="container mx-auto relative z-10">
+      <section id="services" className="py-12 px-4 bg-muted/5 relative overflow-hidden">
+        <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-10">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-5 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">Специализация</span>
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">Наши услуги</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
-                Ремонт полного привода Volkswagen Tiguan I под ключ
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+                Специализация по Volkswagen Tiguan I
               </h2>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-4">
-                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный срок ремонта — 1 день. Гарантия 12 месяцев без ограничения пробега.
+              <p className="text-base text-muted-foreground max-w-3xl mx-auto">
+                Полный цикл восстановления системы полного привода 4Motion с гарантией качества
               </p>
-              <div className="flex flex-wrap justify-center gap-2 text-sm">
-                <div className="flex items-center gap-1.5 bg-background/80 backdrop-blur px-3 py-1.5 rounded-lg border border-border/50">
-                  <Icon name="Award" className="text-primary" size={16} />
-                  <span className="font-semibold">Гарантия 12 месяцев</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-background/80 backdrop-blur px-3 py-1.5 rounded-lg border border-border/50">
-                  <Icon name="Clock" className="text-primary" size={16} />
-                  <span className="font-semibold">Срок 1 день</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-background/80 backdrop-blur px-3 py-1.5 rounded-lg border border-border/50">
-                  <Icon name="CheckCircle" className="text-primary" size={16} />
-                  <span className="font-semibold">Комплексный подход</span>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
@@ -267,46 +253,37 @@ const ServicesSection = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                   className="w-full h-full"
                 >
-                  <Card className={`group h-full flex flex-col border-border/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 ${
-                    index === 0 ? 'lg:col-span-2 border-primary/40 shadow-md' : 'hover:border-primary/30'
-                  }`}>
-                    <CardHeader className="space-y-2 pb-3">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="flex items-start gap-3">
-                          <motion.div 
-                            className="w-10 h-10 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"
-                            whileHover={{ rotate: 360, scale: 1.1 }}
-                            transition={{ duration: 0.6 }}
-                          >
-                            <Icon name={service.icon} className="text-primary" size={20} />
-                          </motion.div>
-                          <div>
-                            <CardTitle className="text-base font-bold text-foreground mb-1">
-                              {service.title}
-                            </CardTitle>
-                            {index === 0 && (
-                              <Badge className="bg-primary/20 text-primary border-primary/30 text-xs">
-                                Рекомендуем
-                              </Badge>
-                            )}
-                          </div>
-                        </div>
-                        <div className="text-right flex-shrink-0">
-                          <div className="text-base font-bold text-primary">{service.price}</div>
-                          <div className="text-xs text-muted-foreground">{service.duration}</div>
-                        </div>
+                  <Card className="group h-full flex flex-col border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+                    <CardHeader className="pb-4">
+                      <motion.div 
+                        className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-3"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Icon name={service.icon} className="text-primary" size={24} />
+                      </motion.div>
+                      <CardTitle className="text-lg font-bold text-foreground mb-2">
+                        {service.title}
+                      </CardTitle>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="outline" className="text-primary border-primary/30">
+                          {service.price}
+                        </Badge>
+                        <Badge variant="outline" className="text-muted-foreground border-border">
+                          {service.duration}
+                        </Badge>
                       </div>
                     </CardHeader>
-                    <CardContent className="pt-0 pb-4">
-                      <CardDescription className="text-xs text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed mb-3">
+                    <CardContent className="pt-0 flex-1">
+                      <CardDescription className="text-sm text-muted-foreground leading-relaxed mb-4">
                         {service.description}
                       </CardDescription>
-                      {service.features && (
-                        <div className="space-y-1.5 mt-3 pt-3 border-t border-border/50">
-                          {service.features.map((feature: string, idx: number) => (
-                            <div key={idx} className="flex items-start gap-1.5 text-xs">
-                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
-                              <span className="text-foreground/80">{feature}</span>
+                      {service.features && service.features.length > 0 && (
+                        <div className="space-y-2 pt-4 border-t border-border/50">
+                          {service.features.slice(0, 4).map((feature: string, idx: number) => (
+                            <div key={idx} className="flex items-start gap-2 text-sm">
+                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={16} />
+                              <span className="text-foreground/90">{feature}</span>
                             </div>
                           ))}
                         </div>
