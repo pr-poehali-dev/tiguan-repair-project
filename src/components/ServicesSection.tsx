@@ -226,6 +226,181 @@ const ServicesSection = () => {
 
   return (
     <>
+      <section id="gallery" className="py-6 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="text-center mb-4">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                Примеры восстановленных деталей
+              </motion.h2>
+              <motion.p 
+                className="text-xs text-muted-foreground max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
+              </motion.p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              {
+                id: 'gallery-1',
+                image: 'https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg',
+                title: 'Готовые детали',
+                description: 'Восстановленные шлицы после ЧПУ и термообработки',
+                badge: null
+              },
+              {
+                id: 'gallery-2',
+                image: 'https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg',
+                title: 'До и после',
+                description: 'Наглядное сравнение изношенных и восстановленных шлицов',
+                badge: 'До / После'
+              },
+              {
+                id: 'gallery-3',
+                image: 'https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg',
+                title: 'Дифференциал и вал',
+                description: 'Восстановление до заводского состояния',
+                badge: null
+              }
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="h-full"
+                >
+                  <Card 
+                    className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
+                    onClick={() => handleImageView(item.id, item.image)}
+                  >
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 left-3">
+                        <Badge className="bg-background/90 text-foreground shadow-lg text-xs backdrop-blur-sm">
+                          <Icon name="Eye" size={12} className="mr-1" />
+                          {imageViews[item.id] || 0}
+                        </Badge>
+                      </div>
+                      {item.badge && (
+                        <div className="absolute top-3 right-3">
+                          <Badge className="bg-primary text-primary-foreground shadow-lg text-xs">
+                            {item.badge}
+                          </Badge>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                          <div className="flex items-center gap-2 text-white">
+                            <Icon name="ZoomIn" size={18} />
+                            <span className="text-sm font-semibold">Увеличить фото</span>
+                          </div>
+                          <button
+                            onClick={(e) => handleShare(e, item)}
+                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg transition-colors text-white text-sm font-semibold"
+                          >
+                            <Icon name="Share2" size={16} />
+                            <span className="hidden sm:inline">Поделиться</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <CardContent className="pt-4 pb-4 flex-1 flex flex-col">
+                      <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground flex-1">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-4">
+            <AnimatedSection delay={0.4}>
+              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Icon name="Video" className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">Видео процесса</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Смотрите, как мы восстанавливаем шлицы на нашем канале RuTube
+                      </p>
+                    </div>
+                  </div>
+                  <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-3">
+                    <iframe
+                      src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
+                      frameBorder="0"
+                      allow="clipboard-write; autoplay"
+                      allowFullScreen
+                      className="w-full h-full"
+                      title="Видео восстановления шлицов"
+                    />
+                  </div>
+                  <a 
+                    href="https://rutube.ru/channel/35843934/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="w-full">
+                      <Icon name="ExternalLink" size={16} className="mr-2" />
+                      Больше видео на RuTube
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.5}>
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
+                <CardContent className="p-4 h-full flex flex-col justify-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                    <Icon name="Camera" className="text-primary" size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Документируем все этапы: от получения детали до финального контроля. Вы видите весь процесс восстановления вашей детали.
+                  </p>
+                  <div className="space-y-2">
+                    {[
+                      'Состояние при получении',
+                      'Процесс восстановления и обработки',
+                      'Термообработка и закалка',
+                      'Финальный контроль качества'
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                        <span className="text-xs">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider variant="gradient" />
+
       <section id="services" className="py-6 px-4 bg-muted/5 relative overflow-hidden">
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
@@ -980,179 +1155,6 @@ const ServicesSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" className="py-6 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20">
-        <div className="container mx-auto max-w-6xl">
-          <AnimatedSection>
-            <div className="text-center mb-4">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                Примеры восстановленных деталей
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
-              </motion.p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {[
-              {
-                id: 'gallery-1',
-                image: 'https://cdn.poehali.dev/files/afd05d83-5c3a-44b5-b7e1-d3ae38464a3d.jpg',
-                title: 'Готовые детали',
-                description: 'Восстановленные шлицы после ЧПУ и термообработки',
-                badge: null
-              },
-              {
-                id: 'gallery-2',
-                image: 'https://cdn.poehali.dev/files/64672975-4dd9-45b5-91f5-5d17f9a3a5d2.jpg',
-                title: 'До и после',
-                description: 'Наглядное сравнение изношенных и восстановленных шлицов',
-                badge: 'До / После'
-              },
-              {
-                id: 'gallery-3',
-                image: 'https://cdn.poehali.dev/files/a0f934cd-d8de-4ab1-8b44-67a3a4433a84.jpeg',
-                title: 'Дифференциал и вал',
-                description: 'Восстановление до заводского состояния',
-                badge: null
-              }
-            ].map((item, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  className="h-full"
-                >
-                  <Card 
-                    className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
-                    onClick={() => handleImageView(item.id, item.image)}
-                  >
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute top-3 left-3">
-                        <Badge className="bg-background/90 text-foreground shadow-lg text-xs backdrop-blur-sm">
-                          <Icon name="Eye" size={12} className="mr-1" />
-                          {imageViews[item.id] || 0}
-                        </Badge>
-                      </div>
-                      {item.badge && (
-                        <div className="absolute top-3 right-3">
-                          <Badge className="bg-primary text-primary-foreground shadow-lg text-xs">
-                            {item.badge}
-                          </Badge>
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
-                          <div className="flex items-center gap-2 text-white">
-                            <Icon name="ZoomIn" size={18} />
-                            <span className="text-sm font-semibold">Увеличить фото</span>
-                          </div>
-                          <button
-                            onClick={(e) => handleShare(e, item)}
-                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg transition-colors text-white text-sm font-semibold"
-                          >
-                            <Icon name="Share2" size={16} />
-                            <span className="hidden sm:inline">Поделиться</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <CardContent className="pt-4 pb-4 flex-1 flex flex-col">
-                      <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
-                      <p className="text-xs text-muted-foreground flex-1">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <div className="mt-6 grid md:grid-cols-2 gap-4">
-            <AnimatedSection delay={0.4}>
-              <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm h-full">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon name="Video" className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-1">Видео процесса</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Смотрите, как мы восстанавливаем шлицы на нашем канале RuTube
-                      </p>
-                    </div>
-                  </div>
-                  <div className="aspect-video rounded-lg overflow-hidden bg-black/5 mb-3">
-                    <iframe
-                      src="https://rutube.ru/play/embed/cc980b113b77037430a3b1067666c8e1/"
-                      frameBorder="0"
-                      allow="clipboard-write; autoplay"
-                      allowFullScreen
-                      className="w-full h-full"
-                      title="Видео восстановления шлицов"
-                    />
-                  </div>
-                  <a 
-                    href="https://rutube.ru/channel/35843934/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline" className="w-full">
-                      <Icon name="ExternalLink" size={16} className="mr-2" />
-                      Больше видео на RuTube
-                    </Button>
-                  </a>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.5}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full">
-                <CardContent className="p-4 h-full flex flex-col justify-center">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                    <Icon name="Camera" className="text-primary" size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Фотоотчёт каждого заказа</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    Документируем все этапы: от получения детали до финального контроля. Вы видите весь процесс восстановления вашей детали.
-                  </p>
-                  <div className="space-y-2">
-                    {[
-                      'Состояние при получении',
-                      'Процесс восстановления и обработки',
-                      'Термообработка и закалка',
-                      'Финальный контроль качества'
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
-                        <span className="text-xs">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
           </div>
         </div>
       </section>
