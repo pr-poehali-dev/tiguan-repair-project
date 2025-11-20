@@ -928,27 +928,22 @@ const ServicesSection = () => {
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -4 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-3">
-                      <div className="flex items-start gap-2 mb-2">
-                        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold flex-shrink-0 text-sm">
-                          {item.step}
-                        </div>
-                        <div className="flex-1">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-1.5">
-                            <Icon name={item.icon} className="text-primary" size={16} />
-                          </div>
-                          <h3 className="text-xs font-bold mb-1">{item.title}</h3>
-                          <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
-                        </div>
+                <Card className="border-border/50 bg-card/50 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-3">
+                    <div className="flex items-start gap-2 mb-2">
+                      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold flex-shrink-0 text-sm">
+                        {item.step}
                       </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                      <div className="flex-1">
+                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-1.5">
+                          <Icon name={item.icon} className="text-primary" size={16} />
+                        </div>
+                        <h3 className="text-xs font-bold mb-1">{item.title}</h3>
+                        <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </AnimatedSection>
             ))}
           </div>
