@@ -33,7 +33,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-foreground">
             Ремонт полного привода под ключ
             <br />
-            <span className="text-primary">Volkswagen Tiguan I</span>
+            <span className="text-primary text-3xl lg:text-4xl">Volkswagen Tiguan I</span>
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3 text-base pt-2">
