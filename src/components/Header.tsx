@@ -94,15 +94,15 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
                 }`}
               >
 
-                <span className="relative z-10">
-                  {section === 'home' && 'Главная'}
-                  {section === 'gallery' && 'Галерея'}
-                  {section === 'services' && 'Услуги'}
-                  {section === 'patents' && 'Патенты'}
-                  {section === 'warranty' && 'Гарантия'}
-                  {section === 'faq' && 'FAQ'}
-                  {section === 'guarantees' && 'Порядок работы'}
-                  {section === 'contacts' && 'Контакты'}
+                <span className="relative z-10 flex items-center gap-1.5">
+                  {section === 'home' && <><Icon name="Home" size={14} />Главная</>}
+                  {section === 'gallery' && <><Icon name="Image" size={14} />Галерея</>}
+                  {section === 'services' && <><Icon name="Wrench" size={14} />Услуги</>}
+                  {section === 'patents' && <><Icon name="Award" size={14} />Патенты</>}
+                  {section === 'warranty' && <><Icon name="ShieldCheck" size={14} />Гарантия</>}
+                  {section === 'faq' && <><Icon name="HelpCircle" size={14} />FAQ</>}
+                  {section === 'guarantees' && <><Icon name="ClipboardList" size={14} />Порядок работы</>}
+                  {section === 'contacts' && <><Icon name="MapPin" size={14} />Контакты</>}
                 </span>
               </button>
             ))}

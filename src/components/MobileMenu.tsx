@@ -47,14 +47,16 @@ const MobileMenu = ({ activeSection, scrollToSection }: MobileMenuProps) => {
                         : 'text-foreground hover:bg-muted/50'
                     }`}
                   >
-                    {section === 'home' && 'Главная'}
-                    {section === 'gallery' && 'Галерея'}
-                    {section === 'services' && 'Услуги'}
-                    {section === 'patents' && 'Патенты'}
-                    {section === 'warranty' && 'Гарантия'}
-                    {section === 'faq' && 'FAQ'}
-                    {section === 'guarantees' && 'Порядок работы'}
-                    {section === 'contacts' && 'Контакты'}
+                    <span className="flex items-center gap-2">
+                      {section === 'home' && <><Icon name="Home" size={18} />Главная</>}
+                      {section === 'gallery' && <><Icon name="Image" size={18} />Галерея</>}
+                      {section === 'services' && <><Icon name="Wrench" size={18} />Услуги</>}
+                      {section === 'patents' && <><Icon name="Award" size={18} />Патенты</>}
+                      {section === 'warranty' && <><Icon name="ShieldCheck" size={18} />Гарантия</>}
+                      {section === 'faq' && <><Icon name="HelpCircle" size={18} />FAQ</>}
+                      {section === 'guarantees' && <><Icon name="ClipboardList" size={18} />Порядок работы</>}
+                      {section === 'contacts' && <><Icon name="MapPin" size={18} />Контакты</>}
+                    </span>
                   </button>
                 ))}
                 <a
