@@ -1149,7 +1149,7 @@ const ServicesSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                Бесплатная консультация. Расчёт стоимости за 15 минут.
+                Бесплатная консультация и расчёт стоимости.
               </motion.p>
             </div>
           </AnimatedSection>
@@ -1180,7 +1180,7 @@ const ServicesSection = () => {
                       <div>
                         <h3 className="text-lg font-bold mb-1">Получить расчёт стоимости</h3>
                         <p className="text-sm text-muted-foreground">
-                          Позвоните или напишите — рассчитаем стоимость за 15 минут
+                          Позвоните или напишите — рассчитаем стоимость
                         </p>
                       </div>
                     </div>
