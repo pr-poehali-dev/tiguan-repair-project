@@ -987,19 +987,19 @@ const ServicesSection = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={0.7}>
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-6">
-              <CardContent className="p-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold mb-2 flex items-center justify-center gap-2">
-                    <Icon name="MapPin" className="text-primary" size={24} />
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-3">
+              <CardContent className="p-4">
+                <div className="text-center mb-3">
+                  <h3 className="text-base font-bold mb-1 flex items-center justify-center gap-2">
+                    <Icon name="MapPin" className="text-primary" size={18} />
                     География и доставка
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs text-muted-foreground">
                     Работаем по всей России через СДЭК — от Калининграда до Владивостока
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3">
                   {[
                     { region: 'Москва, СПб', days: '1-2 дня', price: 'от 350₽' },
                     { region: 'Центральная Россия', days: '2-3 дня', price: 'от 400₽' },
@@ -1008,25 +1008,22 @@ const ServicesSection = () => {
                     { region: 'Юг России', days: '3-4 дня', price: 'от 450₽' },
                     { region: 'Поволжье', days: '1-2 дня', price: 'от 300₽' }
                   ].map((item, index) => (
-                    <div key={index} className="bg-background/80 rounded-lg p-3 text-center">
-                      <div className="font-bold text-sm mb-1">{item.region}</div>
+                    <div key={index} className="bg-background/80 rounded-lg p-2 text-center">
+                      <div className="font-bold text-xs mb-0.5">{item.region}</div>
                       <div className="text-xs text-primary font-semibold">{item.days}</div>
-                      <div className="text-xs text-muted-foreground mt-1">{item.price}</div>
+                      <div className="text-xs text-muted-foreground">{item.price}</div>
                     </div>
                   ))}
                 </div>
 
-                <div className="bg-background/50 rounded-xl p-4 text-center">
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Точный расчёт стоимости и сроков доставки
-                  </p>
+                <div className="bg-background/50 rounded-lg p-2 text-center">
                   <a 
                     href="https://www.cdek.ru/ru/calculate" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="sm">
-                      <Icon name="ExternalLink" size={16} className="mr-2" />
+                    <Button variant="outline" size="sm" className="text-xs h-8">
+                      <Icon name="ExternalLink" size={14} className="mr-1.5" />
                       Калькулятор СДЭК
                     </Button>
                   </a>
