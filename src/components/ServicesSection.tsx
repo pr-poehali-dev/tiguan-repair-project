@@ -382,8 +382,6 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <SectionDivider variant="gradient" />
-
       <section 
         id="services" 
         className="py-4 px-4 bg-muted/5 relative overflow-hidden"
@@ -461,8 +459,6 @@ const ServicesSection = () => {
           </div>
         </div>
       </section>
-
-      <SectionDivider variant="gradient" />
 
       <section 
         id="patents" 
