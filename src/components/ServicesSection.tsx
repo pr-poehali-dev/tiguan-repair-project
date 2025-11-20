@@ -600,37 +600,21 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section 
+      <section 
         id="warranty" 
         className="py-4 px-4 bg-gradient-to-b from-background via-primary/5 to-background"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Гарантия 12 месяцев без ограничения пробега
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-3xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
                 Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
