@@ -36,24 +36,24 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             Ремонт полного привода под ключ
           </h1>
 
-          <ul className="space-y-2 text-base">
-            <li className="flex items-center gap-2">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-base">
+            <div className="flex items-center gap-2">
               <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
               <span>Восстановление муфты Haldex</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
-              <span>Ремонт раздаточной коробки</span>
-            </li>
-            <li className="flex items-center gap-2">
+            </div>
+            <div className="flex items-center gap-2">
               <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
               <span>Восстановление шлицевых соединений</span>
-            </li>
-            <li className="flex items-center gap-2">
+            </div>
+            <div className="flex items-center gap-2">
               <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
               <span>Диагностика системы 4Motion</span>
-            </li>
-          </ul>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="Check" className="text-primary flex-shrink-0" size={18} />
+              <span>Ремонт раздаточной коробки</span>
+            </div>
+          </div>
           
           <div className="flex flex-wrap gap-2 pt-2">
             <div className="flex items-center gap-1.5 px-3 py-1.5 bg-background/90 backdrop-blur rounded-lg border border-border/50 text-sm">
