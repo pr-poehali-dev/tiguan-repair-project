@@ -51,13 +51,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Icon name="Check" className="text-primary" size={14} />
               </div>
-              <span className="font-medium">Восстановление муфты Haldex</span>
+              <span className="font-medium">Восстановление шлицевых соединений</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Icon name="Check" className="text-primary" size={14} />
               </div>
-              <span className="font-medium">Восстановление шлицевых соединений</span>
+              <span className="font-medium">Восстановление муфты Haldex</span>
             </div>
           </div>
           
