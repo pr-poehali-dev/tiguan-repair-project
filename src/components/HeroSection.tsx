@@ -23,8 +23,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
       </div>
 
-      <div className="container mx-auto relative z-10 h-full flex items-center">
-        <div className="max-w-3xl space-y-4 py-12">
+      <div className="container mx-auto max-w-6xl relative z-10 h-full flex items-center">
+        <div className="space-y-4 py-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20 shadow-sm">
             <Icon name="Zap" className="text-primary" size={14} />
             <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт за 1 день</span>

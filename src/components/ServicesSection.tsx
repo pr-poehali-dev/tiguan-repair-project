@@ -227,7 +227,7 @@ const ServicesSection = () => {
   return (
     <>
       <section id="services" className="py-6 px-4 bg-muted/5 relative overflow-hidden">
-        <div className="container mx-auto relative z-10 max-w-5xl">
+        <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
@@ -304,7 +304,7 @@ const ServicesSection = () => {
       <SectionDivider variant="gradient" />
 
       <section id="patents" className="py-6 px-4 bg-gradient-to-b from-muted/5 via-muted/10 to-muted/5">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
@@ -430,7 +430,7 @@ const ServicesSection = () => {
       </section>
 
       <section id="warranty" className="py-6 px-4 bg-gradient-to-b from-background via-primary/5 to-background">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
@@ -575,7 +575,7 @@ const ServicesSection = () => {
       </section>
 
       <section id="faq" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
@@ -694,7 +694,7 @@ const ServicesSection = () => {
       )}
 
       <section id="guarantees" className="py-6 px-4 bg-muted/10">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
@@ -1122,7 +1122,7 @@ const ServicesSection = () => {
       </section>
 
       <section id="contacts" className="py-6 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
               <motion.div 
