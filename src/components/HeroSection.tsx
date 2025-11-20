@@ -39,18 +39,6 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <Icon name="Check" className="text-primary" size={16} />
               </div>
-              <span className="font-medium">Восстановление муфты Haldex</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Icon name="Check" className="text-primary" size={16} />
-              </div>
-              <span className="font-medium">Восстановление шлицевых соединений</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Icon name="Check" className="text-primary" size={16} />
-              </div>
               <span className="font-medium">Диагностика системы 4Motion</span>
             </div>
             <div className="flex items-center gap-3">
@@ -58,6 +46,18 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 <Icon name="Check" className="text-primary" size={16} />
               </div>
               <span className="font-medium">Ремонт раздаточной коробки</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Восстановление муфты Haldex</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon name="Check" className="text-primary" size={16} />
+              </div>
+              <span className="font-medium">Восстановление шлицевых соединений</span>
             </div>
           </div>
           
