@@ -101,7 +101,7 @@ const ServicesSection = () => {
         'Тестирование после ремонта'
       ],
       price: 'от 95 000 ₽',
-      duration: '5-7 рабочих дней'
+      duration: 'от 1 дня'
     },
     {
       icon: 'Cog',
@@ -114,7 +114,7 @@ const ServicesSection = () => {
         'Контроль геометрии и твердости'
       ],
       price: 'от 12 000 ₽',
-      duration: '2-3 рабочих дня'
+      duration: 'от 1 дня'
     },
     {
       icon: 'Gauge',
@@ -127,7 +127,7 @@ const ServicesSection = () => {
         'Заправка оригинальным маслом'
       ],
       price: 'от 45 000 ₽',
-      duration: '3-4 рабочих дня'
+      duration: 'от 1 дня'
     },
     {
       icon: 'Wrench',
@@ -140,7 +140,7 @@ const ServicesSection = () => {
         'Герметизация корпуса'
       ],
       price: 'от 38 000 ₽',
-      duration: '4-5 рабочих дней'
+      duration: 'от 1 дня'
     },
     {
       icon: 'Disc',
@@ -153,7 +153,7 @@ const ServicesSection = () => {
         'Контроль остаточного дисбаланса'
       ],
       price: 'от 8 500 ₽',
-      duration: '1 рабочий день'
+      duration: 'от 1 дня'
     },
     {
       icon: 'Package',
@@ -166,7 +166,7 @@ const ServicesSection = () => {
         'Очистка фильтра муфты'
       ],
       price: 'от 15 000 ₽',
-      duration: '1-2 рабочих дня'
+      duration: 'от 1 дня'
     }
   ];
 
@@ -269,7 +269,7 @@ const ServicesSection = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="Clock" className="text-primary" size={18} />
-                  <span className="font-semibold">Срок 5-7 дней</span>
+                  <span className="font-semibold">Срок от 1 дня</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="CheckCircle" className="text-primary" size={18} />
