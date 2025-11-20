@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -252,35 +251,19 @@ const ServicesSection = () => {
 
   return (
     <>
-      <motion.section 
+      <section 
         id="gallery" 
         className="py-4 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/20"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Примеры восстановленных деталей
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
@@ -403,39 +386,23 @@ const ServicesSection = () => {
             </AnimatedSection>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       <SectionDivider variant="gradient" />
 
-      <motion.section 
+      <section 
         id="services" 
         className="py-4 px-4 bg-muted/5 relative overflow-hidden"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Специализация по Volkswagen Tiguan I
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Полный цикл восстановления системы полного привода 4Motion с гарантией качества
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
@@ -707,13 +674,9 @@ const ServicesSection = () => {
               <AnimatedSection key={index} delay={index * 0.1}>
                 <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full hover:border-primary/50 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-4 text-center">
-                    <motion.div
-                      className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2 shadow-lg"
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
-                    >
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2 shadow-lg">
                       <Icon name={item.icon} className="text-primary" size={20} />
-                    </motion.div>
+                    </div>
                     <div className="text-xl font-bold text-primary mb-0.5">{item.title}</div>
                     <div className="text-xs font-semibold text-muted-foreground mb-2">{item.subtitle}</div>
                     <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
@@ -807,37 +770,21 @@ const ServicesSection = () => {
             </Card>
           </AnimatedSection>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section 
+      <section 
         id="faq" 
         className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Частые вопросы о восстановлении шлицов
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Всё, что нужно знать о технологии восстановления шлицевых соединений Volkswagen Tiguan I
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
@@ -1174,37 +1121,21 @@ const ServicesSection = () => {
             </Card>
           </div>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section 
+      <section 
         id="contacts" 
         className="py-4 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-3">
-              <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
                 Узнайте стоимость восстановления
-              </motion.h2>
-              <motion.p 
-                className="text-xs text-muted-foreground max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
+              </h2>
+              <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Бесплатная консультация и расчёт стоимости.
-              </motion.p>
+              </p>
             </div>
           </AnimatedSection>
 
@@ -1432,7 +1363,7 @@ const ServicesSection = () => {
             </AnimatedSection>
           )}
         </div>
-      </motion.section>
+      </section>
     </>
   );
 };
