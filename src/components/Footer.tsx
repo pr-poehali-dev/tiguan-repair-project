@@ -33,7 +33,7 @@ const Footer = ({ scrollToSection }: FooterProps) => {
               href="https://wa.me/79202520352" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-green-600 hover:bg-green-700 hover:scale-105 rounded-lg transition-all duration-200"
             >
               <Icon name="MessageCircle" size={14} />
               <span className="font-medium">WhatsApp</span>

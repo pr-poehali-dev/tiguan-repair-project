@@ -725,8 +725,8 @@ const ServicesSection = () => {
                           Узнать подробности
                         </Button>
                       </a>
-                      <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
-                        <Button size="sm" variant="outline" className="font-bold">
+                      <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="group">
+                        <Button size="sm" variant="outline" className="font-bold group-hover:scale-105 transition-transform duration-200">
                           <Icon name="MessageCircle" size={16} className="mr-1.5" />
                           WhatsApp
                         </Button>
@@ -1176,8 +1176,8 @@ const ServicesSection = () => {
                       </Button>
                     </a>
                     
-                    <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer">
-                      <Button size="default" variant="outline" className="w-full justify-start">
+                    <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="group">
+                      <Button size="default" variant="outline" className="w-full justify-start group-hover:scale-105 transition-transform duration-200">
                         <Icon name="MessageCircle" size={18} className="mr-2" />
                         WhatsApp
                       </Button>
