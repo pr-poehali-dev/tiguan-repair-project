@@ -449,7 +449,7 @@ const ServicesSection = () => {
                           </p>
                           
                           {service.features && service.features.length > 0 && (
-                            <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
+                            <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 mb-3">
                               {service.features.slice(0, 4).map((feature: string, idx: number) => (
                                 <div key={idx} className="flex items-start gap-1 text-xs">
                                   <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={12} />
@@ -458,6 +458,21 @@ const ServicesSection = () => {
                               ))}
                             </div>
                           )}
+                          
+                          <div className="flex gap-2 mt-2">
+                            <a href="tel:+79202520352" className="flex-1">
+                              <Button size="sm" className="w-full text-xs h-8">
+                                <Icon name="Phone" size={14} className="mr-1.5" />
+                                Позвонить
+                              </Button>
+                            </a>
+                            <a href="https://wa.me/79202520352" target="_blank" rel="noopener noreferrer" className="flex-1">
+                              <Button size="sm" variant="outline" className="w-full text-xs h-8 border-green-500/30 text-green-700 hover:bg-green-500/10">
+                                <Icon name="MessageCircle" size={14} className="mr-1.5" />
+                                WhatsApp
+                              </Button>
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
