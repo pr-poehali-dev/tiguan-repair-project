@@ -1214,7 +1214,7 @@ const ServicesSection = () => {
                     <h3 className="text-base font-bold mb-2">Позвонить</h3>
                     <p className="text-sm text-primary font-semibold mb-1">+7 (920) 252-03-52</p>
                     <p className="text-xs text-muted-foreground">Консультации 24/7</p>
-                    <Button size="sm" className="w-full mt-3 animate-pulse-shadow">
+                    <Button size="sm" className="w-full mt-3">
                       Позвонить сейчас
                     </Button>
                   </CardContent>
