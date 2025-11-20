@@ -99,7 +99,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <div className="grid grid-cols-3 gap-3 pt-5">
             {[
               { value: 15, suffix: '+', label: 'лет опыта', decimal: false },
-              { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
+              { value: 150, suffix: '+', label: 'узлов восстановлено', decimal: false },
               { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
             ].map((stat, index) => (
               <div key={index} className="backdrop-blur-sm rounded-lg p-3 border border-primary/20 text-center hover:border-primary/40 hover:bg-primary/5 hover:scale-105 transition-all duration-300 cursor-default">
