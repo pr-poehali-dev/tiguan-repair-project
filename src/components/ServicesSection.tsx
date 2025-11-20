@@ -230,12 +230,6 @@ const ServicesSection = () => {
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">Наши услуги</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Специализация по Volkswagen Tiguan I
               </h2>
@@ -307,12 +301,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Патентованная технология</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Защищённая интеллектуальная собственность
               </h2>
@@ -433,12 +421,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-bold text-primary uppercase tracking-wider">Наше преимущество</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Гарантия 12 месяцев без ограничения пробега
               </h2>
@@ -578,12 +560,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Ответы на вопросы</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Частые вопросы о восстановлении шлицов
               </h2>
@@ -697,12 +673,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Работаем по всей России</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Как мы работаем с регионами
               </h2>
@@ -958,12 +928,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Наши работы</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Примеры восстановленных деталей
               </h2>
@@ -1125,12 +1089,6 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <motion.div 
-                className="inline-block px-2.5 py-1 bg-primary/10 rounded-full mb-3 backdrop-blur-sm border border-primary/20"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Свяжитесь с нами</span>
-              </motion.div>
               <h2 className="text-xl lg:text-2xl font-bold mb-2 text-foreground">
                 Узнайте стоимость восстановления
               </h2>
