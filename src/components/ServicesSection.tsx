@@ -1012,36 +1012,7 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <AnimatedSection delay={0.6}>
-            <Card className="border-border/50 bg-muted/30 backdrop-blur-sm">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="ShieldCheck" className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-1.5">Гарантия качества 12 месяцев</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Официальная гарантия без ограничения пробега. Уверены в качестве — работаем по патентованной технологии.
-                    </p>
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {[
-                    'Полный фотоотчёт всех этапов работ',
-                    'Протокол контроля качества с замерами',
-                    'Гарантия без ограничения пробега',
-                    'Бесплатная диагностика при обращении'
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
-                      <span className="text-xs">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
+
 
           <AnimatedSection delay={0.7}>
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm mt-3">
