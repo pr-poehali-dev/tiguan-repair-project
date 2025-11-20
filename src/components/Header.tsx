@@ -85,8 +85,8 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`rounded-lg text-xs font-semibold transition-all relative ${
-                  isScrolled ? 'px-3 py-1.5' : 'px-4 py-2'
+                className={`rounded-lg font-semibold transition-all relative ${
+                  isScrolled ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-sm'
                 } ${
                   activeSection === section
                     ? 'bg-primary text-primary-foreground shadow-lg scale-105'
