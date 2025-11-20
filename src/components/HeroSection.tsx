@@ -33,9 +33,26 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <span className="text-primary">Volkswagen Tiguan I</span>
             </h1>
 
-            <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения. Стандартный ремонт за 1 день. Гарантия 12 месяцев. Без ограничения пробега.
-            </p>
+            <div className="space-y-2">
+              <ul className="space-y-1.5 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                  <span>Восстановление муфты Haldex</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                  <span>Ремонт раздаточной коробки</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                  <span>Восстановление шлицевых соединений</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
+                  <span>Диагностика системы 4Motion</span>
+                </li>
+              </ul>
+            </div>
             
             <div className="flex flex-wrap gap-3 text-sm">
               <div className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
