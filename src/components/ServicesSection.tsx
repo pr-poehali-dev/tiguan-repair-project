@@ -88,34 +88,85 @@ const ServicesSection = () => {
 
   const services = [
     {
-      icon: 'Car',
-      title: 'Восстановление шлицевых соединений Volkswagen Tiguan I',
-      description: 'Специализация на ремонте полноприводной трансмиссии Tiguan первого поколения (5N, 2007-2017): восстановление шлицевых соединений передней и задней оси, раздаточной коробки'
+      icon: 'Settings',
+      title: 'Комплексный ремонт полного привода Tiguan под ключ',
+      description: 'Полное восстановление системы полного привода Volkswagen Tiguan I (5N, 2007-2017): диагностика, ремонт муфты Haldex, восстановление шлицевых соединений передней и задней оси, ремонт раздаточной коробки, замена подшипников и сальников. Всё в одном месте с гарантией 18 месяцев.',
+      features: [
+        'Диагностика системы полного привода',
+        'Ремонт муфты Haldex Gen 4',
+        'Восстановление шлицов приводных валов',
+        'Ремонт раздаточной коробки',
+        'Замена масла в редукторах',
+        'Балансировка карданного вала',
+        'Тестирование после ремонта'
+      ],
+      price: 'от 95 000 ₽',
+      duration: '5-7 рабочих дней'
     },
     {
-      icon: 'Factory',
-      title: 'Изготовление шлицевых деталей',
-      description: 'Производство новых шлицевых деталей по чертежам или образцам с соблюдением всех технических характеристик'
+      icon: 'Cog',
+      title: 'Восстановление шлицевых соединений',
+      description: 'Высокоточное восстановление изношенных шлицов на станках с ЧПУ: механическая обработка, наплавка, термообработка до HRC 58-62, контроль геометрии. Специализация на приводных валах, карданах, полуосях Tiguan.',
+      features: [
+        'Обработка на станках с ЧПУ',
+        'Восстановление до заводских параметров',
+        'Термообработка HRC 58-62',
+        'Контроль геометрии и твердости'
+      ],
+      price: 'от 12 000 ₽',
+      duration: '2-3 рабочих дня'
     },
     {
       icon: 'Gauge',
-      title: 'Контроль качества',
-      description: 'Многоуровневая проверка геометрии, твердости и точности шлицевых соединений на профессиональном оборудовании'
+      title: 'Ремонт муфты Haldex',
+      description: 'Профессиональный ремонт муфты полного привода Haldex Generation 4: разборка, дефектовка, замена изношенных дисков, сальников, подшипников, прокладок. Заправка оригинальным маслом Haldex Gen 4.',
+      features: [
+        'Полная разборка и дефектовка',
+        'Замена дисков и фрикционов',
+        'Установка новых подшипников',
+        'Заправка оригинальным маслом'
+      ],
+      price: 'от 45 000 ₽',
+      duration: '3-4 рабочих дня'
     },
     {
       icon: 'Wrench',
-      title: 'Балансировка деталей',
-      description: 'Прецизионная динамическая балансировка приводных деталей трансмиссии для устранения вибраций'
+      title: 'Ремонт раздаточной коробки',
+      description: 'Капитальный ремонт раздаточной коробки: восстановление шлицов первичного и вторичного валов, замена подшипников, сальников, синхронизаторов. Регулировка зазоров, герметизация корпуса.',
+      features: [
+        'Восстановление шлицевых соединений',
+        'Замена подшипников и сальников',
+        'Регулировка зазоров валов',
+        'Герметизация корпуса'
+      ],
+      price: 'от 38 000 ₽',
+      duration: '4-5 рабочих дней'
     },
     {
-      icon: 'Shield',
-      title: 'Термообработка',
-      description: 'Профессиональная термообработка деталей для восстановления твердости и износостойкости поверхности'
+      icon: 'Disc',
+      title: 'Балансировка карданного вала',
+      description: 'Прецизионная динамическая балансировка карданного вала на профессиональном стенде. Устранение вибраций, проверка крестовин, замена эластичных муфт, контроль биения.',
+      features: [
+        'Балансировка на стенде',
+        'Проверка крестовин и шарниров',
+        'Замена эластичных муфт',
+        'Контроль остаточного дисбаланса'
+      ],
+      price: 'от 8 500 ₽',
+      duration: '1 рабочий день'
     },
     {
       icon: 'Package',
-      title: 'Комплексный ремонт трансмиссии',
-      description: 'Восстановление всех изношенных шлицевых узлов в трансмиссии с гарантией качества'
+      title: 'Техническое обслуживание полного привода',
+      description: 'Комплексное ТО системы 4Motion: замена масла в муфте Haldex и редукторах, диагностика электронного блока управления, проверка датчиков, очистка фильтра муфты, тестирование работы полного привода.',
+      features: [
+        'Замена масла Haldex (1.2 л)',
+        'Замена масла в редукторах',
+        'Компьютерная диагностика',
+        'Очистка фильтра муфты'
+      ],
+      price: 'от 15 000 ₽',
+      duration: '1-2 рабочих дня'
     }
   ];
 
@@ -198,42 +249,89 @@ const ServicesSection = () => {
       <section id="services" className="py-12 px-4 bg-muted/10 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
-            <div className="text-center mb-8">
+            <div className="text-center mb-12">
               <motion.div 
-                className="inline-block px-3 py-1.5 bg-primary/10 rounded-full mb-4 backdrop-blur-sm border border-primary/20"
+                className="inline-block px-4 py-2 bg-primary/10 rounded-full mb-6 backdrop-blur-sm border border-primary/20"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-xs font-semibold text-primary uppercase tracking-wide">Технологии</span>
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">Специализация</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
-                Специализация — Volkswagen Tiguan I (5N)
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+                Ремонт полного привода Volkswagen Tiguan I под ключ
               </h2>
-              <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
-                Профессиональное восстановление шлицевых соединений полноприводной трансмиссии Tiguan первого поколения (2007-2017). Запатентованные технологии, станки с ЧПУ, гарантия 18 месяцев.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
+                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения, карданный вал. Полный цикл работ с гарантией 18 месяцев.
               </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
+                  <Icon name="Award" className="text-primary" size={18} />
+                  <span className="font-semibold">Гарантия 18 месяцев</span>
+                </div>
+                <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
+                  <Icon name="Clock" className="text-primary" size={18} />
+                  <span className="font-semibold">Срок 5-7 дней</span>
+                </div>
+                <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
+                  <Icon name="CheckCircle" className="text-primary" size={18} />
+                  <span className="font-semibold">Комплексный подход</span>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <motion.div
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -4 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className="w-full max-w-sm h-full"
+                  className="w-full h-full"
                 >
-                  <Card className="group h-full flex flex-col border-border/50 hover:border-primary/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
-                    <CardHeader className="space-y-2 pb-4 flex-1 flex flex-col">
-                      <motion.div 
-                        className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-1 shadow-lg"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <Icon name={service.icon} className="text-primary" size={24} />
-                      </motion.div>
-                      <CardTitle className="text-base font-bold">{service.title}</CardTitle>
-                      <CardDescription className="text-xs leading-relaxed flex-1">{service.description}</CardDescription>
+                  <Card className={`group h-full flex flex-col border-border/50 bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 ${
+                    index === 0 ? 'lg:col-span-2 border-primary/40 shadow-md' : 'hover:border-primary/30'
+                  }`}>
+                    <CardHeader className="space-y-3 pb-4">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-start gap-4">
+                          <motion.div 
+                            className="w-14 h-14 bg-gradient-to-br from-primary/20 via-primary/10 to-accent/10 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0"
+                            whileHover={{ rotate: 360, scale: 1.1 }}
+                            transition={{ duration: 0.6 }}
+                          >
+                            <Icon name={service.icon} className="text-primary" size={28} />
+                          </motion.div>
+                          <div>
+                            <CardTitle className="text-xl font-bold text-foreground mb-2">
+                              {service.title}
+                            </CardTitle>
+                            {index === 0 && (
+                              <Badge className="bg-primary/20 text-primary border-primary/30">
+                                Рекомендуем
+                              </Badge>
+                            )}
+                          </div>
+                        </div>
+                        <div className="text-right flex-shrink-0">
+                          <div className="text-lg font-bold text-primary">{service.price}</div>
+                          <div className="text-xs text-muted-foreground mt-1">{service.duration}</div>
+                        </div>
+                      </div>
                     </CardHeader>
+                    <CardContent className="pt-0 pb-6">
+                      <CardDescription className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed mb-4">
+                        {service.description}
+                      </CardDescription>
+                      {service.features && (
+                        <div className="space-y-2 mt-4 pt-4 border-t border-border/50">
+                          {service.features.map((feature: string, idx: number) => (
+                            <div key={idx} className="flex items-start gap-2 text-sm">
+                              <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={16} />
+                              <span className="text-foreground/80">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </CardContent>
                   </Card>
                 </motion.div>
               </AnimatedSection>
