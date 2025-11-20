@@ -230,9 +230,15 @@ const ServicesSection = () => {
         <div className="container mx-auto relative z-10 max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Специализация по Volkswagen Tiguan I
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Полный цикл восстановления системы полного привода 4Motion с гарантией качества
               </p>
@@ -301,9 +307,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Защищённая интеллектуальная собственность
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Наша технология восстановления шлицов защищена патентом РФ
               </p>
@@ -421,9 +433,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Гарантия 12 месяцев без ограничения пробега
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
                 Мы уверены в качестве нашей работы и даём расширенную гарантию на все восстановленные детали
               </p>
@@ -560,9 +578,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Частые вопросы о восстановлении шлицов
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Всё, что нужно знать о технологии восстановления шлицевых соединений Volkswagen Tiguan I
               </p>
@@ -673,9 +697,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Как мы работаем с регионами
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Находимся в Нижнем Новгороде, принимаем детали со всей России. Доставка СДЭК 2-5 дней.
               </p>
@@ -928,9 +958,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Примеры восстановленных деталей
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Реальные работы: от изношенных шлицов до полностью восстановленных деталей с гарантией
               </p>
@@ -1089,9 +1125,15 @@ const ServicesSection = () => {
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="text-center mb-4">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-2 text-foreground">
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-2 text-foreground"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
                 Узнайте стоимость восстановления
-              </h2>
+              </motion.h2>
               <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
                 Бесплатная консультация. Расчёт стоимости за 15 минут.
               </p>
