@@ -195,7 +195,7 @@ const ServicesSection = () => {
 
   return (
     <>
-      <section id="services" className="py-8 px-4 bg-gradient-to-b from-background via-muted/10 to-muted/30 relative overflow-hidden">
+      <section id="services" className="py-12 px-4 bg-muted/10 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -205,7 +205,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Технологии</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Специализация — Volkswagen Tiguan I (5N)
               </h2>
               <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
@@ -254,7 +254,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Патентованная технология</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Защищённая интеллектуальная собственность
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -380,7 +380,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Ответы на вопросы</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Частые вопросы о восстановлении шлицов
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -499,7 +499,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Комплексное решение</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Ремонт трансмиссии под ключ
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -548,7 +548,7 @@ const ServicesSection = () => {
           </div>
 
           <AnimatedSection delay={0.4}>
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 via-primary/3 to-accent/5 backdrop-blur-sm">
+            <Card className="border-border/50 bg-muted/30 backdrop-blur-sm">
               <CardContent className="p-4">
                 <div className="grid md:grid-cols-3 gap-4 items-center">
                   <div className="text-center">
@@ -589,7 +589,7 @@ const ServicesSection = () => {
         </div>
       </section>
 
-      <section id="guarantees" className="py-8 px-4 bg-gradient-to-b from-muted/20 via-muted/10 to-background">
+      <section id="guarantees" className="py-12 px-4 bg-muted/10">
         <div className="container mx-auto max-w-5xl">
           <AnimatedSection>
             <div className="text-center mb-8">
@@ -599,7 +599,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Этапы работы</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Как мы работаем
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -674,7 +674,7 @@ const ServicesSection = () => {
           </div>
 
           <AnimatedSection delay={0.6}>
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm">
+            <Card className="border-border/50 bg-muted/30 backdrop-blur-sm">
               <CardContent className="p-4">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -819,7 +819,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Наши работы</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Примеры восстановленных деталей
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -986,7 +986,7 @@ const ServicesSection = () => {
               >
                 <span className="text-xs font-semibold text-primary uppercase tracking-wide">Свяжитесь с нами</span>
               </motion.div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-foreground">
                 Узнайте стоимость восстановления
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
