@@ -13,28 +13,27 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section id="home" className="relative pt-20 pb-8 px-4 overflow-hidden">
+    <section id="home" className="relative pt-24 pb-16 px-4 overflow-hidden">
       <motion.div 
         className="absolute inset-0 bg-muted/30"
         style={{ y, opacity }}
       />
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 items-center">
-          <div className="space-y-3">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-full backdrop-blur-sm border border-primary/20">
               <Icon name="Zap" className="text-primary" size={14} />
               <span className="text-xs font-bold text-primary uppercase tracking-wider">Ремонт за 1 день</span>
             </div>
 
-            <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-foreground">
+            <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-foreground">
               <span className="text-primary">Volkswagen Tiguan I</span>
               <br />
               Ремонт полного привода под ключ
             </h1>
 
-            <div>
-              <ul className="space-y-1 text-sm text-muted-foreground">
+            <ul className="space-y-2.5 text-base text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
                   <span>Восстановление муфты Haldex</span>
@@ -51,28 +50,27 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                   <Icon name="Check" className="text-primary flex-shrink-0" size={16} />
                   <span>Диагностика системы 4Motion</span>
                 </li>
-              </ul>
-            </div>
+            </ul>
             
-            <div className="flex flex-wrap gap-2 text-xs">
-              <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-background/80 backdrop-blur rounded-lg border border-border/50">
-                <Icon name="Clock" className="text-primary" size={14} />
+            <div className="flex flex-wrap gap-3 text-sm pt-2">
+              <div className="flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="Clock" className="text-primary" size={18} />
                 <span className="font-semibold">Ремонт за 1 день</span>
               </div>
-              <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-background/80 backdrop-blur rounded-lg border border-border/50">
-                <Icon name="Award" className="text-primary" size={14} />
+              <div className="flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="Award" className="text-primary" size={18} />
                 <span className="font-semibold">12 месяцев гарантии</span>
               </div>
-              <div className="flex items-center gap-1.5 px-2.5 py-1.5 bg-background/80 backdrop-blur rounded-lg border border-border/50">
-                <Icon name="Gauge" className="text-primary" size={14} />
+              <div className="flex items-center gap-2 px-4 py-2 bg-background/80 backdrop-blur rounded-lg border border-border/50">
+                <Icon name="Gauge" className="text-primary" size={18} />
                 <span className="font-semibold">Без ограничения пробега</span>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4 pt-2">
               <Button 
                 size="default" 
-                className="h-9 px-4 text-sm shadow-sm hover:shadow-md transition-all" 
+                className="h-11 px-6 text-base shadow-sm hover:shadow-md transition-all" 
                 onClick={() => scrollToSection('services')}
               >
                 <Icon name="ArrowRight" size={18} className="mr-2" />
@@ -81,7 +79,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <Button 
                 size="default" 
                 variant="outline" 
-                className="h-9 px-4 text-sm hover:bg-muted transition-colors" 
+                className="h-11 px-6 text-base hover:bg-muted transition-colors" 
                 onClick={() => scrollToSection('contacts')}
               >
                 <Icon name="Phone" size={18} className="mr-2" />
@@ -89,14 +87,14 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border/50">
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
               {[
                 { value: 15, suffix: '+', label: 'лет опыта', decimal: false },
                 { value: 100, suffix: '+', label: 'узлов восстановлено', decimal: false },
                 { value: 99.2, suffix: '%', label: 'успешных работ', decimal: true }
               ].map((stat, index) => (
                 <div key={index}>
-                  <div className="text-xl lg:text-2xl font-bold text-primary mb-0.5">
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-1">
                       <AnimatedCounter 
                         end={stat.value} 
                         suffix={stat.suffix}
@@ -104,7 +102,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                         duration={2.5}
                       />
                   </div>
-                  <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </div>
@@ -117,15 +115,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               <img 
                 src="https://cdn.poehali.dev/files/3ea564e1-504c-4086-937c-2ac7babaa779.jpg"
                 alt="Детали трансмиссии Volkswagen Tiguan"
-                className="relative rounded-2xl shadow-lg w-full h-[350px] object-cover border border-border/50"
+                className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover border border-border/50"
               />
               
-              <div className="absolute bottom-3 left-3 right-3 bg-background/95 backdrop-blur-md p-3 rounded-xl border border-border/50 shadow-lg">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <Icon name="Car" className="text-primary" size={18} />
-                  <span className="font-bold text-sm">Эксперты по Volkswagen Tiguan I</span>
+              <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-md p-5 rounded-xl border border-border/50 shadow-lg">
+                <div className="flex items-center gap-2 mb-2">
+                  <Icon name="Car" className="text-primary" size={20} />
+                  <span className="font-bold text-base">Эксперты по Volkswagen Tiguan I</span>
                 </div>
-                <p className="text-xs text-muted-foreground">Восстановление шлицевых соединений трансмиссии с гарантией</p>
+                <p className="text-sm text-muted-foreground">Восстановление шлицевых соединений трансмиссии с гарантией</p>
               </div>
             </div>
           </div>
