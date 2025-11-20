@@ -166,6 +166,20 @@
     animation: glow 3s ease-in-out infinite;
   }
 
+  @keyframes pulse-shadow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px hsl(var(--primary) / 0);
+    }
+  }
+
+  .animate-pulse-shadow {
+    animation: pulse-shadow 2s ease-in-out infinite;
+  }
+
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;

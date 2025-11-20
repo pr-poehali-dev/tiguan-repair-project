@@ -1170,7 +1170,7 @@ const ServicesSection = () => {
                   
                   <div className="space-y-2 mt-auto">
                     <a href="tel:+79202520352">
-                      <Button size="default" className="w-full justify-start">
+                      <Button size="default" className="w-full justify-start animate-pulse-shadow">
                         <Icon name="Phone" size={18} className="mr-2" />
                         +7 (920) 252-03-52
                       </Button>
