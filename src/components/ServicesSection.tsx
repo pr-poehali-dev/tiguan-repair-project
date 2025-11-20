@@ -292,15 +292,10 @@ const ServicesSection = () => {
               }
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  className="h-full"
+                <Card 
+                  className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
+                  onClick={() => handleImageView(item.id, item.image)}
                 >
-                  <Card 
-                    className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-2xl hover:border-primary/50 transition-all duration-300 cursor-pointer h-full flex flex-col"
-                    onClick={() => handleImageView(item.id, item.image)}
-                  >
                     <div className="relative overflow-hidden">
                       <img 
                         src={item.image}
@@ -341,7 +336,6 @@ const ServicesSection = () => {
                       <p className="text-xs text-muted-foreground flex-1">{item.description}</p>
                     </CardContent>
                   </Card>
-                </motion.div>
               </AnimatedSection>
             ))}
           </div>
