@@ -1195,88 +1195,45 @@ const ServicesSection = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon name="MapPin" className="text-primary" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold mb-1">Адрес производства</h3>
-                      <p className="text-xs text-muted-foreground">г. Нижний Новгород</p>
+              <Card className="border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="p-4 border-b border-border/50">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon name="MapPin" className="text-primary" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold mb-1">Адрес производства</h3>
+                        <p className="text-xs text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="text-sm">Восточный проезд, 11/1</div>
-                    
-                    <div className="pt-3 border-t border-border/50">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Icon name="Clock" className="text-primary" size={16} />
-                        <span className="text-xs font-semibold">Режим работы</span>
-                      </div>
-                      <div className="space-y-1 text-xs text-muted-foreground">
-                        <div>Пн-Пт: 9:30 - 17:30</div>
-                        <div>Сб-Вс: Выходной</div>
-                      </div>
+                  <div className="w-full h-64">
+                    <iframe
+                      src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      title="Карта проезда"
+                      className="w-full h-full"
+                    />
+                  </div>
+                  
+                  <div className="p-3 bg-muted/20 border-t border-border/50">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon name="Clock" className="text-primary" size={16} />
+                      <span className="text-xs font-semibold">Режим работы</span>
+                    </div>
+                    <div className="space-y-1 text-xs text-muted-foreground">
+                      <div>Пн-Пт: 9:30 - 17:30</div>
+                      <div>Сб-Вс: Выходной</div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </AnimatedSection>
           </div>
-
-          <AnimatedSection delay={0.6}>
-            <Card className="mt-4 border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="p-4 border-b border-border/50">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Icon name="MapPin" className="text-primary" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-base">Производственная база</h3>
-                      <p className="text-sm text-muted-foreground">г. Нижний Новгород, Восточный проезд, 11/1</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full h-80">
-                  <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
-                    width="100%"
-                    height="320"
-                    frameBorder="0"
-                    title="Карта проезда"
-                    className="w-full h-full"
-                  />
-                </div>
-                <div className="p-4 bg-muted/20 border-t border-border/50">
-                  <div className="grid grid-cols-2 gap-3">
-                    <a 
-                      href="https://yandex.ru/maps/?rtext=~56.253544,43.914851" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="outline" className="w-full">
-                        <Icon name="Navigation" size={18} className="mr-2" />
-                        Яндекс.Карты
-                      </Button>
-                    </a>
-                    <a 
-                      href="https://www.google.com/maps/dir/?api=1&destination=56.253544,43.914851" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="outline" className="w-full">
-                        <Icon name="MapPin" size={18} className="mr-2" />
-                        Google Maps
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
         </div>
       </section>
     </>
