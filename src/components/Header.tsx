@@ -112,7 +112,7 @@ const Header = ({ activeSection, scrollToSection }: HeaderProps) => {
               href="tel:+79202520352" 
               className="hidden md:block"
             >
-                <Button className={`shadow-sm bg-primary hover:bg-primary/90 transition-colors ${
+                <Button className={`shadow-sm bg-primary hover:bg-primary/90 transition-colors animate-pulse-shadow ${
                   isScrolled ? 'h-9 px-3 text-xs' : 'h-10 px-4 text-sm'
                 }`}>
                   <Icon name="Phone" size={16} className="mr-1.5" />
