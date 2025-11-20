@@ -90,7 +90,7 @@ const ServicesSection = () => {
     {
       icon: 'Settings',
       title: 'Комплексный ремонт полного привода Tiguan под ключ',
-      description: 'Полное восстановление системы полного привода Volkswagen Tiguan I (5N, 2007-2017): диагностика, ремонт муфты Haldex, восстановление шлицевых соединений передней и задней оси, ремонт раздаточной коробки, замена подшипников и сальников. Всё в одном месте с гарантией 18 месяцев.',
+      description: 'Полное восстановление системы полного привода Volkswagen Tiguan I (5N, 2007-2017): диагностика, ремонт муфты Haldex, восстановление шлицевых соединений передней и задней оси, ремонт раздаточной коробки, замена подшипников и сальников. Всё в одном месте с гарантией 12 месяцев без ограничения пробега.',
       features: [
         'Диагностика системы полного привода',
         'Ремонт муфты Haldex Gen 4',
@@ -205,7 +205,7 @@ const ServicesSection = () => {
     {
       title: 'Гарантия качества работ',
       items: [
-        'Восстановление шлицевых соединений Volkswagen Tiguan I - 18 месяцев без ограничения пробега',
+        'Восстановление шлицевых соединений Volkswagen Tiguan I - 12 месяцев без ограничения пробега',
         'Изготовление новых деталей - 24 месяца гарантии',
         'Балансировка валов - 12 месяцев или 30 000 км',
         'Термообработка деталей - пожизненная гарантия на технологию',
@@ -260,12 +260,12 @@ const ServicesSection = () => {
                 Ремонт полного привода Volkswagen Tiguan I под ключ
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
-                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения, карданный вал. Полный цикл работ с гарантией 18 месяцев.
+                Комплексное восстановление системы 4Motion: муфта Haldex, раздаточная коробка, шлицевые соединения, карданный вал. Полный цикл работ с гарантией 12 месяцев без ограничения пробега.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="Award" className="text-primary" size={18} />
-                  <span className="font-semibold">Гарантия 18 месяцев</span>
+                  <span className="font-semibold">Гарантия 12 месяцев</span>
                 </div>
                 <div className="flex items-center gap-2 bg-background/80 backdrop-blur px-4 py-2 rounded-lg border border-border/50">
                   <Icon name="Clock" className="text-primary" size={18} />
