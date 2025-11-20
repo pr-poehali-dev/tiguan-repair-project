@@ -1288,15 +1288,29 @@ const ServicesSection = () => {
                     </div>
                   </div>
                   
-                  <div className="w-full h-64 md:h-auto">
-                    <iframe
-                      src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      title="Карта проезда"
-                      className="w-full h-full"
-                    />
+                  <div className="w-full h-64 md:h-auto flex flex-col">
+                    <div className="flex-1">
+                      <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=43.914851%2C56.253544&amp;z=17&amp;pt=43.914851%2C56.253544%2Cpm2rdm"
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        title="Карта проезда"
+                        className="w-full h-full"
+                      />
+                    </div>
+                    <div className="p-3 bg-muted/30 border-t border-border/50">
+                      <a 
+                        href="https://yandex.ru/maps/?rtext=~56.253544,43.914851" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="sm" className="w-full">
+                          <Icon name="Navigation" size={16} className="mr-2" />
+                          Построить маршрут
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </CardContent>
