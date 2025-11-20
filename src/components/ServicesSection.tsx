@@ -491,22 +491,22 @@ const ServicesSection = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <p className="text-xs leading-snug">
+                    <p className="text-sm leading-snug">
                       <span className="font-semibold">Способ восстановления шлицевого соединения</span> на полноприводных автомобилях с использованием высокоточной механической обработки и термообработки.
                     </p>
                     
                     <div className="space-y-1">
                       <div className="flex items-start gap-1.5">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
-                        <span className="text-xs">Восстановление изношенных шлицов методом механической обработки на станках с ЧПУ</span>
+                        <span className="text-sm">Восстановление изношенных шлицов методом механической обработки на станках с ЧПУ</span>
                       </div>
                       <div className="flex items-start gap-1.5">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
-                        <span className="text-xs">Термообработка для восстановления твёрдости поверхности до заводских параметров</span>
+                        <span className="text-sm">Термообработка для восстановления твёрдости поверхности до заводских параметров</span>
                       </div>
                       <div className="flex items-start gap-1.5">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={12} />
-                        <span className="text-xs">Гарантированное качество и долговечность восстановленных деталей</span>
+                        <span className="text-sm">Гарантированное качество и долговечность восстановленных деталей</span>
                       </div>
                     </div>
 
@@ -539,7 +539,7 @@ const ServicesSection = () => {
                       <Icon name="FileText" className="text-primary" size={16} />
                       <h3 className="text-sm font-bold">Свидетельство о патенте</h3>
                     </div>
-                    <p className="text-xs text-muted-foreground">Официальный документ Роспатента</p>
+                    <p className="text-sm text-muted-foreground">Официальный документ Роспатента</p>
                   </div>
                   
                   <div className="flex-1 p-2 flex items-center justify-center bg-muted/20">
@@ -571,7 +571,7 @@ const ServicesSection = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-sm mb-1">Почему это важно для вас?</h3>
-                    <p className="text-xs text-muted-foreground leading-snug">
+                    <p className="text-sm text-muted-foreground leading-snug">
                       Патент подтверждает уникальность и эффективность нашей технологии. Это не просто ремонт — это научно обоснованный, проверенный и защищённый государством способ восстановления деталей. Вы получаете гарантию качества на 12 месяцев, потому что мы уверены в результате.
                     </p>
                   </div>
@@ -626,8 +626,8 @@ const ServicesSection = () => {
                       <Icon name={item.icon} className="text-primary" size={20} />
                     </div>
                     <div className="text-xl font-bold text-primary mb-0.5">{item.title}</div>
-                    <div className="text-xs font-semibold text-muted-foreground mb-2">{item.subtitle}</div>
-                    <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
+                    <div className="text-sm font-semibold text-muted-foreground mb-2">{item.subtitle}</div>
+                    <p className="text-sm text-muted-foreground leading-snug">{item.description}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -645,7 +645,7 @@ const ServicesSection = () => {
                       </div>
                       <div>
                         <h3 className="text-base font-bold mb-1">Что входит в гарантию?</h3>
-                        <p className="text-xs text-muted-foreground">Полная защита вашего ремонта</p>
+                        <p className="text-sm text-muted-foreground">Полная защита вашего ремонта</p>
                       </div>
                     </div>
                     <div className="space-y-1.5">
@@ -657,7 +657,7 @@ const ServicesSection = () => {
                       ].map((item, index) => (
                         <div key={index} className="flex items-start gap-2">
                           <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
-                          <span className="text-xs">{item}</span>
+                          <span className="text-sm">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -670,7 +670,7 @@ const ServicesSection = () => {
                       </div>
                       <div>
                         <h3 className="text-base font-bold mb-1">Почему мы можем это дать?</h3>
-                        <p className="text-xs text-muted-foreground">Уверенность в технологии</p>
+                        <p className="text-sm text-muted-foreground">Уверенность в технологии</p>
                       </div>
                     </div>
                     <div className="space-y-1.5">
@@ -682,7 +682,7 @@ const ServicesSection = () => {
                       ].map((item, index) => (
                         <div key={index} className="flex items-start gap-2">
                           <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={14} />
-                          <span className="text-xs">{item}</span>
+                          <span className="text-sm">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -695,7 +695,7 @@ const ServicesSection = () => {
                       <Icon name="BadgeCheck" className="text-primary" size={20} />
                       <h4 className="text-base font-bold">Официальный гарантийный талон</h4>
                     </div>
-                    <p className="text-xs text-muted-foreground max-w-2xl mx-auto mb-3">
+                    <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-3">
                       На каждую восстановленную деталь выдаём официальный гарантийный талон с печатью организации, номером заказа и подписью мастера
                     </p>
                     <div className="flex flex-wrap justify-center gap-2">
@@ -776,9 +776,9 @@ const ServicesSection = () => {
                         <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Icon name={item.icon} className="text-primary" size={16} />
                         </div>
-                        <h3 className="text-xs font-bold leading-tight pt-1">{item.question}</h3>
+                        <h3 className="text-sm font-bold leading-tight pt-1">{item.question}</h3>
                       </div>
-                      <p className="text-xs text-muted-foreground leading-snug pl-10">
+                      <p className="text-sm text-muted-foreground leading-snug pl-10">
                         {item.answer}
                       </p>
                     </CardContent>
@@ -796,7 +796,7 @@ const ServicesSection = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold mb-0.5 text-sm">Не нашли ответ на свой вопрос?</h3>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       Позвоните нам или оставьте заявку — ответим на любые вопросы о восстановлении шлицов
                     </p>
                   </div>
@@ -897,8 +897,8 @@ const ServicesSection = () => {
                         <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-1.5">
                           <Icon name={item.icon} className="text-primary" size={16} />
                         </div>
-                        <h3 className="text-xs font-bold mb-1">{item.title}</h3>
-                        <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
+                        <h3 className="text-sm font-bold mb-1">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-snug">{item.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -960,15 +960,15 @@ const ServicesSection = () => {
                     <ul className="space-y-1">
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
+                        <span className="text-sm text-muted-foreground">Упакуйте детали в прочную коробку с защитой от ударов</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Отправьте в ближайший пункт СДЭК на наш адрес</span>
+                        <span className="text-sm text-muted-foreground">Отправьте в ближайший пункт СДЭК на наш адрес</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Стоимость доставки рассчитывается индивидуально на сайте СДЭК</span>
+                        <span className="text-sm text-muted-foreground">Стоимость доставки рассчитывается индивидуально на сайте СДЭК</span>
                       </li>
                     </ul>
                   </div>
@@ -981,15 +981,15 @@ const ServicesSection = () => {
                     <ul className="space-y-1">
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
+                        <span className="text-sm text-muted-foreground">Надёжная упаковка с защитой от повреждений при транспортировке</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Отправка в течение 1 рабочего дня после оплаты</span>
+                        <span className="text-sm text-muted-foreground">Отправка в течение 1 рабочего дня после оплаты</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Icon name="Check" className="text-primary mt-0.5 flex-shrink-0" size={14} />
-                        <span className="text-xs text-muted-foreground">Доставка в любой город России за 2-5 дней</span>
+                        <span className="text-sm text-muted-foreground">Доставка в любой город России за 2-5 дней</span>
                       </li>
                     </ul>
                   </div>
@@ -1003,12 +1003,12 @@ const ServicesSection = () => {
                       </div>
                       <div className="space-y-1">
                         <h4 className="font-bold text-sm">Адрес для отправки через СДЭК</h4>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           <strong>Получатель:</strong> ООО "Мега Шлиц"<br />
                           <strong>Адрес:</strong> г. Нижний Новгород, Восточный проезд, 11/1<br />
                           <strong>Телефон:</strong> +7 (920) 252-03-52
                         </p>
-                        <p className="text-xs text-primary font-medium mt-2">
+                        <p className="text-sm text-primary font-medium mt-2">
                           Свяжитесь с нами перед отправкой — поможем правильно оформить доставку
                         </p>
                       </div>
@@ -1029,7 +1029,7 @@ const ServicesSection = () => {
                             'Заполните пустоты пенопластом',
                             'Заклейте скотчем со всех сторон'
                           ].map((item, index) => (
-                            <div key={index} className="flex items-start gap-1.5 text-xs">
+                            <div key={index} className="flex items-start gap-1.5 text-sm">
                               <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5" size={12} />
                               <span className="text-muted-foreground">{item}</span>
                             </div>
@@ -1071,7 +1071,7 @@ const ServicesSection = () => {
                     </div>
                     <h3 className="text-base font-bold mb-2">Позвонить</h3>
                     <p className="text-sm text-primary font-semibold mb-1">+7 (920) 252-03-52</p>
-                    <p className="text-xs text-muted-foreground">Консультации 24/7</p>
+                    <p className="text-sm text-muted-foreground">Консультации 24/7</p>
                     <Button size="sm" className="w-full mt-3">
                       Позвонить сейчас
                     </Button>
@@ -1089,7 +1089,7 @@ const ServicesSection = () => {
                     </div>
                     <h3 className="text-base font-bold mb-2">WhatsApp</h3>
                     <p className="text-sm text-green-600 font-semibold mb-1">+7 (920) 252-03-52</p>
-                    <p className="text-xs text-muted-foreground">Быстрые ответы</p>
+                    <p className="text-sm text-muted-foreground">Быстрые ответы</p>
                     <Button size="sm" variant="outline" className="w-full mt-3 border-green-500/30 text-green-700 hover:bg-green-500/10 group-hover:scale-105 transition-transform duration-200">
                       Написать в WhatsApp
                     </Button>
@@ -1109,7 +1109,7 @@ const ServicesSection = () => {
                   </div>
                   <h3 className="text-base font-bold mb-2">Email</h3>
                   <p className="text-sm text-primary font-semibold mb-1">megashlic@yandex.ru</p>
-                  <p className="text-xs text-muted-foreground">Подробные запросы</p>
+                  <p className="text-sm text-muted-foreground">Подробные запросы</p>
                   <Button size="sm" variant="outline" className="w-full mt-3">
                     {showEmailForm ? 'Скрыть форму' : 'Написать письмо'}
                   </Button>
