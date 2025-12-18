@@ -1,14 +1,24 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://megashlic.ru/sitemap.xml
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Google
 User-agent: Googlebot
 Allow: /
 
+# Bing
 User-agent: Bingbot
 Allow: /
 
+# Twitter
 User-agent: Twitterbot
 Allow: /
 
+# Facebook
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
